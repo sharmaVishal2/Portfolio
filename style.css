@@ -183,6 +183,7 @@ body {
 .cta-buttons {
     display: flex;
     gap: 1rem;
+    flex-wrap: wrap;
 }
 
 .btn {
@@ -212,6 +213,17 @@ body {
 .btn-secondary:hover {
     background: var(--accent-cyan);
     color: var(--bg-primary);
+    transform: translateY(-2px);
+}
+
+.btn-tertiary {
+    border: 2px solid var(--accent-blue);
+    color: var(--accent-blue);
+}
+
+.btn-tertiary:hover {
+    background: var(--accent-blue);
+    color: white;
     transform: translateY(-2px);
 }
 
