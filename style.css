@@ -152,32 +152,11 @@ body {
     font-family: 'JetBrains Mono', monospace;
 }
 
-.subtitle {
-    font-size: 1.2rem;
+.intro {
+    font-size: 1.05rem;
     color: var(--text-secondary);
-    margin-bottom: 1.5rem;
-    font-style: italic;
-}
-
-.typing-container {
-    height: 40px;
     margin-bottom: 2rem;
-}
-
-.typing-text {
-    font-size: 1.1rem;
-    color: var(--accent-cyan);
-    font-family: 'JetBrains Mono', monospace;
-}
-
-.typing-text::after {
-    content: '|';
-    animation: blink 0.7s infinite;
-}
-
-@keyframes blink {
-    0%, 50% { opacity: 1; }
-    51%, 100% { opacity: 0; }
+    line-height: 1.8;
 }
 
 .cta-buttons {
@@ -294,6 +273,7 @@ section {
     font-size: 1.1rem;
     color: var(--text-secondary);
     line-height: 1.8;
+    margin-bottom: 1rem;
 }
 
 .about-content strong {
@@ -340,6 +320,40 @@ section {
 .year {
     color: var(--accent-cyan);
     font-family: 'JetBrains Mono', monospace;
+}
+
+.education-secondary {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.edu-item {
+    text-align: center;
+    padding: 1.5rem 2rem;
+    background: var(--bg-card);
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    border: 1px solid rgba(0, 217, 255, 0.2);
+    transition: all 0.3s;
+}
+
+.edu-item:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-cyan);
+}
+
+.edu-item h4 {
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.edu-item p {
+    color: var(--accent-cyan);
+    font-size: 1.2rem;
+    font-weight: 600;
 }
 
 /* Skills Section */
@@ -430,6 +444,10 @@ section {
     font-weight: 500;
 }
 
+.status-badge.completed {
+    background: linear-gradient(135deg, #10b981, #059669);
+}
+
 .project-desc {
     color: var(--text-secondary);
     margin-bottom: 1rem;
@@ -513,6 +531,27 @@ section {
 .achievement-card p {
     color: var(--text-secondary);
     line-height: 1.7;
+}
+
+/* Career Section */
+.career {
+    background: var(--bg-secondary);
+}
+
+.career-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.career-content p {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+}
+
+.career-content strong {
+    color: var(--accent-cyan);
 }
 
 /* Contact Section */
@@ -660,6 +699,11 @@ footer p {
     .education-card {
         flex-direction: column;
         text-align: center;
+    }
+
+    .education-secondary {
+        flex-direction: column;
+        gap: 1rem;
     }
 
     .projects-grid {
