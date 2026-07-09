@@ -27,7 +27,7 @@
           <i class="fas fa-sun" aria-hidden="true"></i>
           <span class="sr-only">Toggle theme</span>
         </button>
-        <a href="assets/resume/resumevishalP.pdf" class="btn btn-outline nav-resume" target="_blank" rel="noopener">Resume</a>
+        <a href="assets/resume/_resume_vishal.pdf" class="btn btn-outline nav-resume" target="_blank" rel="noopener">Resume</a>
         <button class="menu-toggle" aria-label="Open menu"><i class="fas fa-bars"></i></button>
       </div>
     </div>
@@ -46,7 +46,7 @@
           production-grade LLM integrations for intelligent features.
         </p>
         <div class="hero-cta">
-          <a href="assets/resume/resumevishalP.pdf" download="resumevishalP.pdf" class="btn btn-primary"><i class="fas fa-download"></i> Download Resume</a>
+          <a href="assets/resume/_resume_vishal.pdf" download="Vishal-Sharma-Resume.pdf" class="btn btn-primary"><i class="fas fa-download"></i> Download Resume</a>
           <a href="#projects" class="btn btn-outline">View Projects</a>
           <a href="#contact" class="btn btn-ghost">Contact Me</a>
         </div>
@@ -127,10 +127,9 @@
         <div class="skill-column">
           <h4><i class="fas fa-code"></i> Languages</h4>
           <ul>
-            <li><i class="fab fa-java"></i> Java</li>
-            <li><i class="fab fa-python"></i> Python</li>
-            <li><i class="fab fa-js-square"></i> JavaScript</li>
-            <li><i class="fas fa-database"></i> SQL</li>
+            <li>Java</li>
+            <li>JavaScript</li>
+            <li>SQL</li>
           </ul>
         </div>
         <div class="skill-column">
@@ -140,6 +139,7 @@
             <li>Spring MVC</li>
             <li>Spring Security</li>
             <li>REST APIs</li>
+            <li>Microservices</li>
             <li>Hibernate / JPA</li>
           </ul>
         </div>
@@ -160,22 +160,14 @@
           </ul>
         </div>
         <div class="skill-column">
-          <h4><i class="fas fa-brain"></i> AI</h4>
-          <ul>
-            <li>Machine Learning</li>
-            <li>Deep Learning</li>
-            <li>NLP / LLMs</li>
-            <li>RAG &amp; Prompt Engineering</li>
-          </ul>
-        </div>
-        <div class="skill-column">
           <h4><i class="fas fa-tools"></i> Tools</h4>
           <ul>
-            <li>Git / GitHub</li>
             <li>Docker</li>
+            <li>Git</li>
             <li>Maven</li>
             <li>Postman</li>
-            <li>AWS</li>
+            <li>Redis (Basics)</li>
+            <li>Apache Kafka (Basics)</li>
           </ul>
         </div>
       </div>
@@ -194,14 +186,14 @@
         <div class="featured-inner">
           <div class="featured-info">
             <h3>SmartHire — AI-Driven Mock Interview Platform</h3>
-            <p class="project-problem">A full-stack AI interview platform with resume ingestion, LLM-driven questions, and real-time feedback.</p>
+            <p class="project-problem">A full-stack AI interview platform supporting 50+ concurrent users with sub-500ms response latency via WebSocket streaming, from resume ingestion to real-time feedback.</p>
             <ul class="feature-list">
-              <li>Resume parsing</li>
-              <li>AI interview generation (RAG + LLM)</li>
-              <li>Automated answer evaluation</li>
-              <li>JWT authentication</li>
+              <li>Designed a <strong>RAG pipeline</strong> integrating LLaMA 3 (Groq API) with PostgreSQL vector search to generate role-specific questions across 10+ job domains, achieving ~85% user-rated relevance</li>
+              <li>Engineered a real-time answer evaluation engine scoring responses across <strong>5 competency dimensions</strong>, delivering structured feedback in under 2 seconds</li>
+              <li>Implemented <strong>JWT-based stateless auth</strong> with RBAC securing 15+ API endpoints for horizontal scalability</li>
+              <li>Architected end-to-end full-stack system with Spring Boot backend and React frontend</li>
             </ul>
-            <div class="project-stack"><span>Spring Boot</span><span>React</span><span>Groq API</span><span>JWT</span><span>PostgreSQL</span></div>
+            <div class="project-stack"><span>Spring Boot</span><span>React</span><span>LLaMA 3 (Groq API)</span><span>JWT</span><span>PostgreSQL</span></div>
             <div class="project-actions">
               <a href="https://github.com/sharmaVishal2/Smart-Hire-AI-driven-interview-prepation-" target="_blank" class="btn btn-outline btn-sm"><i class="fab fa-github"></i> GitHub</a>
               <a href="https://ai-hackfest-mlh.vercel.app/" target="_blank" class="btn btn-primary btn-sm"><i class="fas fa-external-link-alt"></i> Live Demo</a>
@@ -227,28 +219,25 @@
           <div class="project-banner banner-ecommerce"></div>
           <div class="project-body">
             <h3>E-Commerce Backend System</h3>
-            <div class="project-stack"><span>Spring Boot</span><span>PostgreSQL</span><span>OAuth2</span><span>JWT</span></div>
-            <ul class="feature-list"><li>Spring Security + OAuth2</li><li>Pagination & search</li><li>Normalized DB design</li></ul>
-            <div class="project-actions"><a href="https://github.com/sharmaVishal2/E-Commerce-Application-by-Java-Spring-Boot" target="_blank" class="btn btn-outline btn-sm"><i class="fab fa-github"></i> GitHub</a></div>
+            <div class="project-stack"><span>Spring Boot</span><span>PostgreSQL</span><span>Spring Security</span><span>OAuth 2.0</span><span>JPA/Hibernate</span></div>
+            <ul class="feature-list">
+              <li><strong>OAuth 2.0 + JWT</strong> pipeline supporting social login &amp; credential-based flows across 20+ secured routes</li>
+              <li>Normalized PostgreSQL schema across 6+ entities reducing data redundancy by ~30%</li>
+              <li>Paginated product search &amp; multi-filter APIs reducing average query latency by <strong>40%</strong> under load</li>
+              <li>Stateless cart management APIs enabling horizontal scaling with zero sticky-session overhead</li>
+            </ul>
+            <div class="project-actions">
+              <a href="https://github.com/sharmaVishal2/E-Commerce-Application-by-Java-Spring-Boot" target="_blank" class="btn btn-outline btn-sm"><i class="fab fa-github"></i> GitHub</a>
+              <a href="https://e-commerce-application-by-java-spri.vercel.app/" target="_blank" class="btn btn-primary btn-sm"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+            </div>
           </div>
         </div>
 
-        <!-- Sign Language -->
-        <div class="project-card">
-          <div class="project-banner banner-signlang"></div>
-          <div class="project-body">
-            <h3>Sign Language Detection</h3>
-            <div class="project-stack"><span>CNN</span><span>Deep Learning</span><span>Gesture Recognition</span></div>
-            <ul class="feature-list"><li>CNN-based gesture recognition</li><li>Data augmentation</li></ul>
-            <div class="project-actions"><a href="https://github.com/sharmaVishal2" target="_blank" class="btn btn-outline btn-sm"><i class="fab fa-github"></i> GitHub</a></div>
-          </div>
-        </div>
-
-        <!-- Placeholder for more projects -->
+        <!-- GitHub CTA -->
         <div class="project-card">
           <div class="project-body">
             <h3>More Projects</h3>
-            <p class="project-problem">Explore more on my GitHub for additional backend and AI projects.</p>
+            <p class="project-problem">Explore more backend and AI projects on my GitHub.</p>
             <div class="project-actions"><a href="https://github.com/sharmaVishal2?tab=repositories" target="_blank" class="btn btn-outline btn-sm"><i class="fab fa-github"></i> View All</a></div>
           </div>
         </div>
@@ -262,8 +251,24 @@
     <div class="container">
       <div class="section-header"><span class="section-label">Experience</span><h2 class="section-title">Industry Exposure</h2></div>
       <div class="experience-card">
-        <h3>JPMorgan Chase &amp; Co. — Software Engineering Virtual Experience (Forage)</h3>
-        <ul class="feature-list"><li>Built backend services simulating transaction workflows using Spring Boot</li><li>Wrote JUnit tests and clean service-layer code</li></ul>
+        <div class="exp-header">
+          <div class="exp-icon"><i class="fas fa-building"></i></div>
+          <div class="exp-meta">
+            <h3>JPMorgan Chase &amp; Co.</h3>
+            <span class="exp-role">Software Engineering Virtual Experience &mdash; Forage · 2026</span>
+          </div>
+        </div>
+        <ul class="feature-list">
+          <li>Built and tested backend services simulating <strong>financial transaction workflows</strong> using Spring Boot</li>
+          <li>Developed REST APIs with clean service-layer architecture for structured request/response handling</li>
+          <li>Wrote <strong>JUnit</strong> unit tests to ensure correctness and reliability of core application logic</li>
+        </ul>
+        <div class="project-stack">
+          <span class="stack-tag">Spring Boot</span>
+          <span class="stack-tag">REST APIs</span>
+          <span class="stack-tag">JUnit</span>
+          <span class="stack-tag">Maven</span>
+        </div>
       </div>
     </div>
   </section>
@@ -273,12 +278,20 @@
     <div class="container">
       <div class="section-header"><span class="section-label">Achievements</span><h2 class="section-title">Highlights</h2></div>
       <div class="achievements-grid">
-        <div class="achievement-card"><div class="ach-icon"><i class="fas fa-trophy"></i></div><div class="ach-content"><h3>AIR 102 — NEC 2025</h3></div></div>
-        <div class="achievement-card"><div class="ach-icon"><i class="fas fa-users"></i></div><div class="ach-content"><h3>Smart India Hackathon — Team Leader</h3></div></div>
-        <div class="achievement-card"><div class="ach-icon"><i class="fas fa-code"></i></div><div class="ach-content"><h3>300+ DSA Problems</h3></div></div>
-        <div class="achievement-card"><div class="ach-icon"><i class="fas fa-globe"></i></div><div class="ach-content"><h3>CodeChef Global Rank 824</h3></div></div>
-        <div class="achievement-card"><div class="ach-icon"><i class="fas fa-briefcase"></i></div><div class="ach-content"><h3>JPMorgan Chase Virtual Experience</h3></div></div>
-        <div class="achievement-card"><div class="ach-icon"><i class="fas fa-certificate"></i></div><div class="ach-content"><h3>AI for All Certifications</h3></div></div>
+        <div class="achievement-card">
+          <div class="ach-icon"><i class="fas fa-trophy"></i></div>
+          <div class="ach-content">
+            <h3>AIR 102 — NEC 2025</h3>
+            <p>All India Rank 102 among 4,000+ colleges nationwide, placing in the top ~2.5% overall</p>
+          </div>
+        </div>
+        <div class="achievement-card">
+          <div class="ach-icon"><i class="fas fa-users"></i></div>
+          <div class="ach-content">
+            <h3>Smart India Hackathon 2024</h3>
+            <p>Team Leader — Shortlisted Top 50 out of 130+ internal teams (~top 38%)</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
