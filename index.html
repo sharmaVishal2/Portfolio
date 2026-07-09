@@ -1,477 +1,336 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vishal Sharma | Full Stack Developer</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vishal Sharma | Software Engineer</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta name="description" content="Vishal Sharma — Software Engineer. Backend-focused Java & Spring Boot developer building scalable services and AI-powered applications.">
 </head>
-<body>
+<body class="theme-dark">
 
-    <!-- NAVBAR -->
-    <nav class="navbar">
-        <div class="container nav-inner">
-            <a href="#home" class="logo">Vishal Sharma</a>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#achievements">Achievements</a></li>
-                <li><a href="#contact">Contact</a></li>
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container nav-inner">
+      <a href="#home" class="logo">Vishal Sharma</a>
+      <ul class="nav-links" role="menubar">
+        <li role="none"><a role="menuitem" href="#about">About</a></li>
+        <li role="none"><a role="menuitem" href="#skills">Skills</a></li>
+        <li role="none"><a role="menuitem" href="#projects">Projects</a></li>
+        <li role="none"><a role="menuitem" href="#experience">Experience</a></li>
+        <li role="none"><a role="menuitem" href="#achievements">Achievements</a></li>
+        <li role="none"><a role="menuitem" href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button id="themeToggle" class="btn btn-icon" aria-label="Toggle theme">
+          <i class="fas fa-sun" aria-hidden="true"></i>
+          <span class="sr-only">Toggle theme</span>
+        </button>
+        <a href="assets/resume/Vishal Resume final.pdf" class="btn btn-outline nav-resume" target="_blank" rel="noopener">Resume</a>
+        <button class="menu-toggle" aria-label="Open menu"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header id="home" class="hero" role="banner">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <p class="hero-greeting">Hi, I'm</p>
+        <h1>Vishal Sharma</h1>
+        <h2 class="hero-role">Software Engineer | Java Backend Developer | Spring Boot | React</h2>
+        <p class="hero-desc">
+          Backend-focused engineer building scalable, secure services and AI-powered applications. Experienced with
+          <span class="highlight">Spring Boot</span>, <span class="highlight">PostgreSQL</span>, <span class="highlight">JWT</span>, and
+          production-grade LLM integrations for intelligent features.
+        </p>
+        <div class="hero-cta">
+          <a href="assets/resume/Vishal Resume final.pdf" download class="btn btn-primary"><i class="fas fa-download"></i> Download Resume</a>
+          <a href="#projects" class="btn btn-outline">View Projects</a>
+          <a href="#contact" class="btn btn-ghost">Contact Me</a>
+        </div>
+        <p class="hero-subtle">Open to backend / full-stack internships · Expected 2027</p>
+        <div class="hero-socials" aria-hidden="false">
+          <a href="https://github.com/sharmaVishal2" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/sharma-vishal-1abc/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="https://leetcode.com/u/sharma_vishal_1/" target="_blank" aria-label="LeetCode"><i class="fas fa-code"></i></a>
+        </div>
+      </div>
+
+      <div class="hero-image" aria-hidden="true">
+        <div class="profile-ring">
+          <img src="assets/profile/profile.jpg.jpeg" alt="Vishal Sharma" loading="lazy">
+        </div>
+      </div>
+    </div>
+    <div class="bg-animated" aria-hidden="true"></div>
+  </header>
+
+  <!-- ABOUT -->
+  <section id="about" class="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">About Me</span>
+        <h2 class="section-title">Professional Summary</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            I'm a B.Tech Computer Science student (expected 2027) and a Java backend developer focused on building
+            scalable backend systems, REST APIs, and AI-powered applications. I design secure, production-ready services
+            using Spring Boot, PostgreSQL, and modern authentication patterns (JWT/OAuth2). I enjoy solving system design
+            problems and have completed 200+ DSA problems to strengthen algorithmic thinking.
+          </p>
+          <p>
+            My work combines clean architecture, automated testing, and pragmatic deployments. I am passionate about
+            low-latency APIs, observability, and building services that scale horizontally.
+          </p>
+
+          <div class="about-stats">
+            <div class="stat"><span class="stat-number">AIR 102</span><span class="stat-label">NEC 2025</span></div>
+            <div class="stat"><span class="stat-number">Top 50</span><span class="stat-label">SIH 2024</span></div>
+            <div class="stat"><span class="stat-number">200+</span><span class="stat-label">DSA Problems</span></div>
+          </div>
+        </div>
+
+        <aside class="about-details" aria-label="Details">
+          <div class="detail-card">
+            <h3><i class="fas fa-graduation-cap"></i> Education</h3>
+            <p class="detail-main">B.Tech — Computer Science Engineering</p>
+            <p class="detail-sub">Dr. Ambedkar Institute of Technology for Divyangjan, Kanpur</p>
+            <p class="detail-sub">AKTU · Expected 2027 · CGPA: 7.04</p>
+          </div>
+          <div class="detail-card">
+            <h3><i class="fas fa-map-marker-alt"></i> Location</h3>
+            <p class="detail-main">Kanpur, Uttar Pradesh, India</p>
+            <p class="detail-sub">Open to remote internships</p>
+          </div>
+          <div class="detail-card">
+            <h3><i class="fas fa-briefcase"></i> Looking For</h3>
+            <p class="detail-main">Backend / Full Stack Internship</p>
+            <p class="detail-sub">Java · Spring Boot · React</p>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Technical Skills</span>
+        <h2 class="section-title">What I Work With</h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-column">
+          <h4><i class="fas fa-code"></i> Languages</h4>
+          <ul>
+            <li><i class="fab fa-java"></i> Java</li>
+            <li><i class="fab fa-python"></i> Python</li>
+            <li><i class="fab fa-js-square"></i> JavaScript</li>
+            <li><i class="fas fa-database"></i> SQL</li>
+          </ul>
+        </div>
+        <div class="skill-column">
+          <h4><i class="fas fa-server"></i> Backend</h4>
+          <ul>
+            <li>Spring Boot</li>
+            <li>Spring MVC</li>
+            <li>Spring Security</li>
+            <li>REST APIs</li>
+            <li>Hibernate / JPA</li>
+          </ul>
+        </div>
+        <div class="skill-column">
+          <h4><i class="fas fa-database"></i> Database</h4>
+          <ul>
+            <li>PostgreSQL</li>
+            <li>MySQL</li>
+            <li>MongoDB</li>
+          </ul>
+        </div>
+        <div class="skill-column">
+          <h4><i class="fas fa-desktop"></i> Frontend</h4>
+          <ul>
+            <li>React</li>
+            <li>HTML / CSS</li>
+            <li>Tailwind CSS</li>
+          </ul>
+        </div>
+        <div class="skill-column">
+          <h4><i class="fas fa-brain"></i> AI</h4>
+          <ul>
+            <li>Machine Learning</li>
+            <li>Deep Learning</li>
+            <li>NLP / LLMs</li>
+            <li>RAG &amp; Prompt Engineering</li>
+          </ul>
+        </div>
+        <div class="skill-column">
+          <h4><i class="fas fa-tools"></i> Tools</h4>
+          <ul>
+            <li>Git / GitHub</li>
+            <li>Docker</li>
+            <li>Maven</li>
+            <li>Postman</li>
+            <li>AWS</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Projects</span>
+        <h2 class="section-title">What I've Built</h2>
+      </div>
+
+      <div class="featured-project">
+        <div class="featured-inner">
+          <div class="featured-info">
+            <h3>SmartHire — AI-Driven Mock Interview Platform</h3>
+            <p class="project-problem">A full-stack AI interview platform with resume ingestion, LLM-driven questions, and real-time feedback.</p>
+            <ul class="feature-list">
+              <li>Resume parsing</li>
+              <li>AI interview generation (RAG + LLM)</li>
+              <li>Automated answer evaluation</li>
+              <li>JWT authentication</li>
             </ul>
-            <a href="assets/resume/Vishal Resume final.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline nav-resume">View Resume</a>
-            <button class="menu-toggle" aria-label="Toggle menu">
-                <i class="fas fa-bars"></i>
-            </button>
+            <div class="project-stack"><span>Spring Boot</span><span>React</span><span>Groq API</span><span>JWT</span><span>PostgreSQL</span></div>
+            <div class="project-actions">
+              <a href="https://github.com/sharmaVishal2/Smart-Hire-AI-driven-interview-prepation-" target="_blank" class="btn btn-outline btn-sm"><i class="fab fa-github"></i> GitHub</a>
+              <a href="https://ai-hackfest-mlh.vercel.app/" target="_blank" class="btn btn-primary btn-sm"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+            </div>
+          </div>
+          <div class="featured-visual" aria-hidden="true">
+            <div class="project-mockup">
+              <div class="mockup-bar"><span></span><span></span><span></span></div>
+              <div class="mockup-body">
+                <div class="chat-preview">
+                  <div class="chat-msg received">Start mock interview...</div>
+                  <div class="chat-msg sent">Generating questions ⚡</div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </nav>
+      </div>
 
-    <!-- HERO -->
-    <section id="home" class="hero">
-        <div class="container hero-inner">
-            <div class="hero-text">
-                <p class="hero-greeting">Hi, I'm</p>
-                <h1>Vishal Sharma</h1>
-                <h2 class="hero-role">Full Stack Developer</h2>
-                <p class="hero-desc">
-                    I build scalable backend systems and AI-integrated applications using
-                    <span class="highlight">Spring Boot</span>, <span class="highlight">React</span>,
-                    <span class="highlight">PostgreSQL</span>, and <span class="highlight">LLaMA 3</span>.
-                    Focused on clean architecture, JWT-secured APIs, and production-ready deployments.
-                </p>
-                <div class="hero-cta">
-                    <a href="#projects" class="btn btn-primary">View Projects</a>
-                    <a href="#contact" class="btn btn-outline">Contact Me</a>
-                    <a href="assets/resume/Vishal Resume final.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">
-                        <i class="fas fa-file-alt"></i> View Resume
-                    </a>
-                </div>
-                <div class="hero-socials">
-                    <a href="https://github.com/sharmaVishal2" target="_blank" class="tooltip-wrap" aria-label="GitHub">
-                        <i class="fab fa-github"></i>
-                        <span class="tooltip">GitHub</span>
-                    </a>
-                    <a href="https://www.linkedin.com/in/sharma-vishal-1abc/" target="_blank" class="tooltip-wrap" aria-label="LinkedIn">
-                        <i class="fab fa-linkedin"></i>
-                        <span class="tooltip">LinkedIn</span>
-                    </a>
-                    <a href="https://leetcode.com/u/sharma_vishal_1/" target="_blank" class="tooltip-wrap" aria-label="LeetCode">
-                        <i class="fas fa-code"></i>
-                        <span class="tooltip">LeetCode</span>
-                    </a>
-                    <a href="mailto:sharma2005vishal@gmail.com" class="tooltip-wrap" aria-label="Email">
-                        <i class="fas fa-envelope"></i>
-                        <span class="tooltip">Email</span>
-                    </a>
-                </div>
-            </div>
-            <div class="hero-image">
-                <div class="profile-ring">
-                    <img src="assets/profile/profile.jpg.jpeg" alt="Vishal Sharma">
-                </div>
-            </div>
+      <div class="projects-grid premium">
+        <!-- E-Commerce -->
+        <div class="project-card">
+          <img src="assets/profile/project-ecommerce.jpg" alt="E-Commerce banner" loading="lazy">
+          <div class="project-body">
+            <h3>E-Commerce Backend System</h3>
+            <div class="project-stack"><span>Spring Boot</span><span>PostgreSQL</span><span>OAuth2</span><span>JWT</span></div>
+            <ul class="feature-list"><li>Spring Security + OAuth2</li><li>Pagination & search</li><li>Normalized DB design</li></ul>
+            <div class="project-actions"><a href="https://github.com/sharmaVishal2/E-Commerce-Application-by-Java-Spring-Boot" target="_blank" class="btn btn-outline btn-sm"><i class="fab fa-github"></i> GitHub</a></div>
+          </div>
         </div>
-    </section>
 
-    <!-- ABOUT -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">About Me</span>
-                <h2 class="section-title">Who I Am</h2>
-            </div>
-            <div class="about-grid">
-                <div class="about-text">
-                    <p>
-                        I'm a Computer Science undergraduate and Full Stack Developer with a strong focus on
-                        <strong>backend engineering</strong> and <strong>AI-integrated systems</strong>. I design and build
-                        REST APIs, microservices, and end-to-end web applications using
-                        Java, Spring Boot, and React.
-                    </p>
-                    <p>
-                        My backend work spans JWT authentication, OAuth2.0, Spring Security, Kafka-based event-driven
-                        architecture, and Spring Data JPA. On the frontend, I build responsive UIs with React and
-                        Tailwind CSS. I deploy full stack apps using <strong>Vercel</strong>, <strong>Render</strong>, and <strong>Neon DB</strong>.
-                    </p>
-                    <p>
-                        I hold a strong foundation in OOP, DBMS, OS, and Computer Networks. I write clean,
-                        maintainable code and actively seek internship opportunities to contribute to real-world engineering teams.
-                    </p>
-                    <div class="about-stats">
-                        <div class="stat">
-                            <span class="stat-number">AIR 102</span>
-                            <span class="stat-label">NEC 2025</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number">Top 50</span>
-                            <span class="stat-label">SIH 2024</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number">2+</span>
-                            <span class="stat-label">Projects Live</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-details">
-                    <div class="detail-card">
-                        <h3><i class="fas fa-graduation-cap"></i> Education</h3>
-                        <p class="detail-main">B.Tech — Computer Science Engineering</p>
-                        <p class="detail-sub">Dr. Ambedkar Institute of Technology for Divyangjan, Kanpur</p>
-                        <p class="detail-sub">AKTU · Expected 2027 · CGPA: 7.04</p>
-                    </div>
-                    <div class="detail-card">
-                        <h3><i class="fas fa-map-marker-alt"></i> Location</h3>
-                        <p class="detail-main">Kanpur, Uttar Pradesh, India</p>
-                        <p class="detail-sub">Open to remote internships</p>
-                    </div>
-                    <div class="detail-card">
-                        <h3><i class="fas fa-briefcase"></i> Looking For</h3>
-                        <p class="detail-main">Backend / Full Stack Internship</p>
-                        <p class="detail-sub">Java · Spring Boot · React</p>
-                    </div>
-                </div>
-            </div>
+        <!-- Sign Language -->
+        <div class="project-card">
+          <img src="assets/profile/project-signlang.jpg" alt="Sign Language" loading="lazy">
+          <div class="project-body">
+            <h3>Sign Language Detection</h3>
+            <div class="project-stack"><span>CNN</span><span>Deep Learning</span><span>Gesture Recognition</span></div>
+            <ul class="feature-list"><li>CNN-based gesture recognition</li><li>Data augmentation</li></ul>
+            <div class="project-actions"><a href="#" class="btn btn-outline btn-sm"><i class="fab fa-github"></i> GitHub</a></div>
+          </div>
         </div>
-    </section>
 
-    <!-- SKILLS -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Technical Skills</span>
-                <h2 class="section-title">What I Work With</h2>
-            </div>
-            <div class="skills-grid">
-
-                <div class="skill-category">
-                    <div class="skill-cat-header">
-                        <i class="fas fa-code"></i>
-                        <h3>Languages</h3>
-                    </div>
-                    <div class="skill-tags">
-                        <span class="tag">Java</span>
-                        <span class="tag">JavaScript</span>
-                        <span class="tag">SQL</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <div class="skill-cat-header">
-                        <i class="fas fa-server"></i>
-                        <h3>Backend</h3>
-                    </div>
-                    <div class="skill-tags">
-                        <span class="tag">Spring Boot</span>
-                        <span class="tag">Spring MVC</span>
-                        <span class="tag">Spring Security</span>
-                        <span class="tag">Microservices</span>
-                        <span class="tag">REST APIs</span>
-                        <span class="tag">Hibernate</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <div class="skill-cat-header">
-                        <i class="fas fa-database"></i>
-                        <h3>Databases</h3>
-                    </div>
-                    <div class="skill-tags">
-                        <span class="tag">MySQL</span>
-                        <span class="tag">PostgreSQL</span>
-                        <span class="tag">MongoDB</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <div class="skill-cat-header">
-                        <i class="fas fa-desktop"></i>
-                        <h3>Frontend</h3>
-                    </div>
-                    <div class="skill-tags">
-                        <span class="tag">HTML</span>
-                        <span class="tag">CSS</span>
-                        <span class="tag">React</span>
-                        <span class="tag">Tailwind CSS</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <div class="skill-cat-header">
-                        <i class="fas fa-tools"></i>
-                        <h3>Tools &amp; DevOps</h3>
-                    </div>
-                    <div class="skill-tags">
-                        <span class="tag">Docker</span>
-                        <span class="tag">Git</span>
-                        <span class="tag">Maven</span>
-                        <span class="tag">Postman</span>
-                        <span class="tag">Redis</span>
-                        <span class="tag">Apache Kafka</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <div class="skill-cat-header">
-                        <i class="fas fa-brain"></i>
-                        <h3>CS Fundamentals</h3>
-                    </div>
-                    <div class="skill-tags">
-                        <span class="tag">DSA</span>
-                        <span class="tag">OOP</span>
-                        <span class="tag">DBMS</span>
-                        <span class="tag">OS</span>
-                        <span class="tag">Computer Networks</span>
-                    </div>
-                </div>
-
-            </div>
+        <!-- Placeholder for more projects -->
+        <div class="project-card">
+          <div class="project-body">
+            <h3>More Projects</h3>
+            <p class="project-problem">Explore more on my GitHub for additional backend and AI projects.</p>
+            <div class="project-actions"><a href="https://github.com/sharmaVishal2?tab=repositories" target="_blank" class="btn btn-outline btn-sm"><i class="fab fa-github"></i> View All</a></div>
+          </div>
         </div>
-    </section>
+      </div>
 
-    <!-- PROJECTS -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Projects</span>
-                <h2 class="section-title">What I've Built</h2>
-            </div>
+    </div>
+  </section>
 
-            <!-- Featured Project -->
-            <div class="featured-project">
-                <div class="featured-inner">
-                    <div class="featured-info">
-                        <h3>SmartHire — AI-Driven Mock Interview Platform</h3>
-                        <p class="project-problem">
-                            A full-stack AI interview platform supporting 50+ concurrent users with sub-500ms response
-                            latency via WebSocket streaming, from resume ingestion to real-time feedback.
-                        </p>
-                        <ul class="feature-list">
-                            <li>Designed a <strong>RAG pipeline</strong> integrating LLaMA 3 (Groq API) with PostgreSQL vector search to generate role-specific questions across 10+ job domains, achieving ~85% user-rated relevance</li>
-                            <li>Engineered a real-time answer evaluation engine scoring responses across <strong>5 competency dimensions</strong>, delivering structured feedback in under 2 seconds</li>
-                            <li>Implemented <strong>JWT-based stateless auth</strong> with RBAC securing 15+ API endpoints for horizontal scalability</li>
-                            <li>Architected end-to-end full-stack system with Spring Boot backend and React frontend using layered MVC architecture</li>
-                        </ul>
-                        <div class="project-stack">
-                            <span class="stack-tag">Spring Boot</span>
-                            <span class="stack-tag">React</span>
-                            <span class="stack-tag">LLaMA 3 (Groq API)</span>
-                            <span class="stack-tag">PostgreSQL</span>
-                            <span class="stack-tag">JWT</span>
-                        </div>
-                        <div class="project-actions">
-                            <a href="https://github.com/sharmaVishal2/Smart-Hire-AI-driven-interview-prepation-" target="_blank" class="btn btn-outline btn-sm">
-                                <i class="fab fa-github"></i> GitHub
-                            </a>
-                            <a href="https://ai-hackfest-mlh.vercel.app/" target="_blank" class="btn btn-primary btn-sm">
-                                <i class="fas fa-external-link-alt"></i> Live Demo
-                            </a>
-                        </div>
-                    </div>
-                    <div class="featured-visual">
-                        <div class="project-mockup">
-                            <div class="mockup-bar">
-                                <span></span><span></span><span></span>
-                            </div>
-                            <div class="mockup-body">
-                                <div class="chat-preview">
-                                    <div class="chat-msg received">Start mock interview...</div>
-                                    <div class="chat-msg sent">Generating questions ⚡</div>
-                                    <div class="chat-msg received">Evaluating answer...</div>
-                                    <div class="chat-msg sent">Feedback ready! 🤖</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <!-- EXPERIENCE -->
+  <section id="experience" class="experience">
+    <div class="container">
+      <div class="section-header"><span class="section-label">Experience</span><h2 class="section-title">Industry Exposure</h2></div>
+      <div class="experience-card">
+        <h3>JPMorgan Chase &amp; Co. — Software Engineering Virtual Experience (Forage)</h3>
+        <ul class="feature-list"><li>Built backend services simulating transaction workflows using Spring Boot</li><li>Wrote JUnit tests and clean service-layer code</li></ul>
+      </div>
+    </div>
+  </section>
 
-            <!-- Other Projects -->
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-card-top">
-                        <div class="project-icon"><i class="fas fa-shopping-cart"></i></div>
-                    </div>
-                    <h3>E-Commerce Backend System</h3>
-                    <p class="project-problem">
-                        A production-grade e-commerce backend with OAuth 2.0 + JWT auth, normalized PostgreSQL schema
-                        across 6+ entities, and paginated product-discovery APIs handling 10,000+ SKUs.
-                    </p>
-                    <ul class="feature-list">
-                        <li><strong>OAuth 2.0 + JWT</strong> pipeline via Spring Security supporting social login &amp; credential-based flows across 20+ secured routes</li>
-                        <li>Normalized PostgreSQL schema across 6+ entities reducing data redundancy by ~30%, with Spring Data JPA &amp; Hibernate ORM</li>
-                        <li>Paginated product search &amp; multi-filter APIs with indexing strategies reducing average query latency by <strong>40%</strong> under load</li>
-                        <li>Stateless cart management APIs enabling horizontal scaling with zero sticky-session overhead</li>
-                        <li>Leveraged <strong>Amazon Q</strong> AI tooling, cutting boilerplate generation time by ~35% across a 3-month build cycle</li>
-                    </ul>
-                    <div class="project-stack">
-                        <span class="stack-tag">Spring Boot</span>
-                        <span class="stack-tag">PostgreSQL</span>
-                        <span class="stack-tag">Spring Security</span>
-                        <span class="stack-tag">OAuth2.0</span>
-                        <span class="stack-tag">JPA</span>
-                    </div>
-                    <div class="project-actions">
-                        <a href="https://github.com/sharmaVishal2/E-Commerce-Application-by-Java-Spring-Boot" target="_blank" class="btn btn-outline btn-sm">
-                            <i class="fab fa-github"></i> GitHub
-                        </a>
-                        <a href="https://e-commerce-application-by-java-spri.vercel.app/" target="_blank" class="btn btn-primary btn-sm">
-                            <i class="fas fa-external-link-alt"></i> Live Demo
-                        </a>
-                    </div>
-                </div>
-            </div>
+  <!-- ACHIEVEMENTS -->
+  <section id="achievements" class="achievements">
+    <div class="container">
+      <div class="section-header"><span class="section-label">Achievements</span><h2 class="section-title">Highlights</h2></div>
+      <div class="achievements-grid">
+        <div class="achievement-card"><div class="ach-icon"><i class="fas fa-trophy"></i></div><div class="ach-content"><h3>AIR 102 — NEC 2025</h3></div></div>
+        <div class="achievement-card"><div class="ach-icon"><i class="fas fa-users"></i></div><div class="ach-content"><h3>Smart India Hackathon — Team Leader</h3></div></div>
+        <div class="achievement-card"><div class="ach-icon"><i class="fas fa-code"></i></div><div class="ach-content"><h3>200+ DSA Problems</h3></div></div>
+        <div class="achievement-card"><div class="ach-icon"><i class="fas fa-globe"></i></div><div class="ach-content"><h3>CodeChef Global Rank 824</h3></div></div>
+        <div class="achievement-card"><div class="ach-icon"><i class="fas fa-briefcase"></i></div><div class="ach-content"><h3>JPMorgan Chase Virtual Experience</h3></div></div>
+        <div class="achievement-card"><div class="ach-icon"><i class="fas fa-certificate"></i></div><div class="ach-content"><h3>AI for All Certifications</h3></div></div>
+      </div>
+    </div>
+  </section>
 
-            <!-- GitHub CTA -->
-            <div class="github-cta">
-                <p class="github-cta-text">More projects on GitHub</p>
-                <a href="https://github.com/sharmaVishal2?tab=repositories" target="_blank" class="btn btn-outline btn-sm">
-                    <i class="fab fa-github"></i> View All Projects
-                </a>
-            </div>
+  <!-- EDUCATION & TIMELINE -->
+  <section class="education">
+    <div class="container">
+      <div class="section-header"><span class="section-label">Education</span><h2 class="section-title">Academic Background</h2></div>
+      <div class="detail-card"><h3>Dr. AITD, Kanpur</h3><p>B.Tech Computer Science Engineering — Expected 2027 · CGPA: 7.04</p>
+        <p>Relevant coursework: DSA, Operating Systems, DBMS, Computer Networks, OOP, Software Engineering, System Design</p></div>
 
+      <div class="section-header" style="margin-top:18px"><span class="section-label">Timeline</span><h2 class="section-title">Milestones</h2></div>
+      <div class="timeline">
+        <div class="timeline-item"><div class="timeline-year">2023</div><div>Started B.Tech</div></div>
+        <div class="timeline-item"><div class="timeline-year">2024</div><div>Smart India Hackathon — Team Leader</div></div>
+        <div class="timeline-item"><div class="timeline-year">2025</div><div>NEC — AIR 102</div></div>
+        <div class="timeline-item"><div class="timeline-year">2026</div><div>JPMorgan Virtual Experience · AI Certifications</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="section-header"><span class="section-label">Contact</span><h2 class="section-title">Let's Work Together</h2></div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <a href="mailto:sharma2005vishal@gmail.com" class="contact-card"><i class="fas fa-envelope"></i><div><span class="contact-label">Email</span><span class="contact-value">sharma2005vishal@gmail.com</span></div></a>
+          <a href="tel:+918218837039" class="contact-card"><i class="fas fa-phone"></i><div><span class="contact-label">Phone</span><span class="contact-value">+91 82188 37039</span></div></a>
+          <a href="https://www.linkedin.com/in/sharma-vishal-1abc/" target="_blank" class="contact-card"><i class="fab fa-linkedin"></i><div><span class="contact-label">LinkedIn</span><span class="contact-value">sharma-vishal-1abc</span></div></a>
+          <a href="https://github.com/sharmaVishal2" target="_blank" class="contact-card"><i class="fab fa-github"></i><div><span class="contact-label">GitHub</span><span class="contact-value">sharmaVishal2</span></div></a>
+          <a href="https://leetcode.com/u/sharma_vishal_1/" target="_blank" class="contact-card"><i class="fas fa-code"></i><div><span class="contact-label">LeetCode</span><span class="contact-value">sharma_vishal_1</span></div></a>
         </div>
-    </section>
 
-    <!-- EXPERIENCE -->
-    <section id="experience" class="experience">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Virtual Experience</span>
-                <h2 class="section-title">Industry Exposure</h2>
-            </div>
-            <div class="experience-card">
-                <div class="exp-header">
-                    <div class="exp-icon"><i class="fas fa-building"></i></div>
-                    <div class="exp-meta">
-                        <h3>JPMorgan Chase &amp; Co.</h3>
-                        <span class="exp-role">Software Engineering Virtual Experience &mdash; Forage</span>
-                    </div>
-                </div>
-                <ul class="feature-list">
-                    <li>Built and tested backend services simulating <strong>financial transaction workflows</strong> using Spring Boot</li>
-                    <li>Developed REST APIs with clean service-layer architecture for structured request/response handling</li>
-                    <li>Wrote <strong>JUnit</strong> unit tests to ensure correctness and reliability of core application logic</li>
-                </ul>
-                <div class="project-stack">
-                    <span class="stack-tag">Spring Boot</span>
-                    <span class="stack-tag">REST APIs</span>
-                    <span class="stack-tag">JUnit</span>
-                    <span class="stack-tag">Maven</span>
-                </div>
-            </div>
-        </div>
-    </section>
+        <form class="contact-form" id="contactForm">
+          <div class="form-group"><label for="name">Name</label><input type="text" id="name" placeholder="Your name" required></div>
+          <div class="form-group"><label for="email">Email</label><input type="email" id="email" placeholder="your@email.com" required></div>
+          <div class="form-group"><label for="message">Message</label><textarea id="message" rows="5" placeholder="Tell me about the opportunity..." required></textarea></div>
+          <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
 
-    <section id="achievements" class="achievements">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Achievements</span>
-                <h2 class="section-title">Highlights</h2>
-            </div>
-            <div class="achievements-grid">
-                <div class="achievement-card">
-                    <div class="ach-icon"><i class="fas fa-trophy"></i></div>
-                    <div class="ach-content">
-                        <h3>AIR 102 — NEC 2025</h3>
-                        <p>All India Rank 102 among 4,000+ colleges nationwide, placing in the top ~2.5% overall</p>
-                    </div>
-                </div>
-                <div class="achievement-card">
-                    <div class="ach-icon"><i class="fas fa-users"></i></div>
-                    <div class="ach-content">
-                        <h3>Smart India Hackathon 2024</h3>
-                        <p>Team Leader — Shortlisted Top 50 out of 130+ internal teams (~top 38%)</p>
-                    </div>
-                </div>
+  <footer>
+    <div class="container footer-inner">
+      <div class="footer-left"><span class="footer-name">Vishal Sharma</span><span class="footer-role">Software Engineer</span></div>
+      <div class="footer-links"><a href="https://github.com/sharmaVishal2" target="_blank"><i class="fab fa-github"></i></a><a href="https://www.linkedin.com/in/sharma-vishal-1abc/" target="_blank"><i class="fab fa-linkedin"></i></a><a href="mailto:sharma2005vishal@gmail.com"><i class="fas fa-envelope"></i></a></div>
+      <p class="footer-copy">© 2026 Vishal Sharma · Built with HTML, CSS & JS</p>
+    </div>
+  </footer>
 
-            </div>
-        </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Contact</span>
-                <h2 class="section-title">Let's Work Together</h2>
-                <p class="section-sub">I'm actively looking for backend / full stack internship opportunities. If you have a role or project in mind, let's talk.</p>
-            </div>
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <a href="mailto:sharma2005vishal@gmail.com" class="contact-card">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <span class="contact-label">Email</span>
-                            <span class="contact-value">sharma2005vishal@gmail.com</span>
-                        </div>
-                    </a>
-                    <a href="tel:+918218837039" class="contact-card">
-                        <i class="fas fa-phone"></i>
-                        <div>
-                            <span class="contact-label">Phone</span>
-                            <span class="contact-value">+91 82188 37039</span>
-                        </div>
-                    </a>
-                    <a href="https://www.linkedin.com/in/sharma-vishal-1abc/" target="_blank" class="contact-card">
-                        <i class="fab fa-linkedin"></i>
-                        <div>
-                            <span class="contact-label">LinkedIn</span>
-                            <span class="contact-value">sharma-vishal-1abc</span>
-                        </div>
-                    </a>
-                    <a href="https://github.com/sharmaVishal2" target="_blank" class="contact-card">
-                        <i class="fab fa-github"></i>
-                        <div>
-                            <span class="contact-label">GitHub</span>
-                            <span class="contact-value">sharmaVishal2</span>
-                        </div>
-                    </a>
-                    <a href="https://leetcode.com/u/sharma_vishal_1/" target="_blank" class="contact-card">
-                        <i class="fas fa-code"></i>
-                        <div>
-                            <span class="contact-label">LeetCode</span>
-                            <span class="contact-value">sharma_vishal_1</span>
-                        </div>
-                    </a>
-                </div>
-                <form class="contact-form" id="contactForm">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" placeholder="Your name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" placeholder="your@email.com" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" rows="5" placeholder="Tell me about the opportunity..." required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-full">Send Message</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer>
-        <div class="container footer-inner">
-            <div class="footer-left">
-                <span class="footer-name">Vishal Sharma</span>
-                <span class="footer-role">Full Stack Developer</span>
-            </div>
-            <div class="footer-links">
-                <a href="https://github.com/sharmaVishal2" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/sharma-vishal-1abc/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="mailto:sharma2005vishal@gmail.com"><i class="fas fa-envelope"></i></a>
-                <a href="https://leetcode.com/u/sharma_vishal_1/" target="_blank"><i class="fas fa-code"></i></a>
-            </div>
-            <p class="footer-copy">© 2025 Vishal Sharma · Built with HTML, CSS & JS</p>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
