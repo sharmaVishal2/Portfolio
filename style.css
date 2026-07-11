@@ -52,8 +52,7 @@ a { color: inherit; text-decoration: none; }
 .skip-link {
   position: fixed;
   top: 0.9rem;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 1rem;
   background: var(--primary);
   color: white;
   padding: 0.75rem 1rem;
@@ -69,7 +68,7 @@ a { color: inherit; text-decoration: none; }
 .skip-link:focus,
 .skip-link:active {
   outline: none;
-  transform: translateX(-50%) translateY(2px);
+  transform: translateY(2px);
 }
 
 .sr-only {
