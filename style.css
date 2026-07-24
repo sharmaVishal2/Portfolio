@@ -182,8 +182,8 @@ h2 span, h1 span { color: var(--blue); }
 .hero-location { display: inline-flex; align-items: center; gap: 0.35rem; margin-left: 0.35rem; color: var(--muted); font-family: var(--font-mono); font-size: 0.71rem; }
 .hero-location svg { width: 0.9rem; color: var(--blue); }
 .hero-portrait { position: relative; justify-self: end; width: min(100%, 410px); padding: 0.6rem 1.6rem 1rem; }
-.portrait-backdrop { position: absolute; z-index: -1; top: 5%; right: -18%; width: 111%; height: 83%; border: 1px solid rgba(102, 181, 255, 0.28); border-radius: 52% 48% 39% 61% / 39% 45% 55% 61%; background: linear-gradient(130deg, rgba(75, 163, 255, 0.13), rgba(160, 116, 255, 0.05)); transform: rotate(8deg); }
-.portrait-frame { position: relative; overflow: hidden; aspect-ratio: 0.79; border: 1px solid var(--line-bright); border-radius: 50% 50% 3.5rem 3.5rem; background: #ced9e8; box-shadow: var(--shadow); }
+.portrait-backdrop { display: none; }
+.portrait-frame { position: relative; overflow: hidden; aspect-ratio: 1 / 1; border: 1px solid var(--line-bright); border-radius: 50%; background: transparent; box-shadow: var(--shadow); }
 .portrait-frame::after { position: absolute; inset: 0; content: ""; pointer-events: none; background: linear-gradient(180deg, transparent 55%, rgba(5, 12, 22, 0.58)); }
 .portrait-frame img { width: 100%; height: 100%; object-fit: cover; object-position: 45% 31%; filter: saturate(0.93) contrast(1.03); }
 .portrait-label { position: absolute; z-index: 1; right: 1.45rem; bottom: 1.55rem; color: #f7fbff; font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.04em; line-height: 1.55; text-align: right; text-transform: uppercase; }
