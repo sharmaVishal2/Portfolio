@@ -221,6 +221,7 @@ a { color: inherit; text-decoration: none; }
 body.theme-light .btn-outline {
   background: rgba(255, 255, 255, 0.9);
 }
+body.theme-light .section-title { color: #0f172a; }
 .btn-ghost {
   background: transparent;
   border-color: rgba(255,255,255,0.12);
@@ -372,7 +373,7 @@ body.theme-light .btn-outline {
   letter-spacing: 0.2em;
   text-transform: uppercase;
 }
-.section-title { margin: 0; font-size: clamp(1.8rem, 2.7vw, 2.45rem); }
+.section-title { margin: 0; font-size: clamp(1.8rem, 2.7vw, 2.45rem); color: #ffffff; }
 
 .about-grid { display: grid; gap: 1.6rem; grid-template-columns: 1.45fr 0.95fr; }
 .about-text p, .about-text li, .detail-card p, .project-problem, .feature-list, .timeline-item p, .education-card p { color: var(--muted); }
