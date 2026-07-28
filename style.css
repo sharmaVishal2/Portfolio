@@ -434,6 +434,9 @@ body.theme-light .proof-section { background: rgba(255, 255, 255, 0.48); }
 .screen-card.screen-alt .mini-title { background: #a999ff; }
 .sr-dialog-label { margin-top: -0.55rem; color: var(--muted); font-family: var(--font-mono); font-size: 0.58rem; }
 .dialog-visual p { margin: auto 0 0; color: var(--muted); font-size: 0.69rem; line-height: 1.6; }
+.dialog-visual-img { display: flex; flex-direction: column; gap: 0.45rem; }
+.dialog-visual-img img, .dialog-visual-img svg { width: 100%; border-radius: 0.75rem; border: 1px solid var(--line); }
+.dialog-visual-img .sr-dialog-label { color: var(--muted); font-family: var(--font-mono); font-size: 0.58rem; }
 
 /* Progressive motion */
 .reveal { opacity: 0; transform: translateY(20px); transition: opacity 650ms cubic-bezier(.2,.65,.25,1), transform 650ms cubic-bezier(.2,.65,.25,1); }

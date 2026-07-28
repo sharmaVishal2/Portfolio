@@ -1,30 +1,130 @@
-<svg width="1200" height="720" viewBox="0 0 1200 720" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="1200" height="720" rx="40" fill="#07111F"/>
-  <rect x="82" y="92" width="1036" height="536" rx="32" fill="url(#bg)" stroke="#2B456A" stroke-width="2"/>
-  <rect x="136" y="132" width="256" height="34" rx="17" fill="#143A5B"/>
-  <rect x="136" y="182" width="168" height="12" rx="6" fill="#77B3FF"/>
-  <rect x="136" y="208" width="122" height="10" rx="5" fill="#4F698D"/>
-  <circle cx="336" cy="386" r="122" fill="#0D1C32" stroke="#5CA0FF" stroke-width="4"/>
-  <path d="M300 340C300 320 315 306 336 306C357 306 372 320 372 340V360H300V340Z" fill="#F8FAFC"/>
-  <rect x="282" y="360" width="108" height="100" rx="24" fill="#60A5FA"/>
-  <rect x="286" y="396" width="24" height="78" rx="12" fill="#F8FAFC"/>
-  <rect x="320" y="396" width="24" height="78" rx="12" fill="#F8FAFC"/>
-  <rect x="354" y="396" width="24" height="78" rx="12" fill="#F8FAFC"/>
-  <rect x="470" y="236" width="260" height="310" rx="30" fill="#0D1C32" stroke="#5CA0FF" stroke-width="4"/>
-  <path d="M508 304C508 280 526 262 550 262H580C604 262 622 280 622 304V324H508V304Z" fill="#F8FAFC"/>
-  <rect x="500" y="324" width="136" height="164" rx="24" fill="#8B5CF6"/>
-  <rect x="520" y="346" width="22" height="92" rx="11" fill="#F8FAFC"/>
-  <rect x="552" y="346" width="22" height="92" rx="11" fill="#F8FAFC"/>
-  <rect x="584" y="346" width="22" height="92" rx="11" fill="#F8FAFC"/>
-  <circle cx="862" cy="384" r="112" fill="#0D1C32" stroke="#8B5CF6" stroke-width="4"/>
-  <path d="M812 384H912" stroke="#F8FAFC" stroke-width="14" stroke-linecap="round"/>
-  <path d="M862 332V436" stroke="#F8FAFC" stroke-width="14" stroke-linecap="round"/>
-  <rect x="144" y="546" width="424" height="40" rx="20" fill="#15253F"/>
-  <rect x="600" y="546" width="240" height="40" rx="20" fill="#15253F"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" fill="none">
+  <rect width="800" height="420" fill="#080e1c"/>
+  <!-- background grid -->
   <defs>
-    <linearGradient id="bg" x1="126" y1="92" x2="1084" y2="628" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#0B1728"/>
-      <stop offset="1" stop-color="#13253D"/>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(144,175,215,0.04)" stroke-width="1"/>
+    </pattern>
+    <linearGradient id="handGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4aa8ff" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#8079ee" stop-opacity="0.6"/>
     </linearGradient>
+    <linearGradient id="barGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#69b7ff"/>
+      <stop offset="100%" stop-color="#78e5e8"/>
+    </linearGradient>
+    <linearGradient id="barGrad2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#a79aff"/>
+      <stop offset="100%" stop-color="#69b7ff"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
   </defs>
+  <rect width="800" height="420" fill="url(#grid)"/>
+
+  <!-- camera feed box -->
+  <rect x="40" y="40" width="300" height="240" rx="12" fill="#0d1727" stroke="rgba(102,181,255,0.25)" stroke-width="1.5"/>
+  <text x="56" y="62" font-family="monospace" font-size="8" fill="#76e0e2" letter-spacing="1">LIVE CAMERA FEED</text>
+  <!-- hand silhouette (simplified polygon) -->
+  <g filter="url(#glow)">
+    <!-- palm -->
+    <ellipse cx="190" cy="195" rx="42" ry="50" fill="url(#handGrad)" opacity="0.18"/>
+    <!-- fingers -->
+    <rect x="155" y="110" width="14" height="60" rx="7" fill="url(#handGrad)" opacity="0.55"/>
+    <rect x="174" y="98" width="14" height="72" rx="7" fill="url(#handGrad)" opacity="0.65"/>
+    <rect x="193" y="102" width="14" height="68" rx="7" fill="url(#handGrad)" opacity="0.65"/>
+    <rect x="212" y="112" width="14" height="58" rx="7" fill="url(#handGrad)" opacity="0.55"/>
+    <!-- thumb -->
+    <rect x="132" y="148" width="12" height="44" rx="6" transform="rotate(-20 138 170)" fill="url(#handGrad)" opacity="0.5"/>
+    <!-- palm base -->
+    <rect x="148" y="162" width="80" height="60" rx="14" fill="url(#handGrad)" opacity="0.45"/>
+  </g>
+  <!-- bounding box overlay -->
+  <rect x="130" y="95" width="120" height="150" rx="4" fill="none" stroke="#69b7ff" stroke-width="1.5" stroke-dasharray="6 3"/>
+  <!-- corner markers -->
+  <path d="M130 110 L130 95 L145 95" stroke="#78e5e8" stroke-width="2" fill="none"/>
+  <path d="M235 95 L250 95 L250 110" stroke="#78e5e8" stroke-width="2" fill="none"/>
+  <path d="M130 230 L130 245 L145 245" stroke="#78e5e8" stroke-width="2" fill="none"/>
+  <path d="M235 245 L250 245 L250 230" stroke="#78e5e8" stroke-width="2" fill="none"/>
+  <!-- keypoints -->
+  <circle cx="162" cy="112" r="3" fill="#78e5e8" opacity="0.9"/>
+  <circle cx="181" cy="100" r="3" fill="#78e5e8" opacity="0.9"/>
+  <circle cx="200" cy="104" r="3" fill="#78e5e8" opacity="0.9"/>
+  <circle cx="219" cy="114" r="3" fill="#78e5e8" opacity="0.9"/>
+  <circle cx="190" cy="165" r="4" fill="#69b7ff" opacity="0.9"/>
+  <circle cx="162" cy="170" r="3" fill="#a79aff" opacity="0.8"/>
+  <circle cx="219" cy="170" r="3" fill="#a79aff" opacity="0.8"/>
+  <!-- keypoint lines -->
+  <line x1="162" y1="112" x2="190" y2="165" stroke="#78e5e8" stroke-width="0.8" opacity="0.4"/>
+  <line x1="181" y1="100" x2="190" y2="165" stroke="#78e5e8" stroke-width="0.8" opacity="0.4"/>
+  <line x1="200" y1="104" x2="190" y2="165" stroke="#78e5e8" stroke-width="0.8" opacity="0.4"/>
+  <line x1="219" y1="114" x2="190" y2="165" stroke="#78e5e8" stroke-width="0.8" opacity="0.4"/>
+  <!-- prediction label -->
+  <rect x="130" y="252" width="120" height="22" rx="11" fill="rgba(89,202,138,0.15)" stroke="rgba(120,224,165,0.3)" stroke-width="1"/>
+  <text x="190" y="267" text-anchor="middle" font-family="monospace" font-size="10" font-weight="500" fill="#91ebc1">Letter: A  (97.3%)</text>
+
+  <!-- model confidence panel -->
+  <rect x="360" y="40" width="400" height="240" rx="12" fill="#0d1727" stroke="rgba(168,193,229,0.12)" stroke-width="1"/>
+  <text x="376" y="62" font-family="monospace" font-size="8" fill="#76e0e2" letter-spacing="1">MODEL CONFIDENCE</text>
+  <!-- bars -->
+  <text x="376" y="88" font-family="monospace" font-size="9" fill="#a5b1c5">A</text>
+  <rect x="396" y="78" width="300" height="14" rx="7" fill="#1a2a40"/>
+  <rect x="396" y="78" width="292" height="14" rx="7" fill="url(#barGrad)" opacity="0.9"/>
+  <text x="700" y="89" font-family="monospace" font-size="8" fill="#91ebc1">97.3%</text>
+
+  <text x="376" y="114" font-family="monospace" font-size="9" fill="#a5b1c5">B</text>
+  <rect x="396" y="104" width="300" height="14" rx="7" fill="#1a2a40"/>
+  <rect x="396" y="104" width="18" height="14" rx="7" fill="url(#barGrad2)" opacity="0.5"/>
+  <text x="700" y="115" font-family="monospace" font-size="8" fill="#476180">1.4%</text>
+
+  <text x="376" y="140" font-family="monospace" font-size="9" fill="#a5b1c5">C</text>
+  <rect x="396" y="130" width="300" height="14" rx="7" fill="#1a2a40"/>
+  <rect x="396" y="130" width="9" height="14" rx="7" fill="url(#barGrad2)" opacity="0.4"/>
+  <text x="700" y="141" font-family="monospace" font-size="8" fill="#476180">0.8%</text>
+
+  <text x="376" y="166" font-family="monospace" font-size="9" fill="#a5b1c5">D</text>
+  <rect x="396" y="156" width="300" height="14" rx="7" fill="#1a2a40"/>
+  <rect x="396" y="156" width="5" height="14" rx="7" fill="url(#barGrad2)" opacity="0.3"/>
+  <text x="700" y="167" font-family="monospace" font-size="8" fill="#476180">0.5%</text>
+
+  <!-- accuracy chart -->
+  <text x="376" y="200" font-family="monospace" font-size="8" fill="#76e0e2" letter-spacing="1">TRAINING ACCURACY</text>
+  <polyline points="396,230 430,222 464,215 498,208 532,200 566,196 600,192 634,189 668,187 702,185" stroke="#69b7ff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="396,238 430,234 464,228 498,222 532,218 566,214 600,212 634,210 668,209 702,208" stroke="#a79aff" stroke-width="1.5" fill="none" stroke-dasharray="4 2" stroke-linecap="round" stroke-linejoin="round"/>
+  <line x1="396" y1="240" x2="720" y2="240" stroke="#1a2a40" stroke-width="1"/>
+  <text x="396" y="252" font-family="monospace" font-size="7" fill="#476180">Epoch 1</text>
+  <text x="680" y="252" font-family="monospace" font-size="7" fill="#476180">Epoch 50</text>
+  <!-- legend -->
+  <line x1="396" y1="265" x2="416" y2="265" stroke="#69b7ff" stroke-width="2"/>
+  <text x="420" y="269" font-family="monospace" font-size="7" fill="#a5b1c5">CNN</text>
+  <line x1="450" y1="265" x2="470" y2="265" stroke="#a79aff" stroke-width="1.5" stroke-dasharray="4 2"/>
+  <text x="474" y="269" font-family="monospace" font-size="7" fill="#a5b1c5">ANN</text>
+
+  <!-- bottom stats row -->
+  <rect x="40" y="300" width="140" height="80" rx="10" fill="#0d1727" stroke="rgba(168,193,229,0.1)" stroke-width="1"/>
+  <text x="56" y="322" font-family="monospace" font-size="8" fill="#76e0e2" letter-spacing="1">DATASET</text>
+  <text x="56" y="348" font-family="monospace" font-size="22" font-weight="500" fill="#e9f5ff">8,400</text>
+  <text x="56" y="366" font-family="monospace" font-size="8" fill="#a5b1c5">gesture samples</text>
+
+  <rect x="196" y="300" width="140" height="80" rx="10" fill="#0d1727" stroke="rgba(168,193,229,0.1)" stroke-width="1"/>
+  <text x="212" y="322" font-family="monospace" font-size="8" fill="#76e0e2" letter-spacing="1">CNN ACCURACY</text>
+  <text x="212" y="348" font-family="monospace" font-size="22" font-weight="500" fill="#69b7ff">94.7%</text>
+  <text x="212" y="366" font-family="monospace" font-size="8" fill="#a5b1c5">test set</text>
+
+  <rect x="352" y="300" width="140" height="80" rx="10" fill="#0d1727" stroke="rgba(168,193,229,0.1)" stroke-width="1"/>
+  <text x="368" y="322" font-family="monospace" font-size="8" fill="#76e0e2" letter-spacing="1">ANN ACCURACY</text>
+  <text x="368" y="348" font-family="monospace" font-size="22" font-weight="500" fill="#a79aff">88.2%</text>
+  <text x="368" y="366" font-family="monospace" font-size="8" fill="#a5b1c5">test set</text>
+
+  <rect x="508" y="300" width="140" height="80" rx="10" fill="#0d1727" stroke="rgba(168,193,229,0.1)" stroke-width="1"/>
+  <text x="524" y="322" font-family="monospace" font-size="8" fill="#76e0e2" letter-spacing="1">CLASSES</text>
+  <text x="524" y="348" font-family="monospace" font-size="22" font-weight="500" fill="#78e5e8">26</text>
+  <text x="524" y="366" font-family="monospace" font-size="8" fill="#a5b1c5">ASL letters</text>
+
+  <rect x="664" y="300" width="96" height="80" rx="10" fill="#0d1727" stroke="rgba(168,193,229,0.1)" stroke-width="1"/>
+  <text x="680" y="322" font-family="monospace" font-size="8" fill="#76e0e2" letter-spacing="1">LATENCY</text>
+  <text x="680" y="348" font-family="monospace" font-size="22" font-weight="500" fill="#7be0a5">18ms</text>
+  <text x="680" y="366" font-family="monospace" font-size="8" fill="#a5b1c5">inference</text>
 </svg>

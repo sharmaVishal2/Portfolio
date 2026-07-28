@@ -1,33 +1,128 @@
-<svg width="1200" height="720" viewBox="0 0 1200 720" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="1200" height="720" rx="40" fill="#07111F"/>
-  <rect x="72" y="88" width="1056" height="544" rx="32" fill="url(#bg)" stroke="#2B456A" stroke-width="2"/>
-  <rect x="118" y="132" width="240" height="36" rx="18" fill="#18304E"/>
-  <rect x="118" y="186" width="176" height="14" rx="7" fill="#6CA8FF"/>
-  <rect x="118" y="210" width="128" height="12" rx="6" fill="#4A688D"/>
-  <rect x="118" y="268" width="320" height="208" rx="28" fill="#0D1B2F" stroke="#36506F" stroke-width="2"/>
-  <rect x="148" y="302" width="122" height="122" rx="24" fill="#60A5FA"/>
-  <rect x="292" y="316" width="106" height="14" rx="7" fill="#E6F3FF"/>
-  <rect x="292" y="344" width="86" height="10" rx="5" fill="#6EA9F9"/>
-  <rect x="292" y="368" width="72" height="10" rx="5" fill="#516D8E"/>
-  <rect x="470" y="268" width="320" height="208" rx="28" fill="#0D1B2F" stroke="#36506F" stroke-width="2"/>
-  <rect x="502" y="298" width="118" height="18" rx="9" fill="#8B5CF6"/>
-  <rect x="502" y="330" width="176" height="12" rx="6" fill="#E6E7FF"/>
-  <rect x="502" y="354" width="144" height="12" rx="6" fill="#7A90B5"/>
-  <rect x="502" y="386" width="112" height="12" rx="6" fill="#536A86"/>
-  <rect x="822" y="268" width="250" height="208" rx="28" fill="#0D1B2F" stroke="#36506F" stroke-width="2"/>
-  <circle cx="947" cy="372" r="58" fill="#7C3AED"/>
-  <path d="M947 326V418" stroke="#F8FAFC" stroke-width="12" stroke-linecap="round"/>
-  <path d="M903 372H991" stroke="#F8FAFC" stroke-width="12" stroke-linecap="round"/>
-  <rect x="118" y="518" width="760" height="84" rx="24" fill="#101C2E" stroke="#36506F" stroke-width="2"/>
-  <rect x="144" y="544" width="204" height="14" rx="7" fill="#60A5FA"/>
-  <rect x="144" y="570" width="162" height="10" rx="5" fill="#5E7B9D"/>
-  <circle cx="956" cy="560" r="36" fill="#38BDF8"/>
-  <path d="M956 534V586" stroke="#07111F" stroke-width="8" stroke-linecap="round"/>
-  <path d="M932 560H980" stroke="#07111F" stroke-width="8" stroke-linecap="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" fill="none">
+  <rect width="800" height="420" fill="#080e1c"/>
   <defs>
-    <linearGradient id="bg" x1="126" y1="88" x2="1060" y2="632" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#0A1627"/>
-      <stop offset="1" stop-color="#13243A"/>
+    <pattern id="grid2" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(144,175,215,0.04)" stroke-width="1"/>
+    </pattern>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#3f9cff"/>
+      <stop offset="100%" stop-color="#78e5e8"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#a79aff"/>
+      <stop offset="100%" stop-color="#69b7ff"/>
     </linearGradient>
   </defs>
+  <rect width="800" height="420" fill="url(#grid2)"/>
+
+  <!-- title bar -->
+  <rect x="0" y="0" width="800" height="44" fill="#111b2c"/>
+  <circle cx="20" cy="22" r="5" fill="#ff6d7a"/>
+  <circle cx="36" cy="22" r="5" fill="#e8b05c"/>
+  <circle cx="52" cy="22" r="5" fill="#69cf95"/>
+  <text x="76" y="27" font-family="monospace" font-size="10" fill="#93a6c1">POST  /api/v1/auth/login</text>
+  <rect x="640" y="12" width="80" height="20" rx="10" fill="rgba(89,202,138,0.15)" stroke="rgba(120,224,165,0.3)" stroke-width="1"/>
+  <text x="680" y="26" text-anchor="middle" font-family="monospace" font-size="8" fill="#91ebc1">200 OK</text>
+
+  <!-- left: request panel -->
+  <rect x="20" y="60" width="360" height="340" rx="12" fill="#0d1727" stroke="rgba(102,181,255,0.15)" stroke-width="1"/>
+  <text x="36" y="82" font-family="monospace" font-size="8" fill="#76e0e2" letter-spacing="1">REQUEST</text>
+
+  <!-- method + endpoint -->
+  <rect x="36" y="92" width="44" height="18" rx="9" fill="rgba(89,202,138,0.15)" stroke="rgba(120,224,165,0.25)" stroke-width="1"/>
+  <text x="58" y="105" text-anchor="middle" font-family="monospace" font-size="8" fill="#91ebc1">POST</text>
+  <text x="88" y="105" font-family="monospace" font-size="9" fill="#e9f5ff">/api/v1/products/search</text>
+
+  <!-- auth header -->
+  <rect x="36" y="120" width="320" height="32" rx="8" fill="rgba(167,154,255,0.08)" stroke="rgba(167,154,255,0.2)" stroke-width="1"/>
+  <text x="50" y="133" font-family="monospace" font-size="8" fill="#a79aff">Authorization:</text>
+  <text x="50" y="145" font-family="monospace" font-size="7" fill="#476180">Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...</text>
+
+  <!-- body -->
+  <text x="36" y="172" font-family="monospace" font-size="8" fill="#476180">// Request body</text>
+  <text x="36" y="188" font-family="monospace" font-size="9" fill="#e9f5ff">{"{"}</text>
+  <text x="52" y="204" font-family="monospace" font-size="9" fill="#a4d7ff">  "query":</text><text x="130" y="204" font-family="monospace" font-size="9" fill="#91ebc1"> "wireless headphones"</text>
+  <text x="52" y="220" font-family="monospace" font-size="9" fill="#a4d7ff">  "category":</text><text x="140" y="220" font-family="monospace" font-size="9" fill="#91ebc1"> "electronics"</text>
+  <text x="52" y="236" font-family="monospace" font-size="9" fill="#a4d7ff">  "page":</text><text x="110" y="236" font-family="monospace" font-size="9" fill="#d5cdff"> 1</text>
+  <text x="52" y="252" font-family="monospace" font-size="9" fill="#a4d7ff">  "size":</text><text x="110" y="252" font-family="monospace" font-size="9" fill="#d5cdff"> 10</text>
+  <text x="52" y="268" font-family="monospace" font-size="9" fill="#a4d7ff">  "sortBy":</text><text x="120" y="268" font-family="monospace" font-size="9" fill="#91ebc1"> "price_asc"</text>
+  <text x="36" y="284" font-family="monospace" font-size="9" fill="#e9f5ff">{"}"}</text>
+
+  <!-- roles badge -->
+  <rect x="36" y="300" width="320" height="40" rx="8" fill="rgba(255,255,255,0.025)" stroke="rgba(168,193,229,0.1)" stroke-width="1"/>
+  <text x="52" y="316" font-family="monospace" font-size="8" fill="#76e0e2" letter-spacing="1">ROLES</text>
+  <rect x="52" y="322" width="44" height="12" rx="6" fill="rgba(91,173,255,0.2)"/>
+  <text x="74" y="332" text-anchor="middle" font-family="monospace" font-size="7" fill="#a4d7ff">ADMIN</text>
+  <rect x="104" y="322" width="40" height="12" rx="6" fill="rgba(89,202,138,0.15)"/>
+  <text x="124" y="332" text-anchor="middle" font-family="monospace" font-size="7" fill="#91ebc1">USER</text>
+  <rect x="152" y="322" width="50" height="12" rx="6" fill="rgba(167,154,255,0.15)"/>
+  <text x="177" y="332" text-anchor="middle" font-family="monospace" font-size="7" fill="#d5cdff">SELLER</text>
+
+  <!-- right: response panel -->
+  <rect x="400" y="60" width="380" height="340" rx="12" fill="#0d1727" stroke="rgba(168,193,229,0.12)" stroke-width="1"/>
+  <text x="416" y="82" font-family="monospace" font-size="8" fill="#76e0e2" letter-spacing="1">RESPONSE</text>
+
+  <!-- status -->
+  <rect x="416" y="92" width="44" height="18" rx="9" fill="rgba(89,202,138,0.15)" stroke="rgba(120,224,165,0.25)" stroke-width="1"/>
+  <text x="438" y="105" text-anchor="middle" font-family="monospace" font-size="8" fill="#91ebc1">200</text>
+  <text x="468" y="105" font-family="monospace" font-size="9" fill="#a5b1c5">application/json · 48ms</text>
+
+  <!-- product cards in response -->
+  <rect x="416" y="116" width="348" height="56" rx="8" fill="rgba(255,255,255,0.03)" stroke="rgba(168,193,229,0.1)" stroke-width="1"/>
+  <rect x="428" y="126" width="36" height="36" rx="6" fill="rgba(91,173,255,0.12)"/>
+  <text x="446" y="148" text-anchor="middle" font-family="monospace" font-size="16">🎧</text>
+  <text x="474" y="134" font-family="sans-serif" font-size="10" font-weight="600" fill="#e9f5ff">Sony WH-1000XM5</text>
+  <text x="474" y="148" font-family="monospace" font-size="8" fill="#a5b1c5">electronics · in stock</text>
+  <text x="474" y="162" font-family="monospace" font-size="9" fill="#7be0a5">$349.99</text>
+  <rect x="718" y="128" width="36" height="14" rx="7" fill="rgba(89,202,138,0.15)"/>
+  <text x="736" y="139" text-anchor="middle" font-family="monospace" font-size="7" fill="#91ebc1">4.8 ★</text>
+
+  <rect x="416" y="180" width="348" height="56" rx="8" fill="rgba(255,255,255,0.03)" stroke="rgba(168,193,229,0.1)" stroke-width="1"/>
+  <rect x="428" y="190" width="36" height="36" rx="6" fill="rgba(167,154,255,0.1)"/>
+  <text x="446" y="212" text-anchor="middle" font-family="monospace" font-size="16">🎵</text>
+  <text x="474" y="198" font-family="sans-serif" font-size="10" font-weight="600" fill="#e9f5ff">Bose QuietComfort 45</text>
+  <text x="474" y="212" font-family="monospace" font-size="8" fill="#a5b1c5">electronics · in stock</text>
+  <text x="474" y="226" font-family="monospace" font-size="9" fill="#7be0a5">$279.00</text>
+  <rect x="718" y="192" width="36" height="14" rx="7" fill="rgba(89,202,138,0.15)"/>
+  <text x="736" y="203" text-anchor="middle" font-family="monospace" font-size="7" fill="#91ebc1">4.6 ★</text>
+
+  <!-- pagination -->
+  <rect x="416" y="248" width="348" height="28" rx="8" fill="rgba(255,255,255,0.02)" stroke="rgba(168,193,229,0.08)" stroke-width="1"/>
+  <text x="432" y="266" font-family="monospace" font-size="8" fill="#476180">page: 1 / 4  ·  total: 38 results  ·  size: 10</text>
+
+  <!-- JWT flow diagram -->
+  <text x="416" y="300" font-family="monospace" font-size="8" fill="#76e0e2" letter-spacing="1">JWT FLOW</text>
+  <!-- boxes -->
+  <rect x="416" y="308" width="60" height="24" rx="6" fill="rgba(91,173,255,0.12)" stroke="rgba(91,173,255,0.25)" stroke-width="1"/>
+  <text x="446" y="324" text-anchor="middle" font-family="monospace" font-size="7" fill="#a4d7ff">Client</text>
+  <line x1="476" y1="320" x2="510" y2="320" stroke="#476180" stroke-width="1" marker-end="url(#arr)"/>
+  <rect x="510" y="308" width="70" height="24" rx="6" fill="rgba(167,154,255,0.12)" stroke="rgba(167,154,255,0.25)" stroke-width="1"/>
+  <text x="545" y="324" text-anchor="middle" font-family="monospace" font-size="7" fill="#d5cdff">Auth Filter</text>
+  <line x1="580" y1="320" x2="614" y2="320" stroke="#476180" stroke-width="1"/>
+  <rect x="614" y="308" width="60" height="24" rx="6" fill="rgba(89,202,138,0.1)" stroke="rgba(120,224,165,0.2)" stroke-width="1"/>
+  <text x="644" y="324" text-anchor="middle" font-family="monospace" font-size="7" fill="#91ebc1">Controller</text>
+  <line x1="674" y1="320" x2="708" y2="320" stroke="#476180" stroke-width="1"/>
+  <rect x="708" y="308" width="50" height="24" rx="6" fill="rgba(91,173,255,0.1)" stroke="rgba(91,173,255,0.2)" stroke-width="1"/>
+  <text x="733" y="324" text-anchor="middle" font-family="monospace" font-size="7" fill="#a4d7ff">DB</text>
+
+  <!-- token label -->
+  <text x="484" y="314" font-family="monospace" font-size="6" fill="#a79aff">JWT</text>
+  <text x="588" y="314" font-family="monospace" font-size="6" fill="#91ebc1">✓ valid</text>
+
+  <!-- bottom stats -->
+  <rect x="416" y="344" width="80" height="44" rx="8" fill="rgba(255,255,255,0.02)" stroke="rgba(168,193,229,0.08)" stroke-width="1"/>
+  <text x="456" y="362" text-anchor="middle" font-family="monospace" font-size="16" font-weight="500" fill="#69b7ff">5</text>
+  <text x="456" y="378" text-anchor="middle" font-family="monospace" font-size="7" fill="#476180">endpoints</text>
+
+  <rect x="506" y="344" width="80" height="44" rx="8" fill="rgba(255,255,255,0.02)" stroke="rgba(168,193,229,0.08)" stroke-width="1"/>
+  <text x="546" y="362" text-anchor="middle" font-family="monospace" font-size="16" font-weight="500" fill="#a79aff">OAuth2</text>
+  <text x="546" y="378" text-anchor="middle" font-family="monospace" font-size="7" fill="#476180">security</text>
+
+  <rect x="596" y="344" width="80" height="44" rx="8" fill="rgba(255,255,255,0.02)" stroke="rgba(168,193,229,0.08)" stroke-width="1"/>
+  <text x="636" y="362" text-anchor="middle" font-family="monospace" font-size="16" font-weight="500" fill="#78e5e8">48ms</text>
+  <text x="636" y="378" text-anchor="middle" font-family="monospace" font-size="7" fill="#476180">avg latency</text>
+
+  <rect x="686" y="344" width="80" height="44" rx="8" fill="rgba(255,255,255,0.02)" stroke="rgba(168,193,229,0.08)" stroke-width="1"/>
+  <text x="726" y="362" text-anchor="middle" font-family="monospace" font-size="16" font-weight="500" fill="#7be0a5">3</text>
+  <text x="726" y="378" text-anchor="middle" font-family="monospace" font-size="7" fill="#476180">roles</text>
 </svg>

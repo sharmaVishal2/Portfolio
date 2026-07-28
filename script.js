@@ -181,12 +181,135 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  const makeVisual = (label, isAlt) => `
-    <div class="screen-card${isAlt ? ' screen-alt' : ''}">
-      <div class="screen-top"></div>
-      <div class="screen-content"><div class="mini-title"></div><div class="mini-sub"></div><div class="mini-panels"><span></span><span></span></div></div>
-    </div>
-    <span class="sr-dialog-label">${label}</span>`;
+  const projectVisuals = {
+    smarthire: `
+      <div class="dialog-visual-img">
+        <img src="assets/project/smarthire-banner.svg" alt="SmartHire interview workspace" loading="lazy" decoding="async">
+        <span class="sr-dialog-label">Interview workspace &amp; AI feedback panel</span>
+      </div>
+      <div class="dialog-visual-img">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 200" fill="none" style="width:100%;border-radius:0.75rem;">
+          <rect width="480" height="200" fill="#0a1220" rx="10"/>
+          <rect x="16" y="16" width="448" height="28" rx="8" fill="rgba(88,168,243,0.08)" stroke="rgba(112,201,238,0.2)" stroke-width="1"/>
+          <rect x="28" y="24" width="28" height="12" rx="6" fill="rgba(116,229,232,0.2)"/>
+          <text x="42" y="34" text-anchor="middle" font-family="monospace" font-size="7" fill="#86e5e6">PDF</text>
+          <text x="66" y="34" font-family="sans-serif" font-size="9" font-weight="600" fill="#e9f5ff">resume_vishal.pdf — analysis complete</text>
+          <rect x="390" y="24" width="62" height="12" rx="6" fill="rgba(89,202,138,0.15)"/>
+          <text x="421" y="34" text-anchor="middle" font-family="monospace" font-size="7" fill="#91ebc1">94% match</text>
+          <text x="28" y="66" font-family="monospace" font-size="7" fill="#76e0e2" letter-spacing="1">EXTRACTED SKILLS</text>
+          <rect x="28" y="74" width="58" height="16" rx="8" fill="rgba(91,173,255,0.14)" stroke="rgba(91,173,255,0.25)" stroke-width="1"/>
+          <text x="57" y="86" text-anchor="middle" font-family="monospace" font-size="7" fill="#a4d7ff">Spring Boot</text>
+          <rect x="94" y="74" width="34" height="16" rx="8" fill="rgba(91,173,255,0.14)" stroke="rgba(91,173,255,0.25)" stroke-width="1"/>
+          <text x="111" y="86" text-anchor="middle" font-family="monospace" font-size="7" fill="#a4d7ff">JWT</text>
+          <rect x="136" y="74" width="50" height="16" rx="8" fill="rgba(91,173,255,0.14)" stroke="rgba(91,173,255,0.25)" stroke-width="1"/>
+          <text x="161" y="86" text-anchor="middle" font-family="monospace" font-size="7" fill="#a4d7ff">PostgreSQL</text>
+          <rect x="194" y="74" width="38" height="16" rx="8" fill="rgba(155,131,255,0.15)" stroke="rgba(155,131,255,0.25)" stroke-width="1"/>
+          <text x="213" y="86" text-anchor="middle" font-family="monospace" font-size="7" fill="#d5cdff">React</text>
+          <rect x="240" y="74" width="42" height="16" rx="8" fill="rgba(155,131,255,0.15)" stroke="rgba(155,131,255,0.25)" stroke-width="1"/>
+          <text x="261" y="86" text-anchor="middle" font-family="monospace" font-size="7" fill="#d5cdff">Groq AI</text>
+          <text x="28" y="120" font-family="monospace" font-size="7" fill="#76e0e2" letter-spacing="1">GENERATED QUESTIONS</text>
+          <rect x="28" y="128" width="424" height="20" rx="6" fill="rgba(255,255,255,0.03)" stroke="rgba(168,193,229,0.1)" stroke-width="1"/>
+          <text x="40" y="142" font-family="monospace" font-size="8" fill="#e9f5ff">Q1: Explain how JWT authentication works in Spring Security.</text>
+          <rect x="28" y="154" width="424" height="20" rx="6" fill="rgba(255,255,255,0.03)" stroke="rgba(168,193,229,0.1)" stroke-width="1"/>
+          <text x="40" y="168" font-family="monospace" font-size="8" fill="#e9f5ff">Q2: How would you design a paginated product search API?</text>
+          <rect x="28" y="178" width="424" height="14" rx="6" fill="rgba(255,255,255,0.02)"/>
+          <text x="40" y="189" font-family="monospace" font-size="7" fill="#476180">Q3: loading...</text>
+        </svg>
+        <span class="sr-dialog-label">Resume parsing &amp; question generation</span>
+      </div>`,
+    signlanguage: `
+      <div class="dialog-visual-img">
+        <img src="assets/project/signlang-banner.svg" alt="Sign language detection system" loading="lazy" decoding="async">
+        <span class="sr-dialog-label">Live gesture recognition &amp; model confidence</span>
+      </div>
+      <div class="dialog-visual-img">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 200" fill="none" style="width:100%;border-radius:0.75rem;">
+          <rect width="480" height="200" fill="#080e1c" rx="10"/>
+          <text x="20" y="28" font-family="monospace" font-size="7" fill="#76e0e2" letter-spacing="1">CONFUSION MATRIX (SAMPLE)</text>
+          <rect x="20" y="36" width="200" height="150" rx="8" fill="#0d1727" stroke="rgba(168,193,229,0.1)" stroke-width="1"/>
+          <text x="120" y="56" text-anchor="middle" font-family="monospace" font-size="7" fill="#476180">Predicted</text>
+          <text x="30" y="100" font-family="monospace" font-size="7" fill="#476180" transform="rotate(-90 30 100)">Actual</text>
+          <rect x="60" y="64" width="36" height="36" rx="4" fill="rgba(105,183,255,0.7)"/><text x="78" y="87" text-anchor="middle" font-family="monospace" font-size="9" fill="#fff">94</text>
+          <rect x="100" y="64" width="36" height="36" rx="4" fill="rgba(105,183,255,0.08)"/><text x="118" y="87" text-anchor="middle" font-family="monospace" font-size="9" fill="#476180">3</text>
+          <rect x="140" y="64" width="36" height="36" rx="4" fill="rgba(105,183,255,0.04)"/><text x="158" y="87" text-anchor="middle" font-family="monospace" font-size="9" fill="#476180">1</text>
+          <rect x="60" y="104" width="36" height="36" rx="4" fill="rgba(105,183,255,0.06)"/><text x="78" y="127" text-anchor="middle" font-family="monospace" font-size="9" fill="#476180">2</text>
+          <rect x="100" y="104" width="36" height="36" rx="4" fill="rgba(167,154,255,0.65)"/><text x="118" y="127" text-anchor="middle" font-family="monospace" font-size="9" fill="#fff">91</text>
+          <rect x="140" y="104" width="36" height="36" rx="4" fill="rgba(105,183,255,0.05)"/><text x="158" y="127" text-anchor="middle" font-family="monospace" font-size="9" fill="#476180">4</text>
+          <rect x="60" y="144" width="36" height="36" rx="4" fill="rgba(105,183,255,0.03)"/><text x="78" y="167" text-anchor="middle" font-family="monospace" font-size="9" fill="#476180">1</text>
+          <rect x="100" y="144" width="36" height="36" rx="4" fill="rgba(105,183,255,0.04)"/><text x="118" y="167" text-anchor="middle" font-family="monospace" font-size="9" fill="#476180">2</text>
+          <rect x="140" y="144" width="36" height="36" rx="4" fill="rgba(120,229,232,0.6)"/><text x="158" y="167" text-anchor="middle" font-family="monospace" font-size="9" fill="#fff">96</text>
+          <text x="260" y="28" font-family="monospace" font-size="7" fill="#76e0e2" letter-spacing="1">MODEL COMPARISON</text>
+          <text x="260" y="56" font-family="monospace" font-size="8" fill="#a5b1c5">CNN</text>
+          <rect x="290" y="46" width="170" height="14" rx="7" fill="#1a2a40"/>
+          <rect x="290" y="46" width="161" height="14" rx="7" fill="rgba(105,183,255,0.7)"/>
+          <text x="464" y="57" font-family="monospace" font-size="7" fill="#91ebc1">94.7%</text>
+          <text x="260" y="82" font-family="monospace" font-size="8" fill="#a5b1c5">ANN</text>
+          <rect x="290" y="72" width="170" height="14" rx="7" fill="#1a2a40"/>
+          <rect x="290" y="72" width="150" height="14" rx="7" fill="rgba(167,154,255,0.6)"/>
+          <text x="464" y="83" font-family="monospace" font-size="7" fill="#d5cdff">88.2%</text>
+          <text x="260" y="108" font-family="monospace" font-size="8" fill="#a5b1c5">SVM</text>
+          <rect x="290" y="98" width="170" height="14" rx="7" fill="#1a2a40"/>
+          <rect x="290" y="98" width="130" height="14" rx="7" fill="rgba(120,229,232,0.45)"/>
+          <text x="464" y="109" font-family="monospace" font-size="7" fill="#78e5e8">76.4%</text>
+          <rect x="260" y="124" width="200" height="60" rx="8" fill="rgba(255,255,255,0.02)" stroke="rgba(168,193,229,0.08)" stroke-width="1"/>
+          <text x="272" y="142" font-family="monospace" font-size="7" fill="#76e0e2" letter-spacing="1">DATASET SPLIT</text>
+          <text x="272" y="158" font-family="monospace" font-size="8" fill="#a5b1c5">Train: 6,720  ·  Val: 840  ·  Test: 840</text>
+          <text x="272" y="174" font-family="monospace" font-size="7" fill="#476180">80% / 10% / 10%  ·  26 ASL classes</text>
+        </svg>
+        <span class="sr-dialog-label">Confusion matrix &amp; model benchmarks</span>
+      </div>`,
+    ecommerce: `
+      <div class="dialog-visual-img">
+        <img src="assets/project/ecommerce-banner.svg" alt="E-Commerce backend API" loading="lazy" decoding="async">
+        <span class="sr-dialog-label">REST API request &amp; response flow</span>
+      </div>
+      <div class="dialog-visual-img">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 200" fill="none" style="width:100%;border-radius:0.75rem;">
+          <rect width="480" height="200" fill="#080e1c" rx="10"/>
+          <text x="20" y="24" font-family="monospace" font-size="7" fill="#76e0e2" letter-spacing="1">DATABASE SCHEMA</text>
+          <!-- users table -->
+          <rect x="20" y="32" width="100" height="80" rx="6" fill="#0d1727" stroke="rgba(105,183,255,0.3)" stroke-width="1"/>
+          <rect x="20" y="32" width="100" height="18" rx="6" fill="rgba(105,183,255,0.15)"/>
+          <text x="70" y="45" text-anchor="middle" font-family="monospace" font-size="8" font-weight="700" fill="#a4d7ff">users</text>
+          <text x="30" y="62" font-family="monospace" font-size="7" fill="#91ebc1">🔑 id</text>
+          <text x="30" y="74" font-family="monospace" font-size="7" fill="#a5b1c5">name</text>
+          <text x="30" y="86" font-family="monospace" font-size="7" fill="#a5b1c5">email</text>
+          <text x="30" y="98" font-family="monospace" font-size="7" fill="#a5b1c5">role</text>
+          <!-- products table -->
+          <rect x="190" y="32" width="100" height="96" rx="6" fill="#0d1727" stroke="rgba(120,229,232,0.3)" stroke-width="1"/>
+          <rect x="190" y="32" width="100" height="18" rx="6" fill="rgba(120,229,232,0.12)"/>
+          <text x="240" y="45" text-anchor="middle" font-family="monospace" font-size="8" font-weight="700" fill="#78e5e8">products</text>
+          <text x="200" y="62" font-family="monospace" font-size="7" fill="#91ebc1">🔑 id</text>
+          <text x="200" y="74" font-family="monospace" font-size="7" fill="#a5b1c5">name</text>
+          <text x="200" y="86" font-family="monospace" font-size="7" fill="#a5b1c5">price</text>
+          <text x="200" y="98" font-family="monospace" font-size="7" fill="#a5b1c5">category</text>
+          <text x="200" y="110" font-family="monospace" font-size="7" fill="#a5b1c5">stock</text>
+          <!-- orders table -->
+          <rect x="360" y="32" width="100" height="80" rx="6" fill="#0d1727" stroke="rgba(167,154,255,0.3)" stroke-width="1"/>
+          <rect x="360" y="32" width="100" height="18" rx="6" fill="rgba(167,154,255,0.12)"/>
+          <text x="410" y="45" text-anchor="middle" font-family="monospace" font-size="8" font-weight="700" fill="#d5cdff">orders</text>
+          <text x="370" y="62" font-family="monospace" font-size="7" fill="#91ebc1">🔑 id</text>
+          <text x="370" y="74" font-family="monospace" font-size="7" fill="#476180">🔗 user_id</text>
+          <text x="370" y="86" font-family="monospace" font-size="7" fill="#a5b1c5">total</text>
+          <text x="370" y="98" font-family="monospace" font-size="7" fill="#a5b1c5">status</text>
+          <!-- relation lines -->
+          <line x1="120" y1="72" x2="190" y2="72" stroke="#476180" stroke-width="1" stroke-dasharray="4 2"/>
+          <line x1="290" y1="72" x2="360" y2="72" stroke="#476180" stroke-width="1" stroke-dasharray="4 2"/>
+          <!-- endpoint list -->
+          <text x="20" y="148" font-family="monospace" font-size="7" fill="#76e0e2" letter-spacing="1">KEY ENDPOINTS</text>
+          <rect x="20" y="156" width="90" height="14" rx="7" fill="rgba(89,202,138,0.12)"/>
+          <text x="65" y="167" text-anchor="middle" font-family="monospace" font-size="7" fill="#91ebc1">GET /products</text>
+          <rect x="118" y="156" width="110" height="14" rx="7" fill="rgba(91,173,255,0.12)"/>
+          <text x="173" y="167" text-anchor="middle" font-family="monospace" font-size="7" fill="#a4d7ff">POST /auth/register</text>
+          <rect x="236" y="156" width="90" height="14" rx="7" fill="rgba(167,154,255,0.12)"/>
+          <text x="281" y="167" text-anchor="middle" font-family="monospace" font-size="7" fill="#d5cdff">POST /orders</text>
+          <rect x="334" y="156" width="126" height="14" rx="7" fill="rgba(232,176,92,0.12)"/>
+          <text x="397" y="167" text-anchor="middle" font-family="monospace" font-size="7" fill="#e8b05c">DELETE /admin/product</text>
+          <text x="20" y="190" font-family="monospace" font-size="7" fill="#476180">Spring Boot · Spring Security · OAuth2 · JWT · PostgreSQL · Hibernate</text>
+        </svg>
+        <span class="sr-dialog-label">Database schema &amp; API endpoints</span>
+      </div>`
+  };
 
   const openProject = (projectKey, trigger) => {
     const project = projects[projectKey];
@@ -220,8 +343,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <aside class="dialog-visual" aria-label="${project.title} interface snapshots">
           <p class="section-kicker">Screenshots / workflows</p>
           <h3>Product snapshots</h3>
-          ${makeVisual(project.visuals[0], false)}
-          ${makeVisual(project.visuals[1], true)}
+          ${projectVisuals[projectKey] || ''}
           <p>Visual snapshots communicate the core workflow and system touchpoints behind this project.</p>
         </aside>
       </div>`;
