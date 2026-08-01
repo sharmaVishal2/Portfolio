@@ -1077,3 +1077,17 @@ body.theme-light .proof-section { background: rgba(255, 255, 255, 0.48); }
   font-size: 0.78rem;
   line-height: 1.72;
 }
+
+/* Project card — case study button variant */
+.btn-card-case {
+  color: var(--violet);
+  background: rgba(167, 154, 255, 0.07);
+  border-color: rgba(167, 154, 255, 0.25);
+  cursor: pointer;
+}
+.btn-card-case:hover {
+  color: #fff;
+  background: rgba(167, 154, 255, 0.16);
+  border-color: rgba(167, 154, 255, 0.5);
+  box-shadow: 0 4px 14px rgba(167, 154, 255, 0.15);
+}

@@ -1,22 +1,4 @@
 window.PORTFOLIO_PROJECTS = {
-  smarthire: {
-    id: "smarthire",
-    title: "SmartHire",
-    eyebrow: "AI Interview Platform",
-    subtitle: "Resume-aware mock interviews with secure Spring Boot APIs and Groq-powered feedback.",
-    image: "assets/project/smarthire-banner.svg",
-    github: "https://github.com/sharmaVishal2/Smart-Hire-AI-driven-interview-prepation-",
-    live: "https://ai-hackfest-mlh.vercel.app/",
-    stack: ["Java", "Spring Boot", "React", "PostgreSQL", "JWT", "Groq API (LLaMA 3)"],
-    overview: "SmartHire turns a candidate resume into a focused interview preparation flow. It parses resume context, generates technical and HR questions, and returns structured feedback so practice is tied to the candidate's real skills instead of a generic question bank.",
-    problem: "Most interview-prep tools ask generic questions and do not use the candidate's own resume as context. That creates wasted practice time and weak feedback loops.",
-    solution: "SmartHire uses resume parsing, prompt design, Groq LLaMA inference, and secure API workflows to create a personalized interview loop from upload to feedback.",
-    architecture: ["React interview workspace", "Spring Boot REST API", "JWT authentication", "Resume parsing service", "Groq LLaMA orchestration", "PostgreSQL persistence"],
-    features: ["Resume parsing and skill extraction", "Personalized technical and HR question generation", "AI-generated answer feedback", "JWT-secured sessions", "Async-friendly backend flow", "Clear interview progression from upload to review"],
-    screenshots: ["Resume analysis workflow", "Interview question workspace", "AI feedback response"],
-    challenges: "The hardest part was keeping AI output grounded in resume context. The system uses structured prompts and constrained response formats to reduce vague questions and improve feedback quality.",
-    future: ["Add role-specific interview tracks", "Persist historical interview performance", "Add admin analytics for question quality", "Introduce RAG over candidate resume sections"]
-  },
   goalflow: {
     id: "goalflow",
     title: "GoalFlow",
@@ -52,5 +34,49 @@ window.PORTFOLIO_PROJECTS = {
     screenshots: ["Extension action state", "GitHub publishing workflow", "AI explanation output"],
     challenges: "The key challenge was keeping the extension workflow lightweight while coordinating LeetCode page data, GitHub API calls, and AI explanation generation.",
     future: ["Add language-specific explanation templates", "Support multiple repository structures", "Add retry handling for API failures", "Add optional README formatting controls"]
+  },
+  ecommerce: {
+    id: "ecommerce",
+    title: "E-Commerce Backend",
+    eyebrow: "Backend / Security",
+    subtitle: "Production-grade commerce API with OAuth2, JWT, role-based access control, and a fully normalized PostgreSQL data model.",
+    image: "assets/project/ecommerce-banner.svg",
+    github: "https://github.com/sharmaVishal2/E-Commerce-Application-by-Java-Spring-Boot",
+    live: null,
+    stack: ["Java", "Spring Boot", "Spring Security", "OAuth2", "JWT", "PostgreSQL", "Hibernate", "Maven"],
+    overview: "A fully featured e-commerce backend built with Spring Boot that handles the complete product lifecycle — from catalog browsing and cart management to order placement and admin controls. The system enforces strict role-based access so customers, sellers, and admins each operate within clearly defined boundaries, backed by a normalized relational schema designed for consistency and query performance.",
+    problem: "Building a commerce backend that feels simple to the frontend while hiding significant complexity underneath is hard. Most student projects skip proper security, use flat data models, or bolt on authentication as an afterthought. The goal here was to do it right from the start — secure by design, with a schema that reflects real domain relationships.",
+    solution: "The system uses Spring Security with OAuth2 and JWT to handle authentication and authorization at the filter level, keeping business logic clean. Hibernate manages a normalized PostgreSQL schema with proper foreign keys, cascade rules, and indexed queries. Every endpoint is protected by role checks, and the API contract is consistent and predictable across all resources.",
+    architecture: [
+      "Spring Boot application layer",
+      "Spring Security filter chain with JWT validation",
+      "OAuth2 authorization flow",
+      "Role-based access control (Customer / Seller / Admin)",
+      "Hibernate ORM with normalized PostgreSQL schema",
+      "RESTful resource controllers",
+      "Service layer with transactional boundaries",
+      "Maven build and dependency management"
+    ],
+    features: [
+      "JWT-secured authentication with refresh token support",
+      "OAuth2 integration for third-party login",
+      "Three-tier RBAC: Customer, Seller, and Admin roles",
+      "Product catalog with category hierarchy and search",
+      "Cart management with quantity and price validation",
+      "Order placement, tracking, and status management",
+      "Admin dashboard APIs for inventory and user management",
+      "Normalized PostgreSQL schema with referential integrity",
+      "Hibernate-managed entity relationships and lazy loading",
+      "Consistent REST API contract with proper HTTP semantics"
+    ],
+    screenshots: ["Product catalog API response", "Order management flow", "Admin inventory view"],
+    challenges: "The most demanding part was designing the security layer so that role enforcement happened at the right level — not scattered across service methods but centralized in the filter chain and method-level annotations. Getting OAuth2 and JWT to coexist cleanly, with proper token validation and expiry handling, required careful configuration of the Spring Security filter order and token store.",
+    future: [
+      "Add Redis caching for product catalog and session tokens",
+      "Introduce Elasticsearch for full-text product search",
+      "Add payment gateway integration (Razorpay / Stripe)",
+      "Build a seller analytics dashboard with revenue metrics",
+      "Containerize with Docker and add CI/CD pipeline"
+    ]
   }
 };
