@@ -1,24 +1,127 @@
-<svg width="1200" height="720" viewBox="0 0 1200 720" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="1200" height="720" rx="36" fill="#07111E"/>
-  <rect x="70" y="80" width="1060" height="560" rx="28" fill="#0D1729" stroke="#1D3557" stroke-width="2"/>
-  <rect x="110" y="128" width="260" height="130" rx="22" fill="#11253F"/>
-  <rect x="110" y="290" width="260" height="250" rx="22" fill="#162C46"/>
-  <rect x="410" y="128" width="680" height="412" rx="24" fill="#10233D"/>
-  <rect x="440" y="164" width="620" height="48" rx="14" fill="#173550"/>
-  <rect x="440" y="240" width="250" height="120" rx="20" fill="#14324F"/>
-  <rect x="710" y="240" width="170" height="120" rx="20" fill="#173958"/>
-  <rect x="900" y="240" width="160" height="120" rx="20" fill="#1D4A63"/>
-  <rect x="440" y="392" width="620" height="98" rx="18" fill="#132A3D"/>
-  <circle cx="170" cy="188" r="48" fill="#5E9BFF" fill-opacity="0.26"/>
-  <path d="M168 152L171 174L193 178L176 192L181 214L168 202L155 214L160 192L143 178L165 174L168 152Z" fill="#7BE0A5"/>
-  <rect x="140" y="330" width="200" height="18" rx="9" fill="#4A8DFF" fill-opacity="0.75"/>
-  <rect x="140" y="366" width="160" height="14" rx="7" fill="#5D7B98"/>
-  <rect x="140" y="390" width="180" height="14" rx="7" fill="#5D7B98"/>
-  <rect x="140" y="440" width="180" height="16" rx="8" fill="#5D7B98"/>
-  <rect x="140" y="468" width="144" height="16" rx="8" fill="#5D7B98"/>
-  <path d="M470 412H960" stroke="#2F5E85" stroke-width="2" stroke-linecap="round"/>
-  <path d="M470 438H860" stroke="#2F5E85" stroke-width="2" stroke-linecap="round"/>
-  <path d="M470 464H790" stroke="#2F5E85" stroke-width="2" stroke-linecap="round"/>
-  <rect x="1040" y="92" width="70" height="18" rx="9" fill="#7BE0A5" fill-opacity="0.18"/>
-  <rect x="990" y="92" width="40" height="18" rx="9" fill="#5E9BFF" fill-opacity="0.2"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" fill="none">
+  <defs>
+    <linearGradient id="gf-bg" x1="0" y1="0" x2="960" y2="540" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#060e1e"/>
+      <stop offset="100%" stop-color="#0d1a30"/>
+    </linearGradient>
+    <linearGradient id="gf-accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#3f9cff"/>
+      <stop offset="100%" stop-color="#a79aff"/>
+    </linearGradient>
+    <linearGradient id="gf-green" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#7be0a5"/>
+      <stop offset="100%" stop-color="#3fd4a0"/>
+    </linearGradient>
+    <filter id="gf-glow">
+      <feGaussianBlur stdDeviation="18" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <clipPath id="gf-clip">
+      <rect width="960" height="540" rx="0"/>
+    </clipPath>
+  </defs>
+
+  <rect width="960" height="540" fill="url(#gf-bg)"/>
+
+  <!-- Background orbs -->
+  <circle cx="760" cy="100" r="200" fill="rgba(63,156,255,0.07)" filter="url(#gf-glow)"/>
+  <circle cx="200" cy="420" r="160" fill="rgba(167,154,255,0.06)" filter="url(#gf-glow)"/>
+
+  <!-- Grid lines -->
+  <g stroke="rgba(168,193,229,0.04)" stroke-width="1">
+    <line x1="0" y1="90" x2="960" y2="90"/>
+    <line x1="0" y1="180" x2="960" y2="180"/>
+    <line x1="0" y1="270" x2="960" y2="270"/>
+    <line x1="0" y1="360" x2="960" y2="360"/>
+    <line x1="0" y1="450" x2="960" y2="450"/>
+    <line x1="160" y1="0" x2="160" y2="540"/>
+    <line x1="320" y1="0" x2="320" y2="540"/>
+    <line x1="480" y1="0" x2="480" y2="540"/>
+    <line x1="640" y1="0" x2="640" y2="540"/>
+    <line x1="800" y1="0" x2="800" y2="540"/>
+  </g>
+
+  <!-- Sidebar -->
+  <rect x="48" y="80" width="160" height="380" rx="12" fill="rgba(17,26,44,0.9)" stroke="rgba(168,193,229,0.12)" stroke-width="1"/>
+  <rect x="64" y="104" width="128" height="28" rx="6" fill="rgba(63,156,255,0.18)"/>
+  <text x="78" y="123" font-family="monospace" font-size="11" fill="#69b7ff" font-weight="600">GoalFlow</text>
+  <rect x="64" y="148" width="128" height="26" rx="6" fill="rgba(63,156,255,0.22)"/>
+  <text x="78" y="165" font-family="monospace" font-size="10" fill="#a4d7ff">Dashboard</text>
+  <rect x="64" y="182" width="128" height="26" rx="6" fill="transparent"/>
+  <text x="78" y="199" font-family="monospace" font-size="10" fill="rgba(165,177,197,0.7)">My Goals</text>
+  <rect x="64" y="216" width="128" height="26" rx="6" fill="transparent"/>
+  <text x="78" y="233" font-family="monospace" font-size="10" fill="rgba(165,177,197,0.7)">Team Goals</text>
+  <rect x="64" y="250" width="128" height="26" rx="6" fill="transparent"/>
+  <text x="78" y="267" font-family="monospace" font-size="10" fill="rgba(165,177,197,0.7)">Analytics</text>
+  <rect x="64" y="284" width="128" height="26" rx="6" fill="transparent"/>
+  <text x="78" y="301" font-family="monospace" font-size="10" fill="rgba(165,177,197,0.7)">Reviews</text>
+
+  <!-- Role badges in sidebar -->
+  <rect x="64" y="360" width="52" height="18" rx="4" fill="rgba(63,156,255,0.2)"/>
+  <text x="72" y="373" font-family="monospace" font-size="8" fill="#69b7ff">ADMIN</text>
+  <rect x="122" y="360" width="70" height="18" rx="4" fill="rgba(167,154,255,0.2)"/>
+  <text x="130" y="373" font-family="monospace" font-size="8" fill="#a79aff">MANAGER</text>
+  <rect x="64" y="384" width="60" height="18" rx="4" fill="rgba(123,224,165,0.2)"/>
+  <text x="72" y="397" font-family="monospace" font-size="8" fill="#7be0a5">EMPLOYEE</text>
+
+  <!-- Main content area -->
+  <rect x="228" y="80" width="684" height="380" rx="12" fill="rgba(13,22,38,0.85)" stroke="rgba(168,193,229,0.1)" stroke-width="1"/>
+
+  <!-- Top bar -->
+  <rect x="228" y="80" width="684" height="44" rx="12" fill="rgba(17,28,48,0.95)"/>
+  <rect x="228" y="104" width="684" height="20" rx="0" fill="rgba(17,28,48,0.95)"/>
+  <text x="252" y="108" font-family="monospace" font-size="12" fill="rgba(244,247,251,0.9)" font-weight="700">Q3 Goal Dashboard</text>
+  <rect x="796" y="90" width="96" height="24" rx="6" fill="url(#gf-accent)"/>
+  <text x="820" y="107" font-family="monospace" font-size="10" fill="#07111d" font-weight="700">+ New Goal</text>
+
+  <!-- Stats row -->
+  <rect x="248" y="140" width="140" height="72" rx="8" fill="rgba(63,156,255,0.1)" stroke="rgba(63,156,255,0.2)" stroke-width="1"/>
+  <text x="264" y="162" font-family="monospace" font-size="9" fill="rgba(165,177,197,0.8)" text-transform="uppercase">TOTAL GOALS</text>
+  <text x="264" y="196" font-family="monospace" font-size="26" fill="#69b7ff" font-weight="700">24</text>
+
+  <rect x="404" y="140" width="140" height="72" rx="8" fill="rgba(123,224,165,0.1)" stroke="rgba(123,224,165,0.2)" stroke-width="1"/>
+  <text x="420" y="162" font-family="monospace" font-size="9" fill="rgba(165,177,197,0.8)">COMPLETED</text>
+  <text x="420" y="196" font-family="monospace" font-size="26" fill="#7be0a5" font-weight="700">18</text>
+
+  <rect x="560" y="140" width="140" height="72" rx="8" fill="rgba(167,154,255,0.1)" stroke="rgba(167,154,255,0.2)" stroke-width="1"/>
+  <text x="576" y="162" font-family="monospace" font-size="9" fill="rgba(165,177,197,0.8)">IN REVIEW</text>
+  <text x="576" y="196" font-family="monospace" font-size="26" fill="#a79aff" font-weight="700">4</text>
+
+  <rect x="716" y="140" width="140" height="72" rx="8" fill="rgba(255,180,80,0.1)" stroke="rgba(255,180,80,0.2)" stroke-width="1"/>
+  <text x="732" y="162" font-family="monospace" font-size="9" fill="rgba(165,177,197,0.8)">BLOCKERS</text>
+  <text x="732" y="196" font-family="monospace" font-size="26" fill="#f5a623" font-weight="700">2</text>
+
+  <!-- Progress bar section -->
+  <text x="248" y="240" font-family="monospace" font-size="10" fill="rgba(165,177,197,0.7)">QUARTERLY PROGRESS</text>
+  <rect x="248" y="250" width="608" height="8" rx="4" fill="rgba(255,255,255,0.06)"/>
+  <rect x="248" y="250" width="456" height="8" rx="4" fill="url(#gf-green)"/>
+  <text x="862" y="260" font-family="monospace" font-size="10" fill="#7be0a5">75%</text>
+
+  <!-- Goal list -->
+  <rect x="248" y="276" width="608" height="36" rx="6" fill="rgba(255,255,255,0.04)" stroke="rgba(168,193,229,0.08)" stroke-width="1"/>
+  <circle cx="268" cy="294" r="5" fill="rgba(123,224,165,0.3)" stroke="#7be0a5" stroke-width="1.5"/>
+  <text x="284" y="299" font-family="sans-serif" font-size="11" fill="rgba(244,247,251,0.85)">Improve API response time by 30%</text>
+  <rect x="748" y="282" width="60" height="18" rx="4" fill="rgba(123,224,165,0.15)"/>
+  <text x="760" y="295" font-family="monospace" font-size="8" fill="#7be0a5">APPROVED</text>
+
+  <rect x="248" y="320" width="608" height="36" rx="6" fill="rgba(255,255,255,0.04)" stroke="rgba(168,193,229,0.08)" stroke-width="1"/>
+  <circle cx="268" cy="338" r="5" fill="rgba(167,154,255,0.3)" stroke="#a79aff" stroke-width="1.5"/>
+  <text x="284" y="343" font-family="sans-serif" font-size="11" fill="rgba(244,247,251,0.85)">Complete microservices migration</text>
+  <rect x="748" y="326" width="60" height="18" rx="4" fill="rgba(167,154,255,0.15)"/>
+  <text x="756" y="339" font-family="monospace" font-size="8" fill="#a79aff">IN REVIEW</text>
+
+  <rect x="248" y="364" width="608" height="36" rx="6" fill="rgba(255,255,255,0.04)" stroke="rgba(168,193,229,0.08)" stroke-width="1"/>
+  <circle cx="268" cy="382" r="5" fill="rgba(245,166,35,0.3)" stroke="#f5a623" stroke-width="1.5"/>
+  <text x="284" y="387" font-family="sans-serif" font-size="11" fill="rgba(244,247,251,0.85)">Deploy CI/CD pipeline for staging</text>
+  <rect x="748" y="370" width="60" height="18" rx="4" fill="rgba(245,166,35,0.15)"/>
+  <text x="756" y="383" font-family="monospace" font-size="8" fill="#f5a623">BLOCKED</text>
+
+  <rect x="248" y="408" width="608" height="36" rx="6" fill="rgba(255,255,255,0.04)" stroke="rgba(168,193,229,0.08)" stroke-width="1"/>
+  <circle cx="268" cy="426" r="5" fill="rgba(63,156,255,0.3)" stroke="#69b7ff" stroke-width="1.5"/>
+  <text x="284" y="431" font-family="sans-serif" font-size="11" fill="rgba(244,247,251,0.85)">Onboard 3 new team members</text>
+  <rect x="748" y="414" width="60" height="18" rx="4" fill="rgba(63,156,255,0.15)"/>
+  <text x="762" y="427" font-family="monospace" font-size="8" fill="#69b7ff">ACTIVE</text>
+
+  <!-- Bottom label -->
+  <text x="480" y="510" font-family="monospace" font-size="11" fill="rgba(165,177,197,0.35)" text-anchor="middle">GoalFlow — Enterprise Goal Management Platform</text>
 </svg>

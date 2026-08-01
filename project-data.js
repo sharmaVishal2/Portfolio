@@ -43,7 +43,7 @@ window.PORTFOLIO_PROJECTS = {
     image: "assets/project/algo-push-banner.svg",
     github: "https://github.com/sharmaVishal2/AlgoPush",
     live: "https://algopush.vercel.app/",
-    stack: ["Spring Boot", "React", "Chrome Extension API", "GitHub REST API", "Groq API"],
+    stack: ["Java", "Spring Boot", "React", "Chrome Extension API", "GitHub REST API", "Groq API"],
     overview: "AlgoPush is a developer productivity tool that helps push LeetCode solutions to GitHub and generate clean explanations through Groq-powered AI.",
     problem: "Developers often solve problems consistently but skip documentation because moving code from LeetCode to GitHub and writing explanations interrupts the workflow.",
     solution: "AlgoPush automates publishing, organizes solutions, and generates concise explanations so coding practice turns into a well-documented public repository.",

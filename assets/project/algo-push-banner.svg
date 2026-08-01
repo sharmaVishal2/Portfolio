@@ -1,23 +1,148 @@
-<svg width="1200" height="720" viewBox="0 0 1200 720" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="1200" height="720" rx="36" fill="#060C16"/>
-  <rect x="90" y="90" width="1020" height="540" rx="30" fill="#0E1626" stroke="#233A56" stroke-width="2"/>
-  <rect x="130" y="140" width="420" height="420" rx="24" fill="#101B2E"/>
-  <rect x="590" y="140" width="480" height="420" rx="24" fill="#121F34"/>
-  <path d="M190 480C240 400 310 340 372 280" stroke="#73C7FF" stroke-width="12" stroke-linecap="round"/>
-  <path d="M190 480C248 430 300 400 340 352" stroke="#7BE0A5" stroke-width="8" stroke-linecap="round"/>
-  <circle cx="190" cy="480" r="18" fill="#73C7FF"/>
-  <circle cx="372" cy="280" r="18" fill="#7BE0A5"/>
-  <rect x="620" y="184" width="240" height="24" rx="12" fill="#2A4E73"/>
-  <rect x="620" y="226" width="190" height="18" rx="9" fill="#406584"/>
-  <rect x="620" y="270" width="220" height="16" rx="8" fill="#406584"/>
-  <rect x="620" y="322" width="180" height="16" rx="8" fill="#406584"/>
-  <rect x="620" y="364" width="210" height="16" rx="8" fill="#406584"/>
-  <rect x="620" y="430" width="300" height="90" rx="18" fill="#17253D" stroke="#284668" stroke-width="2"/>
-  <rect x="648" y="460" width="120" height="14" rx="7" fill="#73C7FF"/>
-  <rect x="648" y="488" width="180" height="12" rx="6" fill="#4E6C87"/>
-  <rect x="870" y="184" width="160" height="120" rx="20" fill="#18344C"/>
-  <path d="M910 264H1000" stroke="#73C7FF" stroke-width="10" stroke-linecap="round"/>
-  <path d="M955 220V308" stroke="#7BE0A5" stroke-width="10" stroke-linecap="round"/>
-  <rect x="870" y="338" width="160" height="120" rx="20" fill="#173A57"/>
-  <path d="M910 398L945 430L1000 370" stroke="#7BE0A5" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" fill="none">
+  <defs>
+    <linearGradient id="ap-bg" x1="0" y1="0" x2="960" y2="540" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#06101e"/>
+      <stop offset="100%" stop-color="#0b1628"/>
+    </linearGradient>
+    <linearGradient id="ap-blue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#3f9cff"/>
+      <stop offset="100%" stop-color="#78e5e8"/>
+    </linearGradient>
+    <linearGradient id="ap-violet" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#a79aff"/>
+      <stop offset="100%" stop-color="#3f9cff"/>
+    </linearGradient>
+    <filter id="ap-glow">
+      <feGaussianBlur stdDeviation="22" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <filter id="ap-glow-sm">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <rect width="960" height="540" fill="url(#ap-bg)"/>
+
+  <!-- Background orbs -->
+  <circle cx="820" cy="120" r="220" fill="rgba(63,156,255,0.06)" filter="url(#ap-glow)"/>
+  <circle cx="140" cy="400" r="180" fill="rgba(167,154,255,0.05)" filter="url(#ap-glow)"/>
+
+  <!-- Grid -->
+  <g stroke="rgba(168,193,229,0.035)" stroke-width="1">
+    <line x1="0" y1="108" x2="960" y2="108"/>
+    <line x1="0" y1="216" x2="960" y2="216"/>
+    <line x1="0" y1="324" x2="960" y2="324"/>
+    <line x1="0" y1="432" x2="960" y2="432"/>
+    <line x1="192" y1="0" x2="192" y2="540"/>
+    <line x1="384" y1="0" x2="384" y2="540"/>
+    <line x1="576" y1="0" x2="576" y2="540"/>
+    <line x1="768" y1="0" x2="768" y2="540"/>
+  </g>
+
+  <!-- Flow arrow line -->
+  <line x1="200" y1="270" x2="760" y2="270" stroke="rgba(63,156,255,0.15)" stroke-width="1.5" stroke-dasharray="6 4"/>
+
+  <!-- LeetCode panel (left) -->
+  <rect x="48" y="140" width="220" height="260" rx="12" fill="rgba(14,22,38,0.95)" stroke="rgba(245,166,35,0.3)" stroke-width="1"/>
+  <rect x="48" y="140" width="220" height="40" rx="12" fill="rgba(245,166,35,0.12)"/>
+  <rect x="48" y="160" width="220" height="20" rx="0" fill="rgba(245,166,35,0.12)"/>
+  <text x="68" y="166" font-family="monospace" font-size="11" fill="#f5a623" font-weight="700">LeetCode</text>
+  <text x="220" y="166" font-family="monospace" font-size="9" fill="rgba(245,166,35,0.6)">Problem</text>
+
+  <text x="64" y="204" font-family="monospace" font-size="9" fill="rgba(165,177,197,0.6)">TWO SUM</text>
+  <text x="64" y="220" font-family="sans-serif" font-size="11" fill="rgba(244,247,251,0.9)" font-weight="600">Given an array of integers</text>
+  <text x="64" y="236" font-family="sans-serif" font-size="11" fill="rgba(244,247,251,0.9)">nums, return indices...</text>
+
+  <!-- Code block in LeetCode panel -->
+  <rect x="64" y="248" width="188" height="80" rx="6" fill="rgba(0,0,0,0.3)"/>
+  <text x="76" y="266" font-family="monospace" font-size="9" fill="#a79aff">class</text>
+  <text x="106" y="266" font-family="monospace" font-size="9" fill="#69b7ff">Solution</text>
+  <text x="76" y="282" font-family="monospace" font-size="9" fill="rgba(165,177,197,0.7)">  def twoSum(self,</text>
+  <text x="76" y="296" font-family="monospace" font-size="9" fill="rgba(165,177,197,0.7)">    nums, target):</text>
+  <text x="76" y="312" font-family="monospace" font-size="9" fill="#7be0a5">    seen = {}</text>
+
+  <rect x="64" y="344" width="60" height="18" rx="4" fill="rgba(123,224,165,0.15)"/>
+  <text x="72" y="357" font-family="monospace" font-size="8" fill="#7be0a5">ACCEPTED</text>
+  <rect x="132" y="344" width="60" height="18" rx="4" fill="rgba(63,156,255,0.15)"/>
+  <text x="140" y="357" font-family="monospace" font-size="8" fill="#69b7ff">Runtime 98%</text>
+
+  <!-- Arrow 1: LeetCode → AlgoPush -->
+  <polygon points="310,262 298,256 298,268" fill="rgba(63,156,255,0.6)"/>
+  <line x1="268" y1="262" x2="308" y2="262" stroke="rgba(63,156,255,0.5)" stroke-width="1.5"/>
+
+  <!-- AlgoPush Extension (center) -->
+  <rect x="320" y="110" width="320" height="320" rx="16" fill="rgba(14,24,44,0.97)" stroke="rgba(63,156,255,0.35)" stroke-width="1.5"/>
+  <!-- Glow border -->
+  <rect x="320" y="110" width="320" height="320" rx="16" fill="none" stroke="rgba(63,156,255,0.1)" stroke-width="8"/>
+
+  <rect x="320" y="110" width="320" height="48" rx="16" fill="rgba(20,34,60,0.98)"/>
+  <rect x="320" y="138" width="320" height="20" rx="0" fill="rgba(20,34,60,0.98)"/>
+
+  <!-- Extension icon -->
+  <rect x="340" y="122" width="24" height="24" rx="6" fill="url(#ap-blue)"/>
+  <text x="346" y="139" font-family="monospace" font-size="11" fill="#07111d" font-weight="800">AP</text>
+  <text x="374" y="136" font-family="sans-serif" font-size="12" fill="rgba(244,247,251,0.95)" font-weight="700">AlgoPush</text>
+  <text x="374" y="150" font-family="monospace" font-size="8" fill="rgba(165,177,197,0.5)">Chrome Extension</text>
+
+  <!-- Status -->
+  <circle cx="608" cy="134" r="4" fill="#7be0a5"/>
+  <text x="618" y="138" font-family="monospace" font-size="8" fill="#7be0a5">Active</text>
+
+  <!-- Solution detected -->
+  <rect x="340" y="174" width="280" height="52" rx="8" fill="rgba(63,156,255,0.08)" stroke="rgba(63,156,255,0.2)" stroke-width="1"/>
+  <text x="356" y="196" font-family="monospace" font-size="9" fill="rgba(165,177,197,0.7)">SOLUTION DETECTED</text>
+  <text x="356" y="214" font-family="sans-serif" font-size="11" fill="rgba(244,247,251,0.9)" font-weight="600">Two Sum · Python · Accepted ✓</text>
+
+  <!-- AI Explanation -->
+  <rect x="340" y="238" width="280" height="72" rx="8" fill="rgba(167,154,255,0.08)" stroke="rgba(167,154,255,0.2)" stroke-width="1"/>
+  <text x="356" y="258" font-family="monospace" font-size="9" fill="rgba(167,154,255,0.8)">AI EXPLANATION (Groq LLaMA 3)</text>
+  <text x="356" y="276" font-family="sans-serif" font-size="10" fill="rgba(197,206,222,0.85)">Uses a hash map to store seen values.</text>
+  <text x="356" y="292" font-family="sans-serif" font-size="10" fill="rgba(197,206,222,0.85)">O(n) time, O(n) space complexity.</text>
+
+  <!-- Push button -->
+  <rect x="340" y="326" width="280" height="40" rx="8" fill="url(#ap-blue)"/>
+  <text x="440" y="351" font-family="sans-serif" font-size="12" fill="#07111d" font-weight="800" text-anchor="middle">⬆ Push to GitHub</text>
+
+  <!-- Stats row -->
+  <rect x="340" y="380" width="84" height="36" rx="6" fill="rgba(255,255,255,0.04)"/>
+  <text x="382" y="396" font-family="monospace" font-size="14" fill="#69b7ff" font-weight="700" text-anchor="middle">100+</text>
+  <text x="382" y="410" font-family="monospace" font-size="7" fill="rgba(165,177,197,0.6)" text-anchor="middle">Solutions</text>
+
+  <rect x="432" y="380" width="84" height="36" rx="6" fill="rgba(255,255,255,0.04)"/>
+  <text x="474" y="396" font-family="monospace" font-size="14" fill="#a79aff" font-weight="700" text-anchor="middle">1-click</text>
+  <text x="474" y="410" font-family="monospace" font-size="7" fill="rgba(165,177,197,0.6)" text-anchor="middle">Publish</text>
+
+  <rect x="524" y="380" width="76" height="36" rx="6" fill="rgba(255,255,255,0.04)"/>
+  <text x="562" y="396" font-family="monospace" font-size="14" fill="#7be0a5" font-weight="700" text-anchor="middle">AI</text>
+  <text x="562" y="410" font-family="monospace" font-size="7" fill="rgba(165,177,197,0.6)" text-anchor="middle">Docs</text>
+
+  <!-- Arrow 2: AlgoPush → GitHub -->
+  <polygon points="662,262 650,256 650,268" fill="rgba(123,224,165,0.6)"/>
+  <line x1="640" y1="262" x2="660" y2="262" stroke="rgba(123,224,165,0.5)" stroke-width="1.5"/>
+
+  <!-- GitHub panel (right) -->
+  <rect x="672" y="140" width="240" height="260" rx="12" fill="rgba(14,22,38,0.95)" stroke="rgba(123,224,165,0.25)" stroke-width="1"/>
+  <rect x="672" y="140" width="240" height="40" rx="12" fill="rgba(123,224,165,0.1)"/>
+  <rect x="672" y="160" width="240" height="20" rx="0" fill="rgba(123,224,165,0.1)"/>
+  <text x="692" y="166" font-family="monospace" font-size="11" fill="#7be0a5" font-weight="700">GitHub</text>
+  <text x="840" y="166" font-family="monospace" font-size="9" fill="rgba(123,224,165,0.6)">Repo</text>
+
+  <text x="688" y="204" font-family="monospace" font-size="9" fill="rgba(165,177,197,0.6)">sharmaVishal2 / AlgoPush</text>
+
+  <!-- File tree -->
+  <text x="688" y="226" font-family="monospace" font-size="9" fill="rgba(165,177,197,0.5)">📁 solutions/</text>
+  <text x="700" y="244" font-family="monospace" font-size="9" fill="rgba(165,177,197,0.7)">📁 python/</text>
+  <text x="712" y="260" font-family="monospace" font-size="9" fill="#69b7ff">  two_sum.py ✨</text>
+  <text x="712" y="276" font-family="monospace" font-size="9" fill="rgba(165,177,197,0.5)">  valid_parens.py</text>
+  <text x="712" y="292" font-family="monospace" font-size="9" fill="rgba(165,177,197,0.5)">  merge_sort.py</text>
+  <text x="700" y="310" font-family="monospace" font-size="9" fill="rgba(165,177,197,0.5)">📁 java/</text>
+  <text x="700" y="326" font-family="monospace" font-size="9" fill="rgba(165,177,197,0.5)">📄 README.md</text>
+
+  <!-- Commit badge -->
+  <rect x="688" y="344" width="200" height="28" rx="6" fill="rgba(123,224,165,0.1)" stroke="rgba(123,224,165,0.2)" stroke-width="1"/>
+  <text x="698" y="363" font-family="monospace" font-size="9" fill="#7be0a5">✓ Pushed: two_sum.py + AI docs</text>
+
+  <!-- Bottom label -->
+  <text x="480" y="510" font-family="monospace" font-size="11" fill="rgba(165,177,197,0.3)" text-anchor="middle">AlgoPush — AI-powered LeetCode to GitHub Chrome Extension</text>
 </svg>
