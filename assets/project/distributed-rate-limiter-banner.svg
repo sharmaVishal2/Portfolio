@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Distributed Rate Limiter Service</title>
+  <desc id="desc">A visual representation of API traffic being regulated by Redis-backed rate limiting.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="960" y2="540" gradientUnits="userSpaceOnUse"><stop stop-color="#081322"/><stop offset="1" stop-color="#111834"/></linearGradient>
+    <linearGradient id="accent" x1="260" y1="130" x2="700" y2="410" gradientUnits="userSpaceOnUse"><stop stop-color="#69b7ff"/><stop offset="1" stop-color="#78e5e8"/></linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="24"/></filter>
+  </defs>
+  <rect width="960" height="540" fill="url(#bg)"/>
+  <circle cx="170" cy="420" r="150" fill="#3f9cff" opacity=".12" filter="url(#glow)"/><circle cx="800" cy="105" r="140" fill="#78e5e8" opacity=".1" filter="url(#glow)"/>
+  <g stroke="#a8c1e5" stroke-opacity=".08"><path d="M0 108h960M0 216h960M0 324h960M0 432h960M192 0v540M384 0v540M576 0v540M768 0v540"/></g>
+  <text x="64" y="75" fill="#78e5e8" font-family="monospace" font-size="14" letter-spacing="3">DISTRIBUTED RATE LIMITER</text>
+  <text x="64" y="103" fill="#a5b1c5" font-family="sans-serif" font-size="16">Protecting backend services from excessive API traffic</text>
+  <g>
+    <rect x="70" y="188" width="194" height="168" rx="16" fill="#101c31" stroke="#69b7ff" stroke-opacity=".42"/>
+    <text x="94" y="228" fill="#f4f7fb" font-family="sans-serif" font-size="17" font-weight="700">API clients</text>
+    <text x="94" y="254" fill="#a5b1c5" font-family="monospace" font-size="12">Multiple endpoints</text>
+    <circle cx="109" cy="296" r="7" fill="#78e5e8"/><path d="M128 296h92" stroke="#78e5e8" stroke-width="5" stroke-linecap="round"/><circle cx="109" cy="322" r="7" fill="#69b7ff"/><path d="M128 322h62" stroke="#69b7ff" stroke-width="5" stroke-linecap="round"/>
+  </g>
+  <path d="M285 272h83" stroke="#69b7ff" stroke-width="3" stroke-dasharray="8 8"/><path d="m368 272-13-9v18z" fill="#69b7ff"/>
+  <g>
+    <rect x="385" y="142" width="222" height="257" rx="18" fill="#101c31" stroke="url(#accent)" stroke-width="2"/>
+    <rect x="405" y="164" width="182" height="38" rx="8" fill="#69b7ff" fill-opacity=".13"/>
+    <text x="425" y="189" fill="#78e5e8" font-family="monospace" font-size="13">SPRING BOOT</text>
+    <text x="422" y="237" fill="#f4f7fb" font-family="sans-serif" font-size="19" font-weight="700">Rate limit rules</text>
+    <text x="422" y="266" fill="#a5b1c5" font-family="monospace" font-size="12">Token Bucket</text>
+    <text x="422" y="292" fill="#a5b1c5" font-family="monospace" font-size="12">Sliding Window</text>
+    <rect x="422" y="320" width="147" height="42" rx="9" fill="url(#accent)"/>
+    <text x="495" y="347" fill="#07111d" font-family="sans-serif" font-size="13" font-weight="800" text-anchor="middle">THROTTLE</text>
+  </g>
+  <path d="M627 272h78" stroke="#78e5e8" stroke-width="3" stroke-dasharray="8 8"/><path d="m705 272-13-9v18z" fill="#78e5e8"/>
+  <g>
+    <rect x="722" y="168" width="170" height="201" rx="16" fill="#101c31" stroke="#78e5e8" stroke-opacity=".42"/>
+    <text x="748" y="211" fill="#f4f7fb" font-family="sans-serif" font-size="18" font-weight="700">Redis</text>
+    <text x="748" y="238" fill="#78e5e8" font-family="monospace" font-size="11">ATOMIC OPS</text>
+    <path d="M748 268h118M748 292h91M748 316h105" stroke="#a5b1c5" stroke-opacity=".58" stroke-width="6" stroke-linecap="round"/>
+    <text x="748" y="348" fill="#a5b1c5" font-family="monospace" font-size="10">Thread-safe counting</text>
+  </g>
+</svg>

@@ -29,7 +29,7 @@ function renderProject(project) {
           <p>${project.subtitle}</p>
           <div class="case-actions">
             <a class="button button-primary" href="${project.github}" target="_blank" rel="noopener">GitHub</a>
-            <a class="button button-secondary" href="${project.live}" target="_blank" rel="noopener">Live Demo</a>
+            ${project.live ? `<a class="button button-secondary" href="${project.live}" target="_blank" rel="noopener">Live Demo</a>` : ""}
           </div>
         </div>
         <div class="case-visual">
@@ -50,16 +50,8 @@ function renderProject(project) {
             <h2>What it does</h2>
             <p>${project.overview}</p>
           </section>
-          <section>
-            <p class="section-kicker">Problem</p>
-            <h2>The user pain</h2>
-            <p>${project.problem}</p>
-          </section>
-          <section>
-            <p class="section-kicker">Solution</p>
-            <h2>How the product solves it</h2>
-            <p>${project.solution}</p>
-          </section>
+          ${project.problem ? `<section><p class="section-kicker">Problem</p><h2>The user pain</h2><p>${project.problem}</p></section>` : ""}
+          ${project.solution ? `<section><p class="section-kicker">Solution</p><h2>How the product solves it</h2><p>${project.solution}</p></section>` : ""}
         </div>
       </div>
     </section>
@@ -84,28 +76,28 @@ function renderProject(project) {
           <h2>What users can do</h2>
           ${list(project.features, "case-list")}
         </section>
-        <section>
+        ${project.screenshots?.length ? `<section>
           <p class="section-kicker">Screenshots</p>
           <h2>Product moments</h2>
           <div class="screenshot-grid">${project.screenshots.map((shot) => `<div><img src="${project.image}" alt="${project.title} - ${shot}" loading="lazy" decoding="async" /><span>${shot}</span></div>`).join("")}</div>
-        </section>
+        </section>` : ""}
       </div>
     </section>
 
-    <section class="section case-section">
+    ${(project.challenges || project.future) ? `<section class="section case-section">
       <div class="container case-two-column">
-        <section>
+        ${project.challenges ? `<section>
           <p class="section-kicker">Challenges</p>
           <h2>Engineering tradeoffs</h2>
           <p>${project.challenges}</p>
-        </section>
-        <section>
+        </section>` : ""}
+        ${project.future ? `<section>
           <p class="section-kicker">Future improvements</p>
           <h2>How I would extend it</h2>
           ${list(project.future, "case-list")}
-        </section>
+        </section>` : ""}
       </div>
-    </section>
+    </section>` : ""}
 
     <section class="section case-next">
       <div class="container">

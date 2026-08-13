@@ -42,27 +42,21 @@ function hydrateProjectDialogs() {
         <div class="dialog-content">
           <div class="project-overline">
             <span class="section-kicker">${project.eyebrow}</span>
-            <span class="live-pulse"><i></i> Live</span>
+            ${project.live ? '<span class="live-pulse"><i></i> Live</span>' : ''}
           </div>
           <h2 id="dialogTitle">${project.title}</h2>
           <p class="dialog-summary">${project.subtitle}</p>
           <div class="dialog-links">
             <a href="${project.github}" target="_blank" rel="noopener" class="button button-secondary"><i data-lucide="github" aria-hidden="true"></i> GitHub</a>
-            <a href="${project.live}" target="_blank" rel="noopener" class="button button-primary"><i data-lucide="globe" aria-hidden="true"></i> Live Demo</a>
+            ${project.live ? `<a href="${project.live}" target="_blank" rel="noopener" class="button button-primary"><i data-lucide="globe" aria-hidden="true"></i> Live Demo</a>` : ""}
           </div>
           <div class="dialog-sections">
             <div class="dialog-section">
               <h3>Overview</h3>
               <p>${project.overview}</p>
             </div>
-            <div class="dialog-section">
-              <h3>Problem</h3>
-              <p>${project.problem}</p>
-            </div>
-            <div class="dialog-section">
-              <h3>Solution</h3>
-              <p>${project.solution}</p>
-            </div>
+            ${project.problem ? `<div class="dialog-section"><h3>Problem</h3><p>${project.problem}</p></div>` : ""}
+            ${project.solution ? `<div class="dialog-section"><h3>Solution</h3><p>${project.solution}</p></div>` : ""}
             <div class="dialog-section">
               <h3>Architecture</h3>
               <div class="architecture-flow">${project.architecture.map(a => `<span>${a}</span>`).join("")}</div>
@@ -71,14 +65,8 @@ function hydrateProjectDialogs() {
               <h3>Features</h3>
               ${list(project.features)}
             </div>
-            <div class="dialog-section">
-              <h3>Challenges</h3>
-              <p>${project.challenges}</p>
-            </div>
-            <div class="dialog-section">
-              <h3>Future improvements</h3>
-              ${list(project.future)}
-            </div>
+            ${project.challenges ? `<div class="dialog-section"><h3>Challenges</h3><p>${project.challenges}</p></div>` : ""}
+            ${project.future ? `<div class="dialog-section"><h3>Future improvements</h3>${list(project.future)}</div>` : ""}
           </div>
         </div>
         <div class="dialog-visual">

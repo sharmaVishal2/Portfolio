@@ -17,23 +17,17 @@ window.PORTFOLIO_PROJECTS = {
     challenges: "The main challenge was keeping RBAC strict while preserving a simple user experience across three role types.",
     future: ["Add manager notification flows", "Add OKR templates", "Improve analytics with trend comparisons", "Add audit trails for enterprise readiness"]
   },
-  algopush: {
-    id: "algopush",
-    title: "AlgoPush",
-    eyebrow: "Chrome Extension Automation",
-    subtitle: "One-click LeetCode-to-GitHub publishing with AI-generated explanations.",
-    image: "assets/project/algo-push-banner.svg",
-    github: "https://github.com/sharmaVishal2/AlgoPush",
-    live: "https://algopush.vercel.app/",
-    stack: ["Java", "Spring Boot", "React", "Chrome Extension API", "GitHub REST API", "Groq API"],
-    overview: "AlgoPush is a developer productivity tool that helps push LeetCode solutions to GitHub and generate clean explanations through Groq-powered AI.",
-    problem: "Developers often solve problems consistently but skip documentation because moving code from LeetCode to GitHub and writing explanations interrupts the workflow.",
-    solution: "AlgoPush automates publishing, organizes solutions, and generates concise explanations so coding practice turns into a well-documented public repository.",
-    architecture: ["Chrome extension content script", "Popup UI", "GitHub REST API integration", "Groq explanation service", "Repository organization workflow"],
-    features: ["One-click LeetCode solution publishing", "GitHub API integration", "AI-generated explanations", "Organizes 100+ solutions", "Lightweight extension workflow", "Cleaner repository documentation"],
-    screenshots: ["Extension action state", "GitHub publishing workflow", "AI explanation output"],
-    challenges: "The key challenge was keeping the extension workflow lightweight while coordinating LeetCode page data, GitHub API calls, and AI explanation generation.",
-    future: ["Add language-specific explanation templates", "Support multiple repository structures", "Add retry handling for API failures", "Add optional README formatting controls"]
+  "rate-limiter": {
+    id: "rate-limiter",
+    title: "Distributed Rate Limiter Service",
+    eyebrow: "Backend / Distributed systems",
+    subtitle: "Distributed service for regulating API traffic and protecting backend services from excessive requests.",
+    image: "assets/project/distributed-rate-limiter-banner.svg",
+    github: "https://github.com/sharmaVishal2/Distributed-Rate-Limiter",
+    stack: ["Spring Boot", "Redis", "PostgreSQL", "Docker", "Spring Data JPA"],
+    overview: "Developed a distributed rate limiting service using Spring Boot, Redis, and PostgreSQL to regulate API traffic and protect backend services from excessive requests.",
+    architecture: ["Spring Boot", "Secure REST APIs for rate-limiting rules", "Redis atomic operations", "Thread-safe request counting across distributed instances", "PostgreSQL"],
+    features: ["Implemented configurable Token Bucket and Sliding Window algorithms for efficient request throttling across multiple clients and API endpoints.", "Designed secure REST APIs to manage rate-limiting rules.", "Leveraged Redis atomic operations for thread-safe request counting across distributed instances."]
   },
   ecommerce: {
     id: "ecommerce",
