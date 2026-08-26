@@ -51,6 +51,7 @@
 <body class="theme-dark">
   <a class="skip-link" href="#main-content">Skip to content</a>
 
+  <!-- NAVIGATION -->
   <nav class="navbar" aria-label="Main navigation">
     <div class="container nav-inner">
       <a href="#home" class="logo" aria-label="Vishal Sharma home">
@@ -63,7 +64,7 @@
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
         <a href="#systems">System Design</a>
-        <a href="#experience">Experience</a>
+        <a href="#programs">Certifications &amp; Programs</a>
         <a href="#coding-stats">Stats</a>
         <a href="#contact">Contact</a>
       </div>
@@ -87,8 +88,8 @@
       <a href="#skills">Tech Stack</a>
       <a href="#projects">Projects</a>
       <a href="#systems">System Design</a>
-      <a href="#experience">Experience &amp; Programs</a>
-      <a href="#certifications">Certifications</a>
+      <a href="#programs">Certifications &amp; Programs</a>
+      <a href="#achievements">Achievements</a>
       <a href="#coding-stats">Coding Stats</a>
       <a href="#contact">Contact</a>
     </div>
@@ -103,11 +104,11 @@
       <div class="container hero-grid">
         <div class="hero-copy reveal">
           <p class="eyebrow">
-            <span class="status-dot"></span> Available for Summer &amp; 2027 SDE Internships
+            <span class="status-dot"></span> Open to SDE Internships &amp; Full-Time 2027 Opportunities
           </p>
           <h1>Building resilient, high-throughput <span>backend systems.</span></h1>
           <p class="hero-lede">
-            I am <strong>Vishal Sharma</strong>, a backend engineer specializing in Java, Spring Boot, Redis, PostgreSQL, and distributed architectures. I design low-latency APIs, thread-safe middleware, and secure multi-tier platforms.
+            I am <strong>Vishal Sharma</strong>, a backend engineer specializing in Java, Spring Boot, Redis, PostgreSQL, and distributed architectures. I engineer sub-5ms middleware, thread-safe APIs, and secure multi-tier enterprise platforms.
           </p>
           
           <div class="hero-actions">
@@ -146,9 +147,8 @@
 
         <div class="hero-portrait reveal" aria-label="Portrait of Vishal Sharma">
           <div class="portrait-backdrop" aria-hidden="true"></div>
-          <div class="portrait-frame">
-            <img src="assets/profile/portf%20profile.jpeg" alt="Vishal Sharma — Java Backend Software Engineer" width="960" height="1280" fetchpriority="high" decoding="async">
-            <span class="portrait-label">Backend Engineer<br><em>Java &bull; Spring Boot &bull; Redis</em></span>
+          <div class="portrait-frame portrait-circle">
+            <img src="assets/profile/portf%20profile.jpeg" alt="Vishal Sharma — Java Backend Software Engineer" width="400" height="400" fetchpriority="high" decoding="async">
           </div>
           
           <div class="floating-card capability-card">
@@ -157,8 +157,8 @@
           </div>
           
           <div class="floating-card education-card-mini">
-            <span class="mini-number">102</span>
-            <span><strong>AIR 102 / NEC 2025</strong><small>Top 2.5% of 4,000+ Colleges</small></span>
+            <span class="mini-number">2027</span>
+            <span><strong>B.Tech CSE</strong><small>Backend Software Engineer</small></span>
           </div>
         </div>
       </div>
@@ -169,32 +169,24 @@
       </a>
     </header>
 
-    <!-- PROOF METRICS BAR -->
+    <!-- PROOF METRICS BAR (4 CLEAN BOXES - ZERO OVERLAP) -->
     <section id="proof" class="proof-section" aria-label="Verified Engineering Highlights">
       <div class="container proof-grid">
         <article class="proof-item reveal">
           <strong class="metric-value" data-count="377" data-suffix="+">377+</strong>
           <span>DSA Problems Solved (Codolio/LeetCode)</span>
         </article>
-        <article class="proof-item reveal">
-          <strong class="metric-value" data-count="102" data-prefix="AIR ">AIR 102</strong>
-          <span>NEC 2025 &mdash; 4,000+ Colleges (Top 2.5%)</span>
-        </article>
-        <article class="proof-item reveal">
-          <strong class="metric-value" data-count="50" data-prefix="Top ">Top 50</strong>
-          <span>Smart India Hackathon (Team Lead)</span>
+        <article class="proof-item reveal highlight-proof">
+          <strong class="metric-value" data-prefix="Rank " data-count="48">Rank 48</strong>
+          <span>Global Rank &mdash; CodeChef PLACEPREP03</span>
         </article>
         <article class="proof-item reveal">
           <strong class="metric-value" data-count="1425">1,425</strong>
           <span>LeetCode Contest Rating</span>
         </article>
         <article class="proof-item reveal">
-          <strong class="metric-value" data-count="171" data-suffix="+">171+</strong>
-          <span>Active Coding Days (555 Submissions)</span>
-        </article>
-        <article class="proof-item reveal">
-          <strong class="metric-value" data-count="6">6</strong>
-          <span>Competitive Contests Attended</span>
+          <strong class="metric-value" data-prefix="Top " data-count="50">Top 50</strong>
+          <span>Smart India Hackathon (Team Lead)</span>
         </article>
       </div>
     </section>
@@ -361,7 +353,7 @@
       </div>
     </section>
 
-    <!-- PROJECTS SECTION (TWO-TIER HIERARCHY) -->
+    <!-- PROJECTS SECTION (TWO-TIER HIERARCHY — CONTAINED GRID CARDS) -->
     <section id="projects" class="section projects-section">
       <div class="container">
         <div class="section-heading reveal">
@@ -372,150 +364,82 @@
           <p>Real-world projects with defined problem statements, evaluated trade-offs, and clean implementations.</p>
         </div>
 
-        <!-- TIER 1: FEATURED FLAGSHIPS (DEEP CASE STUDIES) -->
+        <!-- TIER 1: FEATURED FLAGSHIPS (CONTAINED 2-COLUMN GRID) -->
         <div class="tier-label reveal">
           <span class="badge badge-blue">Tier 1 &mdash; Flagship Systems</span>
           <p>In-depth architectural case studies with live concurrency &amp; security considerations</p>
         </div>
 
-        <!-- Flagship 1: Distributed Rate Limiter -->
-        <article class="featured-project reveal">
-          <div class="featured-project-copy">
-            <div class="project-overline">
-              <span class="badge badge-blue">Distributed Systems</span>
-              <span class="live-pulse"><i></i> Spring Boot &bull; Redis</span>
+        <div class="tier1-grid">
+          <!-- Flagship 1: Distributed Rate Limiter -->
+          <article class="featured-card reveal">
+            <div class="featured-card-top">
+              <div class="project-overline">
+                <span class="badge badge-blue">Distributed Systems</span>
+                <span class="live-pulse"><i></i> Spring Boot &bull; Redis</span>
+              </div>
+              <h3>Distributed Rate Limiter Service</h3>
+              <p class="featured-card-desc">
+                High-throughput API rate-limiting middleware built in Spring Boot and Redis to mitigate traffic spikes and prevent cascading service outages. Engineered with Redis Lua scripts for atomic token evaluation under sub-5ms latency across horizontally scaled instances.
+              </p>
+              <div class="tag-list">
+                <span>Java</span>
+                <span>Spring Boot</span>
+                <span>Redis</span>
+                <span>PostgreSQL</span>
+                <span>Docker</span>
+                <span>JUnit 5</span>
+              </div>
             </div>
-            <h3>Distributed Rate Limiter Service</h3>
-            <p>
-              High-throughput API rate-limiting middleware built in Spring Boot and Redis to mitigate traffic spikes and prevent cascading service outages. Engineered with Redis Lua scripts for atomic token evaluation under sub-5ms latency across horizontally scaled instances.
-            </p>
-            <div class="tag-list">
-              <span>Java</span>
-              <span>Spring Boot</span>
-              <span>Redis</span>
-              <span>PostgreSQL</span>
-              <span>Docker</span>
-              <span>JUnit 5</span>
-            </div>
-            <div class="project-actions">
+            
+            <div class="featured-card-footer">
               <button class="button button-primary project-open" type="button" data-project="rate-limiter">
                 <span>View Full Case Study</span>
                 <i data-lucide="book-open" aria-hidden="true"></i>
               </button>
               <a href="https://github.com/sharmaVishal2/Distributed-Rate-Limiter" target="_blank" rel="noopener" class="button button-secondary">
                 <i data-lucide="github" aria-hidden="true"></i>
-                <span>GitHub Repo</span>
+                <span>GitHub</span>
               </a>
             </div>
-          </div>
-          
-          <div class="smart-preview" aria-label="Distributed Rate Limiter Architecture Preview">
-            <div class="smart-window">
-              <div class="window-bar">
-                <span></span><span></span><span></span>
-                <b>rate-limiter.service &mdash; Redis Sub-5ms</b>
-              </div>
-              <div class="smart-dashboard">
-                <aside>
-                  <span class="brand-mini">RL</span>
-                  <span class="side-line active"></span>
-                  <span class="side-line"></span>
-                  <span class="side-line"></span>
-                </aside>
-                <div class="dashboard-main">
-                  <div class="dash-header">
-                    <span>Cluster Traffic Guard</span>
-                    <i data-lucide="activity" aria-hidden="true"></i>
-                  </div>
-                  <div class="resume-panel">
-                    <span class="resume-icon"><i data-lucide="gauge" aria-hidden="true"></i></span>
-                    <div>
-                      <b>Sub-5ms Decision Path</b>
-                      <small>Atomic Redis Lua Scripts across multi-node cluster</small>
-                    </div>
-                    <span class="score-pill">Redis</span>
-                  </div>
-                  <div class="question-card">
-                    <span class="question-label">Core Algorithm</span>
-                    <b>Token Bucket with O(1) Memory Overhead</b>
-                    <div class="answer-lines"><i></i><i></i><i></i></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </article>
+          </article>
 
-        <!-- Flagship 2: E-Commerce Backend -->
-        <article class="featured-project reveal" style="margin-top: 2rem;">
-          <div class="featured-project-copy">
-            <div class="project-overline">
-              <span class="badge badge-purple">Enterprise Backend</span>
-              <span class="live-pulse"><i></i> Spring Security &bull; PostgreSQL</span>
+          <!-- Flagship 2: E-Commerce Backend -->
+          <article class="featured-card reveal">
+            <div class="featured-card-top">
+              <div class="project-overline">
+                <span class="badge badge-purple">Enterprise Backend</span>
+                <span class="live-pulse"><i></i> Spring Security &bull; PostgreSQL</span>
+              </div>
+              <h3>E-Commerce Backend Platform</h3>
+              <p class="featured-card-desc">
+                Production-grade e-commerce backend built with Spring Boot, Spring Security, OAuth2, and stateless JWT authentication. Implements 3-tier Role-Based Access Control (Customer, Seller, Admin), ACID-compliant checkout transactions, and a normalized PostgreSQL schema.
+              </p>
+              <div class="tag-list">
+                <span>Java</span>
+                <span>Spring Boot</span>
+                <span>Spring Security</span>
+                <span>OAuth2</span>
+                <span>JWT</span>
+                <span>PostgreSQL</span>
+                <span>Hibernate</span>
+              </div>
             </div>
-            <h3>E-Commerce Backend Platform</h3>
-            <p>
-              Production-grade e-commerce backend built with Spring Boot, Spring Security, OAuth2, and stateless JWT authentication. Implements 3-tier Role-Based Access Control (Customer, Seller, Admin), ACID-compliant checkout transactions, and a normalized PostgreSQL schema.
-            </p>
-            <div class="tag-list">
-              <span>Java</span>
-              <span>Spring Boot</span>
-              <span>Spring Security</span>
-              <span>OAuth2</span>
-              <span>JWT</span>
-              <span>PostgreSQL</span>
-              <span>Hibernate</span>
-            </div>
-            <div class="project-actions">
+            
+            <div class="featured-card-footer">
               <button class="button button-primary project-open" type="button" data-project="ecommerce">
                 <span>View Full Case Study</span>
                 <i data-lucide="book-open" aria-hidden="true"></i>
               </button>
               <a href="https://github.com/sharmaVishal2/E-Commerce-Application-by-Java-Spring-Boot" target="_blank" rel="noopener" class="button button-secondary">
                 <i data-lucide="github" aria-hidden="true"></i>
-                <span>GitHub Repo</span>
+                <span>GitHub</span>
               </a>
             </div>
-          </div>
-          
-          <div class="smart-preview" aria-label="E-Commerce Architecture Preview">
-            <div class="smart-window">
-              <div class="window-bar">
-                <span></span><span></span><span></span>
-                <b>ecommerce-api.backend &mdash; RBAC &amp; JWT</b>
-              </div>
-              <div class="smart-dashboard">
-                <aside>
-                  <span class="brand-mini">EC</span>
-                  <span class="side-line active"></span>
-                  <span class="side-line"></span>
-                  <span class="side-line"></span>
-                </aside>
-                <div class="dashboard-main">
-                  <div class="dash-header">
-                    <span>Spring Security Filter Chain</span>
-                    <i data-lucide="shield-check" aria-hidden="true"></i>
-                  </div>
-                  <div class="resume-panel">
-                    <span class="resume-icon"><i data-lucide="key-round" aria-hidden="true"></i></span>
-                    <div>
-                      <b>Stateless JWT + OAuth2</b>
-                      <small>Customer &bull; Seller &bull; Admin Permissions</small>
-                    </div>
-                    <span class="score-pill">PostgreSQL</span>
-                  </div>
-                  <div class="question-card">
-                    <span class="question-label">Transaction Layer</span>
-                    <b>ACID Order Checkout with Stock Concurrency</b>
-                    <div class="answer-lines"><i></i><i></i><i></i></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </article>
+          </article>
+        </div>
 
-        <!-- TIER 2: ADDITIONAL WORK -->
+        <!-- TIER 2: ADDITIONAL WORK (CONTAINED 3-COLUMN GRID) -->
         <div class="tier-label reveal" style="margin-top: 3.5rem;">
           <span class="badge badge-cyan">Tier 2 &mdash; Additional Systems &amp; Applied AI</span>
           <p>Full-stack platforms, developer tools, and hackathon prototypes backing up applied engineering skills</p>
@@ -526,9 +450,7 @@
           <article class="tier2-card reveal">
             <div class="tier2-card-header">
               <span class="tier2-icon"><i data-lucide="target" aria-hidden="true"></i></span>
-              <a href="https://github.com/sharmaVishal2/GoalFlow" target="_blank" rel="noopener" class="tier2-github" aria-label="View GoalFlow on GitHub">
-                <i data-lucide="github" aria-hidden="true"></i>
-              </a>
+              <span class="badge badge-blue">Full-Stack</span>
             </div>
             <h3>GoalFlow</h3>
             <p class="tier2-type">Enterprise Goal Management &bull; Spring Boot</p>
@@ -543,8 +465,9 @@
               <span>AI Integration</span>
             </div>
             <div class="tier2-footer">
-              <a href="https://github.com/sharmaVishal2/GoalFlow" target="_blank" rel="noopener" class="text-link">
-                View on GitHub <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+              <a href="https://github.com/sharmaVishal2/GoalFlow" target="_blank" rel="noopener" class="button button-secondary tier2-btn">
+                <i data-lucide="github" aria-hidden="true"></i>
+                <span>View Repository</span>
               </a>
             </div>
           </article>
@@ -553,12 +476,10 @@
           <article class="tier2-card reveal">
             <div class="tier2-card-header">
               <span class="tier2-icon"><i data-lucide="upload-cloud" aria-hidden="true"></i></span>
-              <a href="https://github.com/sharmaVishal2/AlgoPush" target="_blank" rel="noopener" class="tier2-github" aria-label="View AlgoPush on GitHub">
-                <i data-lucide="github" aria-hidden="true"></i>
-              </a>
+              <span class="badge badge-cyan">Developer Tool</span>
             </div>
             <h3>AlgoPush</h3>
-            <p class="tier2-type">AI Chrome Extension &bull; Developer Tool</p>
+            <p class="tier2-type">AI Chrome Extension &bull; Groq LLaMA 3</p>
             <p class="tier2-desc">
               Automated Chrome extension that publishes accepted LeetCode solutions directly to organized GitHub repositories with AI-generated complexity analysis.
             </p>
@@ -569,8 +490,9 @@
               <span>Groq LLaMA 3</span>
             </div>
             <div class="tier2-footer">
-              <a href="https://github.com/sharmaVishal2/AlgoPush" target="_blank" rel="noopener" class="text-link">
-                View on GitHub <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+              <a href="https://github.com/sharmaVishal2/AlgoPush" target="_blank" rel="noopener" class="button button-secondary tier2-btn">
+                <i data-lucide="github" aria-hidden="true"></i>
+                <span>View Repository</span>
               </a>
             </div>
           </article>
@@ -579,12 +501,10 @@
           <article class="tier2-card reveal">
             <div class="tier2-card-header">
               <span class="tier2-icon"><i data-lucide="sparkles" aria-hidden="true"></i></span>
-              <a href="https://github.com/sharmaVishal2/SmartHire" target="_blank" rel="noopener" class="tier2-github" aria-label="View SmartHire on GitHub">
-                <i data-lucide="github" aria-hidden="true"></i>
-              </a>
+              <span class="badge badge-purple">MLH Hackathon</span>
             </div>
             <h3>SmartHire</h3>
-            <p class="tier2-type">MLH Hackathon &bull; AI Career Assistant</p>
+            <p class="tier2-type">AI Career Assistant &bull; Spring Boot + React</p>
             <p class="tier2-desc">
               AI career assistant built with Spring Boot, React, and Groq (LLaMA 3) for real-time resume optimization and tailored cover letter generation in sub-second inference.
             </p>
@@ -596,8 +516,9 @@
               <span>REST APIs</span>
             </div>
             <div class="tier2-footer">
-              <a href="https://github.com/sharmaVishal2/SmartHire" target="_blank" rel="noopener" class="text-link">
-                View on GitHub <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+              <a href="https://github.com/sharmaVishal2/SmartHire" target="_blank" rel="noopener" class="button button-secondary tier2-btn">
+                <i data-lucide="github" aria-hidden="true"></i>
+                <span>View Repository</span>
               </a>
             </div>
           </article>
@@ -683,148 +604,159 @@
       </div>
     </section>
 
-    <!-- EXPERIENCE & HACKATHONS SECTION -->
-    <section id="experience" class="section experience-section">
+    <!-- UNIFIED SECTION: CERTIFICATIONS & PROGRAMS -->
+    <section id="programs" class="section programs-section">
       <div class="container">
         <div class="section-heading reveal">
           <div>
-            <p class="section-kicker">05 / Experience &amp; Programs</p>
-            <h2>Engineering leadership &amp; <span>industry simulations.</span></h2>
+            <p class="section-kicker">05 / Certifications &amp; Programs</p>
+            <h2>Verified programs &amp; <span>practical engineering.</span></h2>
           </div>
-          <p>Delivering under competitive hackathon pressure and structured virtual software engineering environments.</p>
+          <p>Competitive hackathon leadership, industry developer simulations, and certified artificial intelligence credentials.</p>
         </div>
 
-        <div class="experience-grid">
-          <!-- Real Leadership: Smart India Hackathon -->
-          <article class="experience-feature reveal">
-            <div class="experience-brand hackathon-brand">
-              <span>SIH</span>
-              <i data-lucide="trophy" aria-hidden="true"></i>
-            </div>
-            <div>
-              <div class="experience-header-meta">
-                <span class="badge badge-blue">National Hackathon</span>
-                <span class="exp-date">Team Lead (6 Members)</span>
+        <div class="programs-grid">
+          <!-- SIH Hackathon -->
+          <article class="program-card reveal">
+            <div class="program-card-header">
+              <div class="program-brand hackathon-brand">
+                <i data-lucide="trophy" aria-hidden="true"></i>
               </div>
-              <h3>Smart India Hackathon &mdash; Top 50 Finalist</h3>
-              <p>
-                Led a 6-engineer development team to a Top 50 national finish out of thousands of participating teams. Spearheaded backend architecture, system boundary definitions, and API integrations under strict hackathon deadlines.
-              </p>
-              <div class="tag-list">
-                <span>Technical Leadership</span>
-                <span>System Architecture</span>
-                <span>RESTful APIs</span>
-                <span>Team Coordination</span>
+              <div class="program-meta">
+                <span class="badge badge-gold">National Hackathon</span>
+                <span class="program-date">Team Lead &bull; 6 Members</span>
               </div>
             </div>
-          </article>
-
-          <!-- Structured Program: JPMorgan Chase Forage -->
-          <article class="experience-feature reveal">
-            <div class="experience-brand jpmc-brand">
-              <span>JPMC</span>
-              <i data-lucide="landmark" aria-hidden="true"></i>
-            </div>
-            <div>
-              <div class="experience-header-meta">
-                <span class="badge badge-purple">Virtual Engineering Experience</span>
-                <span class="exp-date">Forage &bull; 2026</span>
-              </div>
-              <h3>JPMorgan Chase &amp; Co. Software Engineering Experience</h3>
-              <p>
-                Completed practical developer simulation focused on backend service integration. Interfaced RESTful microservice data feeds, implemented data stream processing, and validated reliability using JUnit unit testing suites.
-              </p>
-              <div class="tag-list">
-                <span>Java</span>
-                <span>Spring Boot</span>
-                <span>JUnit 5</span>
-                <span>Financial Data Feeds</span>
-                <span>REST APIs</span>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- CERTIFICATIONS SECTION -->
-    <section id="certifications" class="section certifications-section">
-      <div class="container">
-        <div class="section-heading reveal">
-          <div>
-            <p class="section-kicker">06 / Verified Certifications</p>
-            <h2>Professional <span>credentials.</span></h2>
-          </div>
-          <p>Formal programs and learning tracks in backend engineering, artificial intelligence, and security.</p>
-        </div>
-
-        <div class="cert-grid">
-          <article class="cert-card reveal">
-            <div class="cert-card-top">
-              <span class="cert-badge cert-badge-cyan"><i data-lucide="landmark" aria-hidden="true"></i></span>
-              <span class="cert-org">JPMorgan Chase &amp; Co. &bull; Forage</span>
-            </div>
-            <h3>Software Engineering Virtual Experience</h3>
-            <p>
-              Verified completion of microservice backend design, data feed processing, and unit testing validation in Java and Spring Boot.
+            <h3>Smart India Hackathon &mdash; Top 50 Finalist</h3>
+            <p class="program-issuer">Ministry of Education &bull; Government of India</p>
+            <p class="program-desc">
+              Led a 6-engineer development team to a Top 50 finish nationwide out of thousands of teams. Spearheaded backend microservice architecture, API contracts, and team delivery under hackathon constraints.
             </p>
-            <a href="https://www.linkedin.com/posts/sharma-vishal-1abc_softwareengineering-springboot-kafka-share-7447202162872365056-4SpF/" target="_blank" rel="noopener" class="cert-link">
-              <span>View Credential</span>
-              <i data-lucide="arrow-up-right" aria-hidden="true"></i>
-            </a>
+            <div class="tag-list">
+              <span>Technical Leadership</span>
+              <span>System Architecture</span>
+              <span>REST APIs</span>
+              <span>Team Coordination</span>
+            </div>
           </article>
 
-          <article class="cert-card reveal">
-            <div class="cert-card-top">
-              <span class="cert-badge cert-badge-gold"><i data-lucide="sparkles" aria-hidden="true"></i></span>
-              <span class="cert-org">MPIT-CoE &times; TCS iON &bull; TCS Foundation</span>
+          <!-- JPMorgan Chase Forage -->
+          <article class="program-card reveal">
+            <div class="program-card-header">
+              <div class="program-brand jpmc-brand">
+                <i data-lucide="landmark" aria-hidden="true"></i>
+              </div>
+              <div class="program-meta">
+                <span class="badge badge-blue">Virtual Experience</span>
+                <span class="program-date">Forage &bull; 2026</span>
+              </div>
+            </div>
+            <h3>JPMorgan Chase &amp; Co. Software Engineering Experience</h3>
+            <p class="program-issuer">JPMorgan Chase &amp; Co. &bull; Forage</p>
+            <p class="program-desc">
+              Completed practical developer program focused on backend microservice integration, financial data stream processing, and reliability testing using Java and JUnit.
+            </p>
+            <div class="tag-list">
+              <span>Java</span>
+              <span>Spring Boot</span>
+              <span>JUnit 5</span>
+              <span>Financial Data Feeds</span>
+            </div>
+            <div class="program-footer">
+              <a href="https://www.linkedin.com/posts/sharma-vishal-1abc_softwareengineering-springboot-kafka-share-7447202162872365056-4SpF/" target="_blank" rel="noopener" class="cert-link">
+                <span>View Credential</span>
+                <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- MPIT-CoE x TCS iON -->
+          <article class="program-card reveal">
+            <div class="program-card-header">
+              <div class="program-brand ai-brand">
+                <i data-lucide="sparkles" aria-hidden="true"></i>
+              </div>
+              <div class="program-meta">
+                <span class="badge badge-purple">Professional Certification</span>
+                <span class="program-date">MPIT-CoE &bull; 2026</span>
+              </div>
             </div>
             <h3>Generative AI Essentials &amp; Cybersecurity Awareness</h3>
-            <p>
-              Certified in LLM integration, secure prompt design, application vulnerability awareness, and enterprise security hygiene (2026).
+            <p class="program-issuer">MPIT-CoE &times; TCS iON &bull; TCS Foundation</p>
+            <p class="program-desc">
+              Certified in LLM architecture integration, secure prompt engineering, application vulnerability management, and enterprise cybersecurity hygiene.
             </p>
-            <a href="https://www.linkedin.com/posts/sharma-vishal-1abc_ai-generativeai-cybersecurity-ugcPost-7480622517926264833-sg2V/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE0LrosB0HlZhtfKrZgyXTMnki7Bu6fFWbw" target="_blank" rel="noopener" class="cert-link">
-              <span>View Credential</span>
-              <i data-lucide="arrow-up-right" aria-hidden="true"></i>
-            </a>
+            <div class="tag-list">
+              <span>Generative AI</span>
+              <span>LLM Pipelines</span>
+              <span>Cybersecurity</span>
+              <span>Prompt Design</span>
+            </div>
+            <div class="program-footer">
+              <a href="https://www.linkedin.com/posts/sharma-vishal-1abc_ai-generativeai-cybersecurity-ugcPost-7480622517926264833-sg2V/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE0LrosB0HlZhtfKrZgyXTMnki7Bu6fFWbw" target="_blank" rel="noopener" class="cert-link">
+                <span>View Credential</span>
+                <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+              </a>
+            </div>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- ACHIEVEMENTS & RECOGNITION SECTION -->
+    <!-- HONORS & RECOGNITION SECTION (RANK 48 VISUALLY PRIORITIZED) -->
     <section id="achievements" class="section achievements-section">
       <div class="container">
         <div class="section-heading reveal">
           <div>
-            <p class="section-kicker">07 / Honors &amp; Recognition</p>
-            <h2>Proven signals of <span>consistent execution.</span></h2>
+            <p class="section-kicker">06 / Honors &amp; Recognition</p>
+            <h2>Proven signals of <span>competitive execution.</span></h2>
           </div>
+          <p>Verified rankings and competitive programming milestones across national platforms.</p>
         </div>
         
         <div class="achievement-grid">
-          <article class="achievement-card reveal">
-            <span class="achievement-icon"><i data-lucide="medal" aria-hidden="true"></i></span>
-            <p>National Engineering Challenge 2025</p>
-            <h3>AIR 102 <small>/ Top 2.5% across 4,000+ colleges</small></h3>
+          <!-- TOP FEATURED: CodeChef PLACEPREP03 - Rank 48 -->
+          <article class="achievement-card achievement-highlight reveal">
+            <div class="achievement-card-header">
+              <span class="achievement-icon"><i data-lucide="award" aria-hidden="true"></i></span>
+              <span class="badge badge-gold">Top Global Result</span>
+            </div>
+            <p class="achievement-event">CodeChef PLACEPREP03 Contest</p>
+            <h3>Global Rank 48</h3>
+            <p class="achievement-desc">Achieved Rank 48 globally out of thousands of competitive programmers.</p>
           </article>
           
+          <!-- Starter Contest 237 - Rank 824 -->
           <article class="achievement-card reveal">
-            <span class="achievement-icon"><i data-lucide="trophy" aria-hidden="true"></i></span>
-            <p>Smart India Hackathon</p>
-            <h3>Top 50 Finalist <small>/ Team Lead (6 Members)</small></h3>
+            <div class="achievement-card-header">
+              <span class="achievement-icon"><i data-lucide="binary" aria-hidden="true"></i></span>
+              <span class="badge badge-blue">CodeChef</span>
+            </div>
+            <p class="achievement-event">CodeChef Starter Contest 237</p>
+            <h3>Global Rank 824</h3>
+            <p class="achievement-desc">Competitive performance in division contests solving algorithmic challenges.</p>
+          </article>
+
+          <!-- SIH Top 50 -->
+          <article class="achievement-card reveal">
+            <div class="achievement-card-header">
+              <span class="achievement-icon"><i data-lucide="trophy" aria-hidden="true"></i></span>
+              <span class="badge badge-cyan">National</span>
+            </div>
+            <p class="achievement-event">Smart India Hackathon</p>
+            <h3>Top 50 Finalist</h3>
+            <p class="achievement-desc">Led 6-member team through national evaluation and live build phases.</p>
           </article>
           
+          <!-- LeetCode 100 Days Badge -->
           <article class="achievement-card reveal">
-            <span class="achievement-icon"><i data-lucide="award" aria-hidden="true"></i></span>
-            <p>LeetCode Achievement</p>
-            <h3>100 Days Badge (2026) <small>/ 73-Day Max Streak</small></h3>
-          </article>
-          
-          <article class="achievement-card reveal">
-            <span class="achievement-icon"><i data-lucide="binary" aria-hidden="true"></i></span>
-            <p>Competitive Programming</p>
-            <h3>Global Ranks <small>/ PLACEPREP03: Rank 48 &bull; CC Starter 237: Rank 824</small></h3>
+            <div class="achievement-card-header">
+              <span class="achievement-icon"><i data-lucide="medal" aria-hidden="true"></i></span>
+              <span class="badge badge-purple">LeetCode</span>
+            </div>
+            <p class="achievement-event">LeetCode Milestone (2026)</p>
+            <h3>100 Days Badge</h3>
+            <p class="achievement-desc">Awarded for consistent practice &bull; 73-Day Max Streak (Current: 12 Days).</p>
           </article>
         </div>
       </div>
@@ -835,7 +767,7 @@
       <div class="container">
         <div class="section-heading reveal">
           <div>
-            <p class="section-kicker">08 / Verified Problem Solving</p>
+            <p class="section-kicker">07 / Verified Problem Solving</p>
             <h2>Discipline through <span>daily practice.</span></h2>
           </div>
           <p>
@@ -856,7 +788,7 @@
                   <i data-lucide="code-2"></i> LeetCode (1,425 Rating)
                 </a>
                 <a href="https://www.codechef.com/" target="_blank" rel="noopener" class="platform-badge platform-cc">
-                  <i data-lucide="award"></i> CodeChef (Rank 824)
+                  <i data-lucide="award"></i> CodeChef (Rank 48 / 824)
                 </a>
                 <a href="https://codolio.com/profile/sharma_vishal_1" target="_blank" rel="noopener" class="platform-badge platform-cd">
                   <i data-lucide="check-circle"></i> Codolio Verified
@@ -932,7 +864,7 @@
             </div>
             
             <div class="dsa-footer">
-              <span>Max Streak: <strong>73 Days</strong> &bull; Current: <strong>12 Days</strong></span>
+              <span>Max Streak: <strong>73 Days</strong> &bull; Current Streak: <strong>12 Days</strong></span>
               <a href="https://leetcode.com/u/sharma_vishal_1/" target="_blank" rel="noopener" class="text-link">
                 View LeetCode Submissions <i data-lucide="arrow-up-right"></i>
               </a>
@@ -946,7 +878,7 @@
     <section class="section timeline-section" id="education">
       <div class="container timeline-layout">
         <div class="section-intro reveal">
-          <p class="section-kicker">09 / Education</p>
+          <p class="section-kicker">08 / Education</p>
           <h2>Academic <span>foundation.</span></h2>
           <p>Core computer science fundamentals paired with dedicated backend systems engineering.</p>
         </div>
@@ -974,10 +906,10 @@
     <section id="contact" class="section contact-section">
       <div class="container contact-layout">
         <div class="contact-copy reveal">
-          <p class="section-kicker">10 / Contact &amp; Connect</p>
+          <p class="section-kicker">09 / Contact &amp; Connect</p>
           <h2>Let's build something <span>exceptional together.</span></h2>
           <p>
-            I am actively seeking Software Engineer internships and 2027 graduate opportunities where I can contribute to high-scale backend services, learn from seasoned engineers, and build impactful infrastructure.
+            I am actively seeking Software Engineer internships and full-time 2027 SDE graduate opportunities where I can contribute to high-scale backend services, learn from seasoned engineers, and build impactful infrastructure.
           </p>
           <a href="assets/resume/resume.pdf" class="btn-resume-text" download="Vishal-Sharma-Resume.pdf">
             <i data-lucide="download" aria-hidden="true"></i>
