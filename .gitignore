@@ -1,0 +1,25 @@
+# Ignore IDE/editor folders
+.idea/
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Node
+node_modules/
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+commitmsg.txt
+_codex-index.png
+
+# Ignore untracked old resume (if present locally)
+assets/resume/resume (2).pdf
+
+# Built files
+dist/
+build/
