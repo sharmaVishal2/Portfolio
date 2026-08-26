@@ -1,22 +1,4 @@
 window.PORTFOLIO_PROJECTS = {
-  goalflow: {
-    id: "goalflow",
-    title: "GoalFlow",
-    eyebrow: "Enterprise Goal Management",
-    subtitle: "Role-based goal planning for employees, managers, and admins with AI suggestions and analytics.",
-    image: "assets/project/goalflow-banner.svg",
-    github: "https://github.com/sharmaVishal2/GoalFlow",
-    live: "https://goal-flows.vercel.app/",
-    stack: ["Java", "Spring Boot", "React", "PostgreSQL", "JWT", "Groq API"],
-    overview: "GoalFlow is an enterprise-style goal management platform that organizes Employee, Manager, and Admin workflows around approvals, quarterly reviews, blockers, AI goal suggestions, and analytics.",
-    problem: "Team goals often become scattered across tools, making ownership, blockers, and review cycles difficult for managers to track.",
-    solution: "GoalFlow creates role-specific workflows, protected REST APIs, and clear analytics so teams can plan, review, and improve goals in one product surface.",
-    architecture: ["React dashboard", "Spring Boot controllers", "Service layer for goal lifecycle", "JWT + RBAC middleware", "PostgreSQL data model", "Groq-powered suggestions", "Analytics views"],
-    features: ["Employee, Manager, and Admin roles", "Goal creation, approval, and review cycles", "Blocker tracking", "AI goal suggestions", "Analytics dashboard", "Role-aware access boundaries"],
-    screenshots: ["Role-based dashboard", "Goal approval workflow", "Analytics and progress view"],
-    challenges: "The main challenge was keeping RBAC strict while preserving a simple user experience across three role types.",
-    future: ["Add manager notification flows", "Add OKR templates", "Improve analytics with trend comparisons", "Add audit trails for enterprise readiness"]
-  },
   "rate-limiter": {
     id: "rate-limiter",
     title: "Distributed Rate Limiter Service",

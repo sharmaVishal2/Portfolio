@@ -135,7 +135,7 @@ themeToggle?.addEventListener("click", () => {
   setTheme();
 });
 
-const key = new URLSearchParams(window.location.search).get("project") || "smarthire";
+const key = new URLSearchParams(window.location.search).get("project") || "rate-limiter";
 if (projects[key]) renderProject(projects[key]);
 else renderMissing();
 

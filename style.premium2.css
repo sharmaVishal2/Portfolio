@@ -73,8 +73,8 @@ body {
   .project-card:hover .smart-window, .featured-project:hover .smart-window { transform: perspective(1000px) rotateY(-4deg) translateY(-6px); }
 }
 
-/* Ensure no global overflow or black overlays */
-html, body, main { overflow-x: hidden; }
+/* Prevent decorative elements from causing horizontal scrolling without creating a nested page scroller. */
+html, body { overflow-x: clip; }
 
 /* Accessibility: reduce motion respect */
 @media (prefers-reduced-motion: reduce){
