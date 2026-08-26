@@ -15,7 +15,8 @@ function setTheme() {
   const isLight = body.classList.contains("theme-light");
   themeToggle?.setAttribute("aria-pressed", String(isLight));
   themeToggle?.setAttribute("aria-label", isLight ? "Switch to dark mode" : "Switch to light mode");
-  if (themeToggle) themeToggle.textContent = isLight ? "◐" : "☀";
+  if (themeToggle) themeToggle.innerHTML = isLight ? '<i data-lucide="moon"></i>' : '<i data-lucide="sun"></i>';
+  renderIcons();
 }
 
 function closeMenu() {
@@ -33,7 +34,23 @@ function hydrateProjectDialogs() {
   const projects = window.PORTFOLIO_PROJECTS || {};
 
   function list(items) {
+    if (!items || !items.length) return "";
     return `<ul class="dialog-section-list">${items.map(i => `<li>${i}</li>`).join("")}</ul>`;
+  }
+
+  function tradeoffsList(tradeoffs) {
+    if (!tradeoffs || !tradeoffs.length) return "";
+    return `
+      <div class="dialog-tradeoffs">
+        ${tradeoffs.map(t => {
+          const parts = t.split(":");
+          if (parts.length > 1) {
+            return `<div class="tradeoff-card"><strong>${parts[0]}:</strong><span>${parts.slice(1).join(":")}</span></div>`;
+          }
+          return `<div class="tradeoff-card"><span>${t}</span></div>`;
+        }).join("")}
+      </div>
+    `;
   }
 
   function renderDialog(project) {
@@ -42,39 +59,100 @@ function hydrateProjectDialogs() {
         <div class="dialog-content">
           <div class="project-overline">
             <span class="section-kicker">${project.eyebrow}</span>
-            ${project.live ? '<span class="live-pulse"><i></i> Live</span>' : ''}
+            ${project.live ? '<span class="live-pulse"><i></i> Live Demo</span>' : '<span class="live-pulse"><i></i> Case Study</span>'}
           </div>
           <h2 id="dialogTitle">${project.title}</h2>
           <p class="dialog-summary">${project.subtitle}</p>
+          
           <div class="dialog-links">
-            <a href="${project.github}" target="_blank" rel="noopener" class="button button-secondary"><i data-lucide="github" aria-hidden="true"></i> GitHub</a>
-            ${project.live ? `<a href="${project.live}" target="_blank" rel="noopener" class="button button-primary"><i data-lucide="globe" aria-hidden="true"></i> Live Demo</a>` : ""}
+            <a href="${project.github}" target="_blank" rel="noopener" class="button button-primary">
+              <i data-lucide="github" aria-hidden="true"></i> <span>View on GitHub</span>
+            </a>
+            ${project.live ? `
+              <a href="${project.live}" target="_blank" rel="noopener" class="button button-secondary">
+                <i data-lucide="globe" aria-hidden="true"></i> <span>Live Demo</span>
+              </a>
+            ` : ""}
           </div>
+
           <div class="dialog-sections">
             <div class="dialog-section">
-              <h3>Overview</h3>
+              <h3><i data-lucide="info"></i> Project Overview</h3>
               <p>${project.overview}</p>
             </div>
-            ${project.problem ? `<div class="dialog-section"><h3>Problem</h3><p>${project.problem}</p></div>` : ""}
-            ${project.solution ? `<div class="dialog-section"><h3>Solution</h3><p>${project.solution}</p></div>` : ""}
+
+            ${project.problem ? `
+              <div class="dialog-section">
+                <h3><i data-lucide="alert-triangle"></i> Problem &amp; System Constraints</h3>
+                <p>${project.problem}</p>
+              </div>
+            ` : ""}
+
+            ${project.solution ? `
+              <div class="dialog-section">
+                <h3><i data-lucide="check-circle-2"></i> Architecture &amp; Solution</h3>
+                <p>${project.solution}</p>
+              </div>
+            ` : ""}
+
+            ${project.tradeoffs ? `
+              <div class="dialog-section">
+                <h3><i data-lucide="scale"></i> Key Architectural Trade-offs</h3>
+                ${tradeoffsList(project.tradeoffs)}
+              </div>
+            ` : ""}
+
             <div class="dialog-section">
-              <h3>Architecture</h3>
-              <div class="architecture-flow">${project.architecture.map(a => `<span>${a}</span>`).join("")}</div>
+              <h3><i data-lucide="workflow"></i> System Flow</h3>
+              <div class="architecture-flow">
+                ${project.architecture.map((a, idx) => `
+                  <div class="flow-step">
+                    <span class="step-num">${idx + 1}</span>
+                    <span class="step-desc">${a}</span>
+                  </div>
+                `).join("")}
+              </div>
             </div>
+
             <div class="dialog-section">
-              <h3>Features</h3>
+              <h3><i data-lucide="cpu"></i> Core Features &amp; Implementation</h3>
               ${list(project.features)}
             </div>
-            ${project.challenges ? `<div class="dialog-section"><h3>Challenges</h3><p>${project.challenges}</p></div>` : ""}
-            ${project.future ? `<div class="dialog-section"><h3>Future improvements</h3>${list(project.future)}</div>` : ""}
+
+            ${project.challenges ? `
+              <div class="dialog-section">
+                <h3><i data-lucide="zap"></i> Technical Challenges &amp; Resolution</h3>
+                <p>${project.challenges}</p>
+              </div>
+            ` : ""}
+
+            ${project.future ? `
+              <div class="dialog-section">
+                <h3><i data-lucide="compass"></i> Future Roadmap</h3>
+                ${list(project.future)}
+              </div>
+            ` : ""}
           </div>
         </div>
+
         <div class="dialog-visual">
-          <div class="tag-list">${project.stack.map(s => `<span>${s}</span>`).join("")}</div>
-          <div class="dialog-visual-img">
-            <img src="${project.image}" alt="${project.title} preview" loading="lazy" decoding="async" />
+          <div class="dialog-visual-header">
+            <h4>Technology Stack</h4>
+            <div class="tag-list">
+              ${project.stack.map(s => `<span>${s}</span>`).join("")}
+            </div>
           </div>
-          <p>Tech stack and architecture for ${project.title}.</p>
+          ${project.image ? `
+            <div class="dialog-visual-img">
+              <img src="${project.image}" alt="${project.title} Architecture Preview" loading="lazy" decoding="async" />
+            </div>
+          ` : ""}
+          <div class="dialog-repo-box">
+            <p>Full source code, tests, and documentation are available in the public repository.</p>
+            <a href="${project.github}" target="_blank" rel="noopener" class="text-link">
+              Inspect source code <i data-lucide="arrow-up-right"></i>
+            </a>
+          </div>
         </div>
       </div>
     `;
@@ -111,7 +189,10 @@ function hydrateProjectDialogs() {
 function hydrateNavigation() {
   const navLinks = [...document.querySelectorAll(".desktop-nav a")];
   const sections = navLinks
-    .map((link) => document.querySelector(link.getAttribute("href")))
+    .map((link) => {
+      const href = link.getAttribute("href");
+      return href && href.startsWith("#") ? document.querySelector(href) : null;
+    })
     .filter(Boolean);
 
   const updateNavigation = () => {
@@ -142,7 +223,7 @@ function hydrateRevealAnimations() {
     parents.forEach((siblings) => {
       siblings.forEach((el, index) => {
         if (!el.style.getPropertyValue("--delay")) {
-          el.style.setProperty("--delay", `${index * 70}ms`);
+          el.style.setProperty("--delay", `${index * 60}ms`);
         }
       });
     });
@@ -153,7 +234,7 @@ function hydrateRevealAnimations() {
         entry.target.classList.add("is-visible");
         obs.unobserve(entry.target);
       });
-    }, { threshold: 0.1, rootMargin: "0px 0px -32px 0px" });
+    }, { threshold: 0.08, rootMargin: "0px 0px -24px 0px" });
 
     revealItems.forEach((item) => observer.observe(item));
   } else {
@@ -187,7 +268,7 @@ function hydrateMetrics() {
         countUp(entry.target);
         obs.unobserve(entry.target);
       });
-    }, { threshold: 0.55 });
+    }, { threshold: 0.4 });
 
     metrics.forEach((metric) => observer.observe(metric));
   } else {
@@ -196,45 +277,6 @@ function hydrateMetrics() {
       const suffix = metric.dataset.suffix || "";
       metric.textContent = `${prefix}${Number(metric.dataset.count || 0).toLocaleString()}${suffix}`;
     });
-  }
-}
-
-async function hydrateGitHub() {
-  const commitList = document.getElementById("commitList");
-  const stats = document.getElementById("githubStats");
-  if (!commitList && !stats) return;
-
-  try {
-    const response = await fetch("https://api.github.com/users/sharmaVishal2/events/public", {
-      headers: { Accept: "application/vnd.github+json" }
-    });
-    if (!response.ok) throw new Error("GitHub API unavailable");
-    const events = await response.json();
-    const commits = events
-      .filter((event) => event.type === "PushEvent")
-      .flatMap((event) => (event.payload?.commits || []).map((commit) => ({
-        repo: event.repo?.name?.replace("sharmaVishal2/", "") || "repository",
-        message: commit.message,
-        url: `https://github.com/${event.repo?.name}/commit/${commit.sha}`
-      })))
-      .slice(0, 3);
-
-    if (commitList && commits.length) {
-      commitList.innerHTML = commits
-        .map((commit) => `<li><a href="${commit.url}" target="_blank" rel="noopener"><strong>${commit.repo}</strong><span>${commit.message}</span></a></li>`)
-        .join("");
-    } else if (commitList) {
-      commitList.innerHTML = "<li>Recent public commits will appear here when GitHub returns activity.</li>";
-    }
-
-    if (stats) {
-      const publicRepos = new Set(events.map((event) => event.repo?.name).filter(Boolean)).size;
-      stats.innerHTML = `<span>${publicRepos || "Active"} public repos touched recently</span><span>Java backend focus</span><span>AI product builds</span>`;
-    }
-  } catch (error) {
-    if (commitList) {
-      commitList.innerHTML = "<li>GitHub activity is available from the profile link when the API is rate limited.</li>";
-    }
   }
 }
 
@@ -273,7 +315,6 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
 hydrateNavigation();
 hydrateRevealAnimations();
 hydrateMetrics();
-hydrateGitHub();
 hydrateProjectDialogs();
 
 const year = document.getElementById("year");
