@@ -1,0 +1,91 @@
+/* style.premium2.css — non-destructive overrides for premium dark theme
+   Loaded after existing style.css to avoid rewriting HTML structure.
+   Purpose: subtle visual polish, glass navbar, refined hero background, improved reveal timings,
+   premium card hover, button micro-interactions, and responsive safety. */
+
+:root{
+  --pp-bg:#0a0a0a; /* high-end deep */
+  --pp-surface: rgba(255,255,255,0.02);
+  --pp-accent: #10d7f0;
+  --pp-accent-2: #33c7f5;
+  --pp-accent-soft: rgba(16,215,244,0.06);
+  --pp-glow: 0 18px 50px rgba(16,215,244,0.06);
+  --pp-radius: 12px;
+  --pp-ease: cubic-bezier(.16,.84,.24,1);
+}
+
+/* Ensure base background remains but subtly enhance gradients */
+body {
+  background-image: radial-gradient(1000px 540px at 10% 6%, rgba(16,215,244,0.02), transparent 8%), radial-gradient(900px 480px at 92% 86%, rgba(51,199,245,0.01), transparent 12%), linear-gradient(180deg, rgba(0,0,0,0.02), rgba(0,0,0,0));
+}
+
+/* NAVBAR: glassmorphism, subtle border, smooth transition */
+.navbar {
+  transition: background 360ms var(--pp-ease), box-shadow 360ms var(--pp-ease), border-color 360ms var(--pp-ease);
+}
+.navbar.is-scrolled {
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  backdrop-filter: blur(12px) saturate(140%);
+  border-bottom-color: rgba(16,215,244,0.06);
+  box-shadow: var(--pp-glow);
+}
+
+/* Logo subtle size bump */
+.logo-mark { box-shadow: 0 8px 34px rgba(16,215,244,0.08); }
+
+/* Hero: subtle floating gradients and depth */
+.hero { position:relative; overflow:visible; }
+.hero::before{ content:""; position:absolute; inset: -12% -20% auto -20%; height: 60%; pointer-events:none; background: radial-gradient(circle at 24% 24%, rgba(16,215,244,0.04), transparent 10%), radial-gradient(circle at 82% 78%, rgba(139,92,246,0.02), transparent 12%); filter: blur(48px); z-index:-1; }
+.hero-orb-one, .hero-orb-two { opacity:0.18; filter:blur(28px); }
+
+/* Buttons: enhanced micro interactions */
+.button, .btn-card, .nav-resume { transition: transform 260ms var(--pp-ease), box-shadow 260ms var(--pp-ease), background 260ms var(--pp-ease); }
+.button-primary:hover, .btn-resume-premium.nav-resume:hover{ transform: translateY(-4px); box-shadow: 0 30px 80px rgba(16,215,244,0.09); }
+.button-secondary:hover{ transform: translateY(-3px); box-shadow: 0 18px 48px rgba(16,215,244,0.04); }
+
+/* Cards: premium lift + rim on hover */
+.principle-card, .skill-card, .project-card, .cert-card, .achievement-card, .experience-feature { will-change: transform, box-shadow; }
+.principle-card:hover, .skill-card:hover, .project-card:hover, .cert-card:hover, .achievement-card:hover, .experience-feature:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 30px 80px rgba(2,6,23,0.6), 0 0 36px rgba(16,215,244,0.06);
+  border-color: rgba(16,215,244,0.08);
+}
+
+/* Reveal animation tuning: slightly tighter translation and stagger */
+.reveal{ transition-duration: 760ms; transition-timing-function: var(--pp-ease); }
+.reveal { transform: translate3d(0,18px,0) scale(.998); }
+.reveal.is-visible { transform: none; }
+
+/* Proof grid safety: ensure new boxes align */
+.proof-grid { gap: 1px; }
+.proof-item { padding: 1.6rem clamp(1rem,2.4vw,2.2rem); }
+.proof-item strong.metric-value{ font-weight:700; }
+
+/* Skills cards: subtle icon ring */
+.skill-card { padding:1.2rem; border-radius:var(--pp-radius); }
+.skill-icon { box-shadow: inset 0 -1px 0 rgba(255,255,255,0.02); }
+.skill-card h3{ margin-bottom: .9rem; }
+.skill-card .tag-list span { background: rgba(255,255,255,0.015); border-radius:8px; padding:.32rem .6rem; }
+
+/* Project visuals: subtle 3D tilt on hover for large screens only */
+@media (hover:hover) and (min-width:900px) {
+  .smart-window { transition: transform 560ms var(--pp-ease); }
+  .project-card:hover .smart-window, .featured-project:hover .smart-window { transform: perspective(1000px) rotateY(-4deg) translateY(-6px); }
+}
+
+/* Ensure no global overflow or black overlays */
+html, body, main { overflow-x: hidden; }
+
+/* Accessibility: reduce motion respect */
+@media (prefers-reduced-motion: reduce){
+  .reveal, .hero-orb-one, .hero-orb-two, .smart-window, .project-visual img { transition: none !important; animation: none !important; transform: none !important; }
+}
+
+/* Responsive safety: limit hero imagery growth */
+@media (max-width:920px) {
+  .hero-grid { grid-template-columns: 1fr 360px; }
+  .portrait-frame { width: 360px; height: 360px; }
+}
+
+/* Slight footer contrast lift */
+.footer { background: linear-gradient(180deg, rgba(255,255,255,0.01), transparent); }
