@@ -210,7 +210,7 @@ h2 span, h1 span { color: var(--blue); }
 /* Proof */
 .proof-section { position: relative; z-index: 3; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: rgba(9, 15, 27, 0.46); }
 body.theme-light .proof-section { background: rgba(255, 255, 255, 0.48); }
-.proof-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1px; background: var(--line); }
+.proof-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1px; background: var(--line); }
 .proof-item { min-height: 10rem; display: flex; flex-direction: column; justify-content: center; padding: 1.8rem clamp(1rem, 2.4vw, 2.2rem); background: color-mix(in srgb, var(--bg) 95%, transparent); }
 .metric-value { display: block; margin-bottom: 0.35rem; color: var(--text); font-family: var(--font-mono); font-size: clamp(1.7rem, 2.4vw, 2.45rem); font-weight: 500; letter-spacing: -0.07em; line-height: 1.1; }
 .proof-item:nth-child(2) .metric-value { color: var(--blue); }
