@@ -46,7 +46,7 @@ window.PORTFOLIO_PROJECTS = {
     subtitle: "Production-grade commerce platform engineered with Spring Boot, Spring Security, OAuth2, JWT authentication, and a fully normalized PostgreSQL domain model.",
     image: "assets/project/ecommerce-banner.svg",
     github: "https://github.com/sharmaVishal2/E-Commerce-Application-by-Java-Spring-Boot",
-    live: null,
+    live: "https://e-commerce-application-by-java-spri.vercel.app/",
     stack: ["Java", "Spring Boot", "Spring Security", "OAuth2", "JWT", "PostgreSQL", "Hibernate", "Maven"],
     overview: "A robust, production-ready e-commerce backend built with Spring Boot that handles complete catalog management, multi-tier user authentication, shopping carts, order fulfillment workflows, and admin controls. Engineered with strict role-based access control (RBAC), transactional integrity across checkout operations, and an optimized relational schema.",
     problem: "Many full-stack e-commerce prototypes fail in real-world scenarios due to insecure authentication implementations, flat un-normalized schemas, race conditions during inventory checkout, and leaky abstraction boundaries. The objective was to build a secure, maintainable backend adhering to enterprise standards — strict RBAC, stateless security filter chains, ACID transactions for order workflows, and clean RESTful resource modeling.",
