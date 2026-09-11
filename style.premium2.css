@@ -1263,169 +1263,86 @@ body.theme-light .tradeoff-card strong {
   }
 }
 
-/* ─── Achievements Section (Premium Redesign) ────────────── */
+/* ─── Achievements Section ───────────────────────────────── */
 .achievements-section { padding-top: 6rem; }
 
-.ach-layout {
+/* Secondary compact cards grid */
+.ach-secondary-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  align-items: start;
-}
-
-.ach-col-label {
-  margin: 0 0 1rem;
-  color: var(--muted);
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
-
-.ach-col {
-  display: flex;
-  flex-direction: column;
+  grid-template-columns: repeat(4, 1fr);
   gap: 0.85rem;
+  margin-top: 1.1rem;
 }
 
-.ach-card {
-  display: grid;
-  grid-template-columns: 4.5rem 1fr;
-  gap: 1.1rem;
-  align-items: start;
-  padding: 1.35rem 1.4rem;
-  border: 1px solid rgba(255, 255, 255, 0.07);
-  border-radius: var(--pp-radius-lg);
-  background: linear-gradient(145deg, rgba(255,255,255,0.035), rgba(255,255,255,0.008));
-  transition: transform 260ms var(--pp-ease), border-color 260ms ease, box-shadow 260ms ease;
-}
-
-.ach-card:hover {
-  transform: translateY(-4px);
-  border-color: rgba(91, 168, 255, 0.28);
-  box-shadow: 0 16px 40px rgba(0,0,0,0.3);
-}
-
-.ach-card-featured {
-  border-color: rgba(245, 158, 11, 0.3);
-  background: linear-gradient(145deg, rgba(245,158,11,0.07), rgba(10,16,28,0.7));
-}
-
-.ach-card-featured:hover {
-  border-color: rgba(245, 158, 11, 0.55);
-  box-shadow: 0 16px 40px rgba(245,158,11,0.1);
-}
-
-.ach-card-hackathon {
-  border-color: rgba(6, 182, 212, 0.25);
-  background: linear-gradient(145deg, rgba(6,182,212,0.06), rgba(10,16,28,0.7));
-}
-
-.ach-card-hackathon:hover {
-  border-color: rgba(6, 182, 212, 0.45);
-  box-shadow: 0 16px 40px rgba(6,182,212,0.08);
-}
-
-.ach-card-left {
+.ach-mini-card {
   display: flex;
-  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: var(--pp-radius-md);
+  background: linear-gradient(145deg, rgba(255,255,255,0.025), rgba(255,255,255,0.005));
+  transition: transform 240ms var(--pp-ease), border-color 240ms ease, box-shadow 240ms ease;
+}
+
+.ach-mini-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(91, 168, 255, 0.22);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.25);
+}
+
+.ach-mini-icon {
+  display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 3.5rem;
-  padding: 0.5rem 0.25rem;
-  border-right: 1px solid rgba(255,255,255,0.07);
-  text-align: center;
-}
-
-.ach-rank-num {
-  display: block;
-  color: var(--text);
-  font-family: var(--font-mono);
-  font-size: 1.35rem;
-  font-weight: 700;
-  letter-spacing: -0.04em;
-  line-height: 1.1;
-}
-
-.ach-card-featured .ach-rank-num { color: #fcd34d; }
-.ach-card-hackathon .ach-rank-num { color: var(--pp-cyan); }
-
-.ach-rank-label {
-  display: block;
-  margin-top: 0.15rem;
-  color: var(--muted);
-  font-family: var(--font-mono);
-  font-size: 0.6rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.ach-cert-icon {
+  width: 2rem;
+  height: 2rem;
+  flex-shrink: 0;
+  border-radius: 0.5rem;
+  background: rgba(91, 168, 255, 0.1);
   color: var(--pp-blue);
-  font-size: 1.4rem;
-  border-right: 1px solid rgba(255,255,255,0.07);
+  border: 1px solid rgba(91, 168, 255, 0.18);
 }
 
-.ach-cert-icon svg { width: 1.4rem; height: 1.4rem; }
+.ach-mini-icon svg { width: 0.9rem; height: 0.9rem; }
 
-.ach-card-body { min-width: 0; }
+.ach-mini-card > div { min-width: 0; }
 
-.ach-card-top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.5rem;
-  margin-bottom: 0.45rem;
-}
-
-.ach-year {
+.ach-mini-label {
+  margin: 0 0 0.2rem;
   color: var(--muted);
   font-family: var(--font-mono);
-  font-size: 0.65rem;
+  font-size: 0.62rem;
+  line-height: 1.4;
   white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.ach-card-body h3 {
-  margin: 0 0 0.35rem;
-  font-size: 0.97rem;
+.ach-mini-card h4 {
+  margin: 0 0 0.2rem;
+  font-size: 0.88rem;
   font-weight: 700;
   letter-spacing: -0.02em;
-  line-height: 1.3;
   color: var(--text);
+  line-height: 1.25;
 }
 
-.ach-card-body p {
-  margin: 0 0 0.65rem;
+.ach-mini-card > div > p {
+  margin: 0;
   color: var(--muted);
-  font-size: 0.78rem;
-  line-height: 1.6;
+  font-size: 0.72rem;
+  line-height: 1.5;
 }
 
-.ach-platform {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  color: var(--muted);
-  font-family: var(--font-mono);
-  font-size: 0.65rem;
+@media (max-width: 900px) {
+  .ach-secondary-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
-.ach-platform svg { width: 0.75rem; height: 0.75rem; }
-
-.ach-cred-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.3rem;
-  color: var(--pp-blue);
-  font-family: var(--font-mono);
-  font-size: 0.68rem;
-  font-weight: 600;
-  transition: color 180ms ease, gap 180ms ease;
+@media (max-width: 480px) {
+  .ach-secondary-grid { grid-template-columns: 1fr; }
+  .ach-mini-card { padding: 0.85rem; }
 }
-
-.ach-cred-link:hover { color: var(--pp-cyan); gap: 0.5rem; }
-.ach-cred-link svg { width: 0.75rem; height: 0.75rem; }
 
 /* ─── Hero entrance animation ─────────────────────────────── */
 @keyframes hero-fade-up {
