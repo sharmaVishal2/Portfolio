@@ -1262,3 +1262,302 @@ body.theme-light .tradeoff-card strong {
     transform: none !important;
   }
 }
+
+/* ─── Achievements Section (Premium Redesign) ────────────── */
+.achievements-section { padding-top: 6rem; }
+
+.ach-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.ach-col-label {
+  margin: 0 0 1rem;
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.ach-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.ach-card {
+  display: grid;
+  grid-template-columns: 4.5rem 1fr;
+  gap: 1.1rem;
+  align-items: start;
+  padding: 1.35rem 1.4rem;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: var(--pp-radius-lg);
+  background: linear-gradient(145deg, rgba(255,255,255,0.035), rgba(255,255,255,0.008));
+  transition: transform 260ms var(--pp-ease), border-color 260ms ease, box-shadow 260ms ease;
+}
+
+.ach-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(91, 168, 255, 0.28);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.3);
+}
+
+.ach-card-featured {
+  border-color: rgba(245, 158, 11, 0.3);
+  background: linear-gradient(145deg, rgba(245,158,11,0.07), rgba(10,16,28,0.7));
+}
+
+.ach-card-featured:hover {
+  border-color: rgba(245, 158, 11, 0.55);
+  box-shadow: 0 16px 40px rgba(245,158,11,0.1);
+}
+
+.ach-card-hackathon {
+  border-color: rgba(6, 182, 212, 0.25);
+  background: linear-gradient(145deg, rgba(6,182,212,0.06), rgba(10,16,28,0.7));
+}
+
+.ach-card-hackathon:hover {
+  border-color: rgba(6, 182, 212, 0.45);
+  box-shadow: 0 16px 40px rgba(6,182,212,0.08);
+}
+
+.ach-card-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 3.5rem;
+  padding: 0.5rem 0.25rem;
+  border-right: 1px solid rgba(255,255,255,0.07);
+  text-align: center;
+}
+
+.ach-rank-num {
+  display: block;
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+}
+
+.ach-card-featured .ach-rank-num { color: #fcd34d; }
+.ach-card-hackathon .ach-rank-num { color: var(--pp-cyan); }
+
+.ach-rank-label {
+  display: block;
+  margin-top: 0.15rem;
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.ach-cert-icon {
+  color: var(--pp-blue);
+  font-size: 1.4rem;
+  border-right: 1px solid rgba(255,255,255,0.07);
+}
+
+.ach-cert-icon svg { width: 1.4rem; height: 1.4rem; }
+
+.ach-card-body { min-width: 0; }
+
+.ach-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.45rem;
+}
+
+.ach-year {
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  white-space: nowrap;
+}
+
+.ach-card-body h3 {
+  margin: 0 0 0.35rem;
+  font-size: 0.97rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.3;
+  color: var(--text);
+}
+
+.ach-card-body p {
+  margin: 0 0 0.65rem;
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.6;
+}
+
+.ach-platform {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+}
+
+.ach-platform svg { width: 0.75rem; height: 0.75rem; }
+
+.ach-cred-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: var(--pp-blue);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 600;
+  transition: color 180ms ease, gap 180ms ease;
+}
+
+.ach-cred-link:hover { color: var(--pp-cyan); gap: 0.5rem; }
+.ach-cred-link svg { width: 0.75rem; height: 0.75rem; }
+
+/* ─── Hero entrance animation ─────────────────────────────── */
+@keyframes hero-fade-up {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.hero-copy .eyebrow   { animation: hero-fade-up 0.6s var(--pp-ease) 0.05s both; }
+.hero-copy h1         { animation: hero-fade-up 0.65s var(--pp-ease) 0.15s both; }
+.hero-copy .hero-lede { animation: hero-fade-up 0.65s var(--pp-ease) 0.25s both; }
+.hero-copy .hero-actions { animation: hero-fade-up 0.65s var(--pp-ease) 0.35s both; }
+.hero-copy .hero-meta { animation: hero-fade-up 0.6s var(--pp-ease) 0.45s both; }
+.hero-portrait        { animation: hero-fade-up 0.7s var(--pp-ease) 0.2s both; }
+
+/* ─── Improved reveal animation ───────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.6s cubic-bezier(0.16,1,0.3,1),
+              transform 0.6s cubic-bezier(0.16,1,0.3,1);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* stagger siblings */
+.reveal:nth-child(2) { transition-delay: 80ms; }
+.reveal:nth-child(3) { transition-delay: 150ms; }
+.reveal:nth-child(4) { transition-delay: 210ms; }
+.reveal:nth-child(5) { transition-delay: 260ms; }
+.reveal:nth-child(6) { transition-delay: 300ms; }
+
+/* ─── Navbar active underline polish ──────────────────────── */
+.desktop-nav a {
+  position: relative;
+  transition: color 200ms ease, background 200ms ease;
+}
+
+.desktop-nav a::after {
+  content: "";
+  position: absolute;
+  bottom: 2px;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  width: 1.2rem;
+  height: 2px;
+  background: var(--pp-blue);
+  border-radius: 99rem;
+  transition: transform 220ms var(--pp-ease), opacity 220ms ease;
+  opacity: 0;
+}
+
+.desktop-nav a.active::after,
+.desktop-nav a:hover::after {
+  transform: translateX(-50%) scaleX(1);
+  opacity: 1;
+}
+
+/* ─── Button micro-interactions ───────────────────────────── */
+.button {
+  transition: transform 200ms var(--pp-ease),
+              box-shadow 200ms ease,
+              background 200ms ease,
+              border-color 200ms ease;
+}
+
+.button:active { transform: translateY(0) scale(0.97); }
+
+/* ─── Featured card hover polish ──────────────────────────── */
+.featured-card {
+  transition: transform 280ms var(--pp-ease),
+              border-color 280ms ease,
+              box-shadow 280ms ease;
+}
+
+/* ─── Skill card tag hover ─────────────────────────────────── */
+.skill-card .tag-list span {
+  transition: background 180ms ease, border-color 180ms ease, color 180ms ease;
+}
+
+.skill-card:hover .tag-list span {
+  border-color: color-mix(in srgb, var(--card-accent) 22%, var(--line));
+}
+
+/* ─── Proof item entrance ──────────────────────────────────── */
+.proof-item {
+  transition: transform 240ms var(--pp-ease),
+              background 240ms ease,
+              border-color 240ms ease;
+}
+
+/* ─── Contact row hover ────────────────────────────────────── */
+.contact-row {
+  transition: background 180ms ease, padding-left 180ms ease;
+}
+
+.contact-row:hover { padding-left: 1.45rem; }
+
+/* ─── Footer tagline ───────────────────────────────────────── */
+.footer-tagline {
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+}
+
+/* ─── Responsive: achievements ────────────────────────────── */
+@media (max-width: 860px) {
+  .ach-layout { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+  .ach-card { grid-template-columns: 3.5rem 1fr; gap: 0.75rem; padding: 1rem; }
+  .ach-rank-num { font-size: 1.1rem; }
+}
+
+/* ─── Reduced motion overrides ────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .hero-copy .eyebrow,
+  .hero-copy h1,
+  .hero-copy .hero-lede,
+  .hero-copy .hero-actions,
+  .hero-copy .hero-meta,
+  .hero-portrait {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
