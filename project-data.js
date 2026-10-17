@@ -46,8 +46,8 @@ window.PORTFOLIO_PROJECTS = {
     subtitle: "Production-grade commerce platform engineered with Spring Boot, Spring Security, OAuth2, JWT authentication, and a fully normalized PostgreSQL domain model.",
     image: "assets/project/ecommerce-banner.svg",
     github: "https://github.com/sharmaVishal2/E-Commerce-Application-by-Java-Spring-Boot",
-    live: null,
-    stack: ["Java", "Spring Boot", "Spring Security", "OAuth2", "JWT", "PostgreSQL", "Hibernate", "Maven"],
+    live: "https://e-commerce-application-by-java-spri.vercel.app/",
+    stack: ["Java", "Spring Boot", "Spring MVC", "React", "Spring Security", "OAuth2", "JWT", "PostgreSQL", "Hibernate", "Groq API", "Maven"],
     overview: "A robust, production-ready e-commerce backend built with Spring Boot that handles complete catalog management, multi-tier user authentication, shopping carts, order fulfillment workflows, and admin controls. Engineered with strict role-based access control (RBAC), transactional integrity across checkout operations, and an optimized relational schema.",
     problem: "Many full-stack e-commerce prototypes fail in real-world scenarios due to insecure authentication implementations, flat un-normalized schemas, race conditions during inventory checkout, and leaky abstraction boundaries. The objective was to build a secure, maintainable backend adhering to enterprise standards — strict RBAC, stateless security filter chains, ACID transactions for order workflows, and clean RESTful resource modeling.",
     solution: "Architected a layered Spring Boot application decoupling controllers, service interfaces, data access objects, and security filters. Enforced stateless JWT authentication and OAuth2 third-party login at the filter level. Designed a normalized PostgreSQL schema with composite indexing, foreign key cascade constraints, and optimistic locking on inventory stock to prevent overselling.",
@@ -93,12 +93,41 @@ window.PORTFOLIO_PROJECTS = {
   "algopush": {
     id: "algopush",
     title: "AlgoPush — AI LeetCode GitHub Sync",
-    eyebrow: "Productivity / AI & Browser Extension",
-    subtitle: "Automated Chrome extension that synchronizes accepted LeetCode solutions directly to organized GitHub repositories with AI-generated complexity analysis.",
+    eyebrow: "AI & Productivity / Chrome Extension",
+    subtitle: "Chrome extension backed by Spring Boot that automatically commits accepted LeetCode solutions to GitHub with AI-generated complexity analysis, SHA-256 duplicate detection, and organized Markdown READMEs.",
     github: "https://github.com/sharmaVishal2/AlgoPush",
-    live: null,
-    stack: ["JavaScript", "Chrome Extension API", "GitHub REST API", "Groq LLaMA 3", "AI Explanations"],
-    overview: "A developer tool that captures accepted LeetCode submissions in real time, generates markdown documentation with time/space complexity analysis using LLM APIs, and automatically commits solutions to organized GitHub repositories."
+    live: "https://algopush.vercel.app/",
+    stack: ["Java", "Spring Boot", "React", "PostgreSQL", "Docker", "Groq API", "OAuth 2.0", "JWT", "SHA-256", "Chrome Extension API"],
+    overview: "AlgoPush is a developer productivity tool consisting of a Chrome extension and a Spring Boot backend. It detects accepted LeetCode submissions in real time, uses Groq LLaMA 3 to generate solution breakdowns and complexity notes, and commits everything as clean Markdown files to the user's chosen GitHub repository — fully automated.",
+    problem: "Developers who solve LeetCode problems regularly have no easy way to persist, organize, or document their solutions in a searchable GitHub repository. Manual copy-paste is tedious, solutions lack complexity annotations, and duplicate commits clutter repos. The challenge was building a seamless, automated pipeline from LeetCode acceptance to a well-structured GitHub commit with zero manual effort.",
+    solution: "Built a Chrome extension that intercepts LeetCode's submission success event and sends the solution code to a Spring Boot backend. The backend authenticates via GitHub OAuth 2.0, generates AI-powered documentation using Groq API, computes a SHA-256 hash to detect duplicates, and commits the file to the user's selected repository via the GitHub REST API.",
+    tradeoffs: [
+      "SHA-256 Hashing vs. Full Diff Check: A full diff check against existing repo files would require fetching all file contents on every submission, adding latency and API rate-limit risk. SHA-256 hashing of the solution body stored in PostgreSQL provides O(1) duplicate detection with a single DB lookup.",
+      "Groq API vs. Local LLM: A local model avoids external API dependency but requires significant compute. Groq's hosted LLaMA 3 delivers sub-second inference with no infrastructure overhead, making it the right trade-off for a developer tool where speed matters.",
+      "Chrome Extension vs. Browser Bookmarklet: A bookmarklet requires manual user action per submission. A Chrome extension can passively observe page events and trigger the pipeline automatically, delivering the zero-friction experience the tool is designed for."
+    ],
+    architecture: [
+      "Chrome Extension detects LeetCode submission acceptance event",
+      "Extension sends solution code + metadata to Spring Boot backend",
+      "Backend verifies JWT session and resolves GitHub OAuth 2.0 token",
+      "SHA-256 hash checked against PostgreSQL to prevent duplicate commits",
+      "Groq LLaMA 3 generates complexity notes and Markdown README",
+      "GitHub REST API commits the file to the user's target repository"
+    ],
+    features: [
+      "Automatic detection of accepted LeetCode submissions via Chrome extension content script",
+      "GitHub OAuth 2.0 login with repository selection and topic-based folder organization",
+      "AI-generated time/space complexity analysis and solution breakdown via Groq LLaMA 3",
+      "SHA-256 code hashing to prevent duplicate commits from cluttering the repository",
+      "Clean Markdown README generation per submission with difficulty and topic tags",
+      "React frontend dashboard to manage connected repositories and view commit history"
+    ],
+    challenges: "The trickiest part was reliably detecting the submission acceptance event on LeetCode's dynamically rendered React page without a stable DOM hook. The solution was observing network responses via the Chrome extension's webRequest API to intercept LeetCode's internal submission status endpoint, which fires consistently on every accepted result regardless of UI changes.",
+    future: [
+      "Add support for CodeForces and CodeChef submission auto-sync",
+      "Weekly digest email summarizing solved problems and progress trends",
+      "Public profile page showing a user's solved problem history from their synced repo"
+    ]
   },
   "smarthire": {
     id: "smarthire",
